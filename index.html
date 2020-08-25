@@ -2,6 +2,12 @@
 layout: default
 ---
 
+<style>
+    .papers {
+        border: 1px solid black;
+    }
+</style>
+
 <script>
     function show(id) {
         var x = document.getElementById(id);
@@ -21,15 +27,17 @@ layout: default
 </ul>
 
 <h1>Papers:</h1>
-    <h2><button onclick="show('div00')">Albumentations: fast and flexible image augmentations</button></h2>
-    <div id="div00">
-        <a target="_blank" href="https://arxiv.org/abs/1809.06839v1">Arxiv</a>
-        <p>Year: 2018</p>
-        <p>Autores: Alexander Buslaev, Alex Parinov, Eugene Khvedchenya, Vladimir I. Iglovikov, Alexandr A. Kalinin</p>
-        <a target="_blank" href="https://github.com/albumentations-team/albumentations">Github</a>
-    </div>    
-    
-    
+<ul>
+    <li>
+        <button onclick="show('div00')">Albumentations: fast and flexible image augmentations</button>
+        <div id="div00" class="papers">
+            <a target="_blank" href="https://arxiv.org/abs/1809.06839v1">Arxiv</a>
+            Year: 2018<br>
+            Autores: Alexander Buslaev, Alex Parinov, Eugene Khvedchenya, Vladimir I. Iglovikov, Alexandr A. Kalinin<br>
+            <a target="_blank" href="https://github.com/albumentations-team/albumentations">Github</a>
+        </div>
+    </li>
+</ul>
 
 <h1>Libraries:</h1>
 
