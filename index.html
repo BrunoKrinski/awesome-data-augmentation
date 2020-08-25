@@ -141,6 +141,42 @@ layout: default
             <img src="images/kitty_gaussian_blur.jpg">
         </div>
     </li>
+    <li class="item_list">
+        <button onclick="show('aug10')">GlassBlur</button>
+        <div id="aug10" style="display: none;">
+            Apply glass noise to the input image.
+            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.GlassBlur">Albumentations</a><br>
+            <img src="images/kitty.jpg"> 
+            <img src="images/kitty_glass_blur.jpg">
+        </div>
+    </li>
+    <li class="item_list">
+        <button onclick="show('aug11')">HueSaturationValue</button>
+        <div id="aug11" style="display: none;">
+            Randomly change hue, saturation and value of the input image.
+            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.HueSaturationValue">Albumentations</a><br>
+            <img src="images/kitty.jpg"> 
+            <img src="images/kitty_hue_saturation.jpg">
+        </div>
+    </li>
+    <li class="item_list">
+        <button onclick="show('aug12')">IAAAdditiveGaussianNoise</button>
+        <div id="aug12" style="display: none;">
+            Add gaussian noise to the input image.
+            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/imgaug/transforms/#albumentations.imgaug.transforms.IAAAdditiveGaussianNoise">Albumentations</a><br>
+            <img src="images/kitty.jpg"> 
+            <img src="images/kitty_additive_gaussian_noise.jpg">
+        </div>
+    </li>
+    <li class="item_list">
+        <button onclick="show('aug13')">IAAEmboss</button>
+        <div id="aug13" style="display: none;">
+            Emboss the input image and overlays the result with the original image.
+            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/imgaug/transforms/#albumentations.imgaug.transforms.IAAEmboss">Albumentations</a><br>
+            <img src="images/kitty.jpg"> 
+            <img src="images/kitty_emboss.jpg">
+        </div>
+    </li>
 </ul>
 
 <h1>Surveys:</h1>
