@@ -3,7 +3,7 @@ layout: default
 ---
 
 <style>
-    .papers {
+    .paper {
         border: 1px solid black;
         margin: 20px;
         padding: 10px;
@@ -15,7 +15,7 @@ layout: default
         margin-bottom: 0;
     }
 
-    .papers_list li {
+    #papers li {
         margin-bottom: 20px;
     }
 </style>
@@ -39,10 +39,10 @@ layout: default
 </ul>
 
 <h1>Papers:</h1>
-<ul>
+<ul id="papers">
     <li>
         <button onclick="show('div00')">Albumentations: fast and flexible image augmentations</button>
-        <div id="div00" class="papers" style="display: block;">
+        <div id="div00" class="paper" style="display: block;">
             <ul class="papers_list">
                 <li>
                     Link: <a target="_blank" href="https://arxiv.org/abs/1809.06839v1">Arxiv</a>
@@ -64,7 +64,7 @@ layout: default
     </li>
     <li>
         <button onclick="show('div01')">Biomedical image augmentation using Augmentor</button>
-        <div id="div01" class="papers" style="display: block;">
+        <div id="div01" class="paper" style="display: block;">
             <ul class="papers_list">
                 <li>
                     Link: <a target="_blank" href="https://academic.oup.com/bioinformatics/article-abstract/35/21/4522/5466454?redirectedFrom=fulltext">Academic</a>
