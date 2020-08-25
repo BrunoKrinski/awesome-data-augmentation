@@ -26,6 +26,10 @@ layout: default
     img {
         width: 300px;
     }
+
+    #augmentations li {
+        display: inline-block;
+    }
 </style>
 
 <script>
@@ -41,7 +45,7 @@ layout: default
 
 <h1>Augmentations:</h1>
 <h2>Pixel-level transforms</h2>
-<ul>
+<ul id="augmentations">
     <li class="item_list">
         <button onclick="show('aug00')">Blur</button>
         <div id="aug00" style="display: none;">
@@ -97,7 +101,7 @@ layout: default
         </div>
     </li>
     <li class="item_list">
-        <button onclick="show('aug06')">Equalize:</button>
+        <button onclick="show('aug06')">Equalize</button>
         <div id="aug06" style="display: none;">
             Equalize the image histogram.
             Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Equalize">Albumentations</a>
@@ -106,7 +110,7 @@ layout: default
         </div>
     </li>
     <li class="item_list">
-        <button onclick="show('aug07')">Fancy PCA:</button>
+        <button onclick="show('aug07')">Fancy PCA</button>
         <div id="aug07" style="display: none;">
             Augment RGB image using FancyPCA from Krizhevsky's paper "ImageNet Classification with Deep Convolutional Neural Networks".
             Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.FancyPCA">Albumentations</a>
@@ -115,7 +119,7 @@ layout: default
         </div>
     </li>
     <li class="item_list">
-        <button onclick="show('aug08')">GaussNoise:</button>
+        <button onclick="show('aug08')">GaussNoise</button>
         <div id="aug08" style="display: none;">
             Apply gaussian noise to the input image.
             Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.GaussNoise">Albumentations</a>
@@ -124,7 +128,7 @@ layout: default
         </div>
     </li>
     <li class="item_list">
-        <button onclick="show('aug09')">GaussianBlue:</button>
+        <button onclick="show('aug09')">GaussianBlue</button>
         <div id="aug09" style="display: none;">
             Blur the input image using a Gaussian filter with a random kernel size.
             Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.GaussianBlur">Albumentations</a>
