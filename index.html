@@ -3,7 +3,7 @@ layout: default
 ---
 
 <style>
-    .papers {
+    .paper {
         border: 1px solid black;
         margin: 20px;
         padding: 10px;
@@ -20,7 +20,7 @@ layout: default
     }
 
     img {
-        width: 200px;
+        width: 300px;
     }
 </style>
 
@@ -40,9 +40,9 @@ layout: default
 <ul>
     <li class="item_list">
         <button onclick="show('aug00')">Blur</button>
-        Blur the input image using a random-sized kernel.
-        Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Blur">Albumentations</a>
         <div id="aug00" style="display: none;">
+            Blur the input image using a random-sized kernel.
+            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Blur">Albumentations</a>
             <img src="images/kitty.jpg"> 
             <img src="images/kitty_blur.jpg">
         </div>
