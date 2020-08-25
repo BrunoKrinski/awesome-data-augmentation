@@ -15,7 +15,7 @@ layout: default
         margin-bottom: 0;
     }
 
-    li {
+    .item_list li {
         margin-bottom: 20px;
     }
 
@@ -38,8 +38,10 @@ layout: default
 <h1>Augmentations:</h1>
 <h2>Pixel-level transforms</h2>
 <ul>
-    <li>
+    <li class="item_list">
         <button onclick="show('aug00')">Blur</button>
+        Blur the input image using a random-sized kernel.
+        Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Blur">Albumentations</a>
         <div id="aug00" style="display: none;">
             <img src="images/kitty.jpg"> 
             <img src="images/kitty_blur.jpg">
@@ -59,7 +61,7 @@ layout: default
     <li>
         <button onclick="show('div00')">Albumentations: fast and flexible image augmentations</button>
         <div id="div00" class="paper" style="display: none;">
-            <ul class="papers_list">
+            <ul class="item_list">
                 <li>
                     Link: <a target="_blank" href="https://arxiv.org/abs/1809.06839v1">Arxiv</a>
                 </li>
@@ -81,7 +83,7 @@ layout: default
     <li>
         <button onclick="show('div01')">Biomedical image augmentation using Augmentor</button>
         <div id="div01" class="paper" style="display: none;">
-            <ul class="papers_list">
+            <ul class="item_list">
                 <li>
                     Link: <a target="_blank" href="https://academic.oup.com/bioinformatics/article-abstract/35/21/4522/5466454?redirectedFrom=fulltext">Academic</a>
                 </li>
