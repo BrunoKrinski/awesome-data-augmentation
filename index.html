@@ -268,21 +268,21 @@ layout: default
         </div>
     </li>
     <li class="item_list">
-        <button onclick="show('aug24')">RandomBrightnessContrast</button>
-        <div id="aug24" style="display: none;">
-            Randomly change brightness and contrast of the input image.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomBrightnessContrast">Albumentations</a><br>
-            <img src="images/kitty.jpg"> 
-            <img src="images/kitty_brightness_contrast.jpg">
-        </div>
-    </li>
-    <li class="item_list">
         <button onclick="show('aug25')">RandomFog</button>
         <div id="aug25" style="display: none;">
             Simulates fog for the image.
             Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomFog">Albumentations</a><br>
             <img src="images/kitty.jpg"> 
             <img src="images/kitty_random_fog.jpg">
+        </div>
+    </li>
+    <li class="item_list">
+        <button onclick="show('aug24')">RandomBrightnessContrast</button>
+        <div id="aug24" style="display: none;">
+            Randomly change brightness and contrast of the input image.
+            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomBrightnessContrast">Albumentations</a><br>
+            <img src="images/kitty.jpg"> 
+            <img src="images/kitty_brightness_contrast.jpg">
         </div>
     </li>
     <li class="item_list">
@@ -497,6 +497,69 @@ layout: default
             Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomRotate90">Albumentations</a><br>
             <img src="images/kitty.jpg"> 
             <img src="images/kitty_random_rotate90.jpg">
+        </div>
+    </li>
+    <li class="item_list">
+        <button onclick="show('aug50')">RandomSizedCrop</button>
+        <div id="aug50" style="display: none;">
+            Crop a random part of the input and rescale it to some size.
+            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomSizedCrop">Albumentations</a><br>
+            <img src="images/kitty.jpg"> 
+            <img src="images/kitty_random_sized_crop.jpg">
+        </div>
+    </li>
+    <li class="item_list">
+        <button onclick="show('aug51')">Resize</button>
+        <div id="aug51" style="display: none;">
+            Resize the input to the given height and width.
+            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Resize">Albumentations</a><br>
+            <img src="images/kitty.jpg"> 
+            <img src="images/kitty_resize.jpg">
+        </div>
+    </li>
+    <li class="item_list">
+        <button onclick="show('aug52')">Rotate</button>
+        <div id="aug52" style="display: none;">
+            Rotate the input by an angle selected randomly from the uniform distribution.
+            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Rotate">Albumentations</a><br>
+            <img src="images/kitty.jpg"> 
+            <img src="images/kitty_rotate.jpg">
+        </div>
+    </li>
+    <li class="item_list">
+        <button onclick="show('aug53')">ShiftScaleRotate</button>
+        <div id="aug53" style="display: none;">
+            Randomly apply affine transforms: translate, scale and rotate the input.
+            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ShiftScaleRotate">Albumentations</a><br>
+            <img src="images/kitty.jpg"> 
+            <img src="images/kitty_shift_scale_rotate.jpg">
+        </div>
+    </li>
+    <li class="item_list">
+        <button onclick="show('aug54')">SmallestMaxSize</button>
+        <div id="aug54" style="display: none;">
+            Rescale an image so that minimum side is equal to max_size, keeping the aspect ratio of the initial image.
+            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.SmallestMaxSize">Albumentations</a><br>
+            <img src="images/kitty.jpg"> 
+            <img src="images/kitty_smallest_max_size.jpg">
+        </div>
+    </li>
+    <li class="item_list">
+        <button onclick="show('aug55')">Transpose</button>
+        <div id="aug55" style="display: none;">
+            Transpose the input by swapping rows and columns.
+            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Transpose">Albumentations</a><br>
+            <img src="images/kitty.jpg"> 
+            <img src="images/kitty_transpose.jpg">
+        </div>
+    </li>
+    <li class="item_list">
+        <button onclick="show('aug56')">VerticalFlip</button>
+        <div id="aug56" style="display: none;">
+            Flip the input vertically around the x-axis.
+            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.VerticalFlip">Albumentations</a><br>
+            <img src="images/kitty.jpg"> 
+            <img src="images/kitty_vertical_flip.jpg">
         </div>
     </li>
 </ul>

@@ -15,7 +15,9 @@ from albumentations import CenterCrop, Crop, CropNonEmptyMaskIfExists, \
                            HorizontalFlip, IAAAffine, IAACropAndPad, \
                            IAAPiecewiseAffine, LongestMaxSize, \
                            OpticalDistortion, RandomCrop, RandomGridShuffle, \
-                           RandomResizedCrop, RandomRotate90
+                           RandomResizedCrop, RandomRotate90, RandomScale, \
+                           RandomSizedCrop, Resize, Rotate, ShiftScaleRotate, \
+                           SmallestMaxSize, Transpose, VerticalFlip
 
 
 def get_args():
@@ -199,7 +201,32 @@ if __name__ == '__main__':
 
     elif augmentation == 'random_rotate90':
         transform = RandomRotate90(always_apply=True)
+
+    elif augmentation == 'random_scale':
+        transform = RandomScale(always_apply=True)
+
+    elif augmentation == 'random_sized_crop':
+        transform = RandomSizedCrop(always_apply=True, height=500, width=500, min_max_height=[200, 200])
+
+    elif augmentation == 'resize':
+        transform = Resize(always_apply=True, height=500, width=500)
+
+    elif augmentation == 'rotate':
+        transform = Rotate(always_apply=True)
+
+    elif augmentation == 'shift_scale_rotate':
+        transform = ShiftScaleRotate(always_apply=True, shift_limit=0.1, 
+                                                        scale_limit=0.5)
     
+    elif augmentation == 'smallest_max_size':
+        transform = SmallestMaxSize(always_apply=True)
+
+    elif augmentation == 'transpose':
+        transform = Transpose(always_apply=True)
+
+    elif augmentation == 'vertical_flip':
+        transform = VerticalFlip(always_apply=True)
+
     transformed_image = transform(image=image)['image']
 
     name, ext = image_name.split('.')
