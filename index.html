@@ -411,6 +411,67 @@ layout: default
             <img src="images/kitty_grid_dropout.jpg">
         </div>
     </li>
+    <li class="item_list">
+        <button onclick="show('aug40')">HorizontalFlip</button>
+        <div id="aug40" style="display: none;">
+            Flip the input horizontally around the y-axis.
+            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.HorizontalFlip">Albumentations</a><br>
+            <img src="images/kitty.jpg"> 
+            <img src="images/kitty_horizontal_flip.jpg">
+        </div>
+    </li>
+    <li class="item_list">
+        <button onclick="show('aug41')">IAAAffine</button>
+        <div id="aug41" style="display: none;">
+            Place a regular grid of points on the input and randomly move the neighbourhood of these point around via affine transformations.
+            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/imgaug/transforms/#albumentations.imgaug.transforms.IAAAffine">Albumentations</a><br>
+            <img src="images/kitty.jpg"> 
+            <img src="images/kitty_iaaaffine.jpg">
+        </div>
+    </li>
+    <li class="item_list">
+        <button onclick="show('aug42')">IAACropAndPad</button>
+        <div id="aug42" style="display: none;">
+            Source: <a target="_blank" href="https://github.com/albumentations-team/albumentations">Albumentations</a><br>
+            <img src="images/kitty.jpg"> 
+            <img src="images/kitty_crop_and_pad.jpg">
+        </div>
+    </li>
+    <li class="item_list">
+        <button onclick="show('aug43')">IAAPiecewiseAffine</button>
+        <div id="aug43" style="display: none;">
+            Place a regular grid of points on the input and randomly move the neighbourhood of these point around via affine transformations.
+            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/imgaug/transforms/#albumentations.imgaug.transforms.IAAPiecewiseAffine">Albumentations</a><br>
+            <img src="images/kitty.jpg"> 
+            <img src="images/kitty_piecewise_affine.jpg">
+        </div>
+    </li>
+    <li class="item_list">
+        <button onclick="show('aug44')">LongestMaxSize</button>
+        <div id="aug44" style="display: none;">
+            Rescale an image so that maximum side is equal to max_size, keeping the aspect ratio of the initial image.
+            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.LongestMaxSize">Albumentations</a><br>
+            <img src="images/kitty.jpg"> 
+            <img src="images/kitty_longest_max_size.jpg">
+        </div>
+    </li>
+    <li class="item_list">
+        <button onclick="show('aug45')">OpticalDistortion</button>
+        <div id="aug45" style="display: none;">
+            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.OpticalDistortion">Albumentations</a><br>
+            <img src="images/kitty.jpg"> 
+            <img src="images/kitty_optical_distortion.jpg">
+        </div>
+    </li>
+    <li class="item_list">
+        <button onclick="show('aug46')">RandomCrop</button>
+        <div id="aug46" style="display: none;">
+            Crop a random part of the input.
+            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomCrop">Albumentations</a><br>
+            <img src="images/kitty.jpg"> 
+            <img src="images/kitty_random_crop.jpg">
+        </div>
+    </li>
 </ul>
 
 <h1>Surveys:</h1>
