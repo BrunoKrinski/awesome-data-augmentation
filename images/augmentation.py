@@ -14,7 +14,8 @@ from albumentations import CenterCrop, Crop, CropNonEmptyMaskIfExists, \
                            ElasticTransform, Flip, GridDistortion, GridDropout,\
                            HorizontalFlip, IAAAffine, IAACropAndPad, \
                            IAAPiecewiseAffine, LongestMaxSize, \
-                           OpticalDistortion, RandomCrop
+                           OpticalDistortion, RandomCrop, RandomGridShuffle, \
+                           RandomResizedCrop, RandomRotate90
 
 
 def get_args():
@@ -189,6 +190,15 @@ if __name__ == '__main__':
     
     elif augmentation == 'random_crop':
         transform = RandomCrop(always_apply=True, width=200, height=200)
+
+    elif augmentation == 'random_grid_shuffle':
+        transform = RandomGridShuffle(always_apply=True, grid=(5, 5))
+
+    elif augmentation == 'random_resized_crop':
+        transform = RandomResizedCrop(always_apply=True, width=100, height=100)
+
+    elif augmentation == 'random_rotate90':
+        transform = RandomRotate90(always_apply=True)
     
     transformed_image = transform(image=image)['image']
 
