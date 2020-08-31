@@ -66,7 +66,7 @@ layout: default
 A huge list of many types of data augmentations techniques used for deep learning!
 <h2>Pixel-level transforms</h2>
 
-<h3>Contrast</h3>
+<h3>Arithmetic</h3>
 <ul class="augmentations">
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
@@ -134,6 +134,22 @@ A huge list of many types of data augmentations techniques used for deep learnin
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
+        <button onclick="show('aug31')">Solarize</button>
+        <div id="aug31" style="display: none;">
+            Invert all pixel values above a threshold.
+            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Solarize">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_solarize.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
         <button onclick="show('aug76')">Additive Poisson Noise</button>
         <div id="aug76" style="display: none;">
             Add noise sampled from poisson distributions elementwise to images.
@@ -162,22 +178,6 @@ A huge list of many types of data augmentations techniques used for deep learnin
                 <img src="images/kitty_channel_droput.jpg">
                 <figcaption>Augmentation</figcaption>
             </figure>
-        </div>
-    </li>
-    <!----------------------------------------------------------------------------------------------------------------->
-    <li class="item_list">
-        <button onclick="show('aug31')">Solarize</button>
-        <div id="aug31" style="display: none;">
-            Invert all pixel values above a threshold.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Solarize">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_solarize.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>  
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
