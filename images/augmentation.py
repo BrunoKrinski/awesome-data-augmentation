@@ -43,9 +43,50 @@ if __name__ == '__main__':
 
     # Pixel Level transforms:
 
+    ## Arithmetic
+    if augmentation == 'add':
+        transform = iaa.Add((-75, 75))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'additive_gaussian_noise':
+        transform = iaa.AdditiveGaussianNoise(scale=(0, 0.2*255))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'multiply':
+        transform = iaa.Multiply((0.1, 2.0))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'coarse_dropout':
+        transform = CoarseDropout(always_apply=True, max_holes=100)
+        transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'solarize':
+        transform = Solarize(always_apply=True)
+        transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'invert_img':
+        transform = InvertImg(always_apply=True)
+        transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'image_compression':
+        transform = ImageCompression(always_apply=True, quality_lower=10)
+        transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'cutout':
+        transform = iaa.Cutout(nb_iterations=5)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'dropout':
+        transform = iaa.Dropout(p=(0, 0.2))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'channel_droput':
+        transform = ChannelDropout(always_apply=True)
+        transformed_image = transform(image=image)['image']
+
     ## Blur
 
-    if augmentation == 'blur':
+    elif augmentation == 'blur':
         transform = Blur(always_apply=True)
         transformed_image = transform(image=image)['image']
 
@@ -116,22 +157,12 @@ if __name__ == '__main__':
         transform = iaa.AllChannelsCLAHE()
         transformed_image = transform(image=image)
     
-    ###
-    
-    
-        
-    elif augmentation == 'channel_droput':
-        transform = ChannelDropout(always_apply=True)
-        transformed_image = transform(image=image)['image']
-        
+    ####################
+            
     elif augmentation == 'channel_shuffle':
         transform = ChannelShuffle(always_apply=True)
         transformed_image = transform(image=image)['image']
-        
-    elif augmentation == 'coarse_dropout':
-        transform = CoarseDropout(always_apply=True, max_holes=100)
-        transformed_image = transform(image=image)['image']
-        
+                
     elif augmentation == 'downscale':
         transform = Downscale(always_apply=True)
         transformed_image = transform(image=image)['image']
@@ -152,10 +183,6 @@ if __name__ == '__main__':
         transform = HueSaturationValue(always_apply=True)
         transformed_image = transform(image=image)['image']
     
-    elif augmentation == 'additive_gaussian_noise':
-        transform = IAAAdditiveGaussianNoise(always_apply=True)
-        transformed_image = transform(image=image)['image']
-
     elif augmentation == 'emboss':
         transform = IAAEmboss(always_apply=True, strength=(0.5, 0.8), alpha=1.0)
         transformed_image = transform(image=image)['image']
@@ -171,14 +198,6 @@ if __name__ == '__main__':
     elif augmentation == 'iso_noise':
         transform = ISONoise(always_apply=True, color_shift=(0.08, 0.1), 
                                                 intensity=(0.5, 0.8))
-        transformed_image = transform(image=image)['image']
-
-    elif augmentation == 'image_compression':
-        transform = ImageCompression(always_apply=True, quality_lower=10)
-        transformed_image = transform(image=image)['image']
-
-    elif augmentation == 'invert_img':
-        transform = InvertImg(always_apply=True)
         transformed_image = transform(image=image)['image']
 
     elif augmentation == 'multiplicative_noise':
@@ -225,10 +244,6 @@ if __name__ == '__main__':
 
     elif augmentation == 'random_sun_flare':
         transform = RandomSunFlare(always_apply=True)
-        transformed_image = transform(image=image)['image']
-
-    elif augmentation == 'solarize':
-        transform = Solarize(always_apply=True)
         transformed_image = transform(image=image)['image']
 
     elif augmentation == 'to_float':

@@ -65,6 +65,175 @@ layout: default
 <h1>Awesome Augmentations:</h1>
 A huge list of many types of data augmentations techniques used for deep learning!
 <h2>Pixel-level transforms</h2>
+
+<h3>Contrast</h3>
+<ul class="augmentations">
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug68')">Add</button>
+        <div id="aug68" style="display: none;">
+            Add a value to all pixels in an image.
+            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/arithmetic.html#add">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_add.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug67')">Additive Gaussian Noise</button>
+        <div id="aug67" style="display: none;">
+            Add noise sampled from gaussian distributions elementwise to images.
+            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/arithmetic.html#additivegaussiannoise">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_additive_gaussian_noise.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug02')">Channel Dropout (Dropout 2D)</button>
+        <div id="aug02" style="display: none;">
+            Randomly Drop Channels in the input Image.
+            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ChannelDropout">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_channel_droput.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug31')">Solarize</button>
+        <div id="aug31" style="display: none;">
+            Invert all pixel values above a threshold.
+            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Solarize">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_solarize.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug18')">InvertImg</button>
+        <div id="aug18" style="display: none;">
+            Invert the input image by subtracting pixel values from 255.
+            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.InvertImg">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_invert_img.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug17')">ImageCompression</button>
+        <div id="aug17" style="display: none;">
+            Decrease Jpeg, WebP compression of an image.
+            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ImageCompression">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_image_compression.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure> 
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug69')">Multiply</button>
+        <div id="aug69" style="display: none;">
+            Multiply all pixels in an image with a specific value, thereby making the image darker or brighter.
+            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/arithmetic.html#multiply">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_multiply.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug70')">Cutout</button>
+        <div id="aug70" style="display: none;">
+            Fill one or more rectangular areas in an image using a fill mode. See paper “Improved Regularization of Convolutional Neural Networks with Cutout” by DeVries and Taylor.
+            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/arithmetic.html#cutout">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_cutout.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug71')">Dropout</button>
+        <div id="aug71" style="display: none;">
+            Augmenter that sets a certain fraction of pixels in images to zero.
+            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/arithmetic.html#dropout">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_dropout.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug04')">Coarse Dropout</button>
+        <div id="aug04" style="display: none;">
+            CoarseDropout of the rectangular regions in the image.
+            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.CoarseDropout">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_coarse_dropout.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------------------->
+</ul>
+
 <h3>Blur</h3>
 <ul class="augmentations">
     <!----------------------------------------------------------------------------------------------------------------->
@@ -345,24 +514,10 @@ A huge list of many types of data augmentations techniques used for deep learnin
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
 </ul>
-<ul class="augmentations">
-    
-    
-    <li class="item_list">
-        <button onclick="show('aug02')">Channel Dropout</button>
-        <div id="aug02" style="display: none;">
-            Randomly Drop Channels in the input Image.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ChannelDropout">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_channel_droput.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>
-        </div>
-    </li>
+
+<p>On building...</p>
+
+<ul class="augmentations">    
     <li class="item_list">
         <button onclick="show('aug03')">Channel Shuffle</button>
         <div id="aug03" style="display: none;">
@@ -374,21 +529,6 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure>
             <figure>
                 <img src="images/kitty_channel_shuffle.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>
-        </div>
-    </li>
-    <li class="item_list">
-        <button onclick="show('aug04')">Coarse Dropout</button>
-        <div id="aug04" style="display: none;">
-            CoarseDropout of the rectangular regions in the image.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.CoarseDropout">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_coarse_dropout.jpg">
                 <figcaption>Augmentation</figcaption>
             </figure>
         </div>
@@ -469,21 +609,6 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <li class="item_list">
-        <button onclick="show('aug12')">IAAAdditiveGaussianNoise</button>
-        <div id="aug12" style="display: none;">
-            Add gaussian noise to the input image.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/imgaug/transforms/#albumentations.imgaug.transforms.IAAAdditiveGaussianNoise">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_additive_gaussian_noise.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>
-        </div>
-    </li>
-    <li class="item_list">
         <button onclick="show('aug14')">IAASharpen</button>
         <div id="aug14" style="display: none;">
             Sharpen the input image and overlay the result with the original image.
@@ -526,36 +651,6 @@ A huge list of many types of data augmentations techniques used for deep learnin
                 <img src="images/kitty_iso_noise.jpg">
                 <figcaption>Augmentation</figcaption>
             </figure>
-        </div>
-    </li>
-    <li class="item_list">
-        <button onclick="show('aug17')">ImageCompression</button>
-        <div id="aug17" style="display: none;">
-            Decrease Jpeg, WebP compression of an image.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ImageCompression">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_image_compression.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure> 
-        </div>
-    </li>
-    <li class="item_list">
-        <button onclick="show('aug18')">InvertImg</button>
-        <div id="aug18" style="display: none;">
-            Invert the input image by subtracting pixel values from 255.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.InvertImg">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_invert_img.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>  
         </div>
     </li>
     <li class="item_list">
@@ -703,21 +798,6 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure>
             <figure>
                 <img src="images/kitty_random_sun_flare.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>  
-        </div>
-    </li>
-    <li class="item_list">
-        <button onclick="show('aug31')">Solarize</button>
-        <div id="aug31" style="display: none;">
-            Invert all pixel values above a threshold.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Solarize">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_solarize.jpg">
                 <figcaption>Augmentation</figcaption>
             </figure>  
         </div>
