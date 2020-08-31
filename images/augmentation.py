@@ -111,6 +111,10 @@ if __name__ == '__main__':
     elif augmentation == 'all_channels_he':
         transform = iaa.AllChannelsHistogramEqualization()
         transformed_image = transform(image=image)
+
+    elif augmentation == 'all_channels_clahe':
+        transform = iaa.AllChannelsCLAHE()
+        transformed_image = transform(image=image)
     
     ###
     

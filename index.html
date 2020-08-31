@@ -217,6 +217,22 @@ A huge list of many types of data augmentations techniques used for deep learnin
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
+        <button onclick="show('aug66')">All Channels CLAHE</button>
+        <div id="aug66" style="display: none;">
+            Apply CLAHE to all channels of images in their original colorspaces.
+            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/contrast.html#allchannelsclahe">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_all_channels_clahe.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
         <button onclick="show('aug06')">Equalize</button>
         <div id="aug06" style="display: none;">
             Equalize the image histogram.
@@ -313,7 +329,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
-        <button onclick="show('aug65')">All Histogram Equalization</button>
+        <button onclick="show('aug65')">All Channels Histogram Equalization</button>
         <div id="aug65" style="display: none;">
             Apply Histogram Eq. to all channels of images in their original colorspaces.
             Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/contrast.html#allchannelshistogramequalization">Imgaug</a><br>
