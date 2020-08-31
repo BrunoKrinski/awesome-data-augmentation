@@ -1,5 +1,8 @@
 import cv2
+import imageio
 import argparse
+import imgaug as ia
+from imgaug import augmenters as iaa
 from albumentations import Blur, CLAHE, ChannelDropout, ChannelShuffle, \
                            CoarseDropout, Downscale, Equalize, FancyPCA, \
                            FromFloat, GaussNoise, GaussianBlur, GlassBlur, \
@@ -38,9 +41,30 @@ if __name__ == '__main__':
     height, width, channels = image.shape 
     image_name = image_path.split('/')[-1]
 
+    # Pixel Level transforms:
+
+    ## Blur
+
     if augmentation == 'blur':
         transform = Blur(always_apply=True)
-        transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'gaussian_blur':
+        transform = GaussianBlur(always_apply=True)
+
+    elif augmentation == 'glass_blur':
+        transform = GlassBlur(always_apply=True)
+
+    elif augmentation == 'median_blur':
+        transform = MedianBlur(always_apply=True, blur_limit=(18, 25))
+
+    elif augmentation == 'motion_blur':
+        transform = MotionBlur(always_apply=True)
+
+    elif augmentation == 'average_blur':
+        transform = iaa.AverageBlur(k=(2, 11))
+        transformed_image = transform(image=image)
+
+    ####
     
     elif augmentation == 'clahe':
         transform = CLAHE(always_apply=True, tile_grid_size=(64, 64))
@@ -68,12 +92,6 @@ if __name__ == '__main__':
         
     elif augmentation == 'gauss_noise':
         transform = GaussNoise(always_apply=True, var_limit=(200.0, 250.0))
-
-    elif augmentation == 'gaussian_blur':
-        transform = GaussianBlur(always_apply=True)
-
-    elif augmentation == 'glass_blur':
-        transform = GlassBlur(always_apply=True)
     
     elif augmentation == 'hue_saturation':
         transform = HueSaturationValue(always_apply=True)
@@ -99,12 +117,6 @@ if __name__ == '__main__':
 
     elif augmentation == 'invert_img':
         transform = InvertImg(always_apply=True)
-
-    elif augmentation == 'median_blur':
-        transform = MedianBlur(always_apply=True, blur_limit=(18, 25))
-
-    elif augmentation == 'motion_blur':
-        transform = MotionBlur(always_apply=True)
 
     elif augmentation == 'multiplicative_noise':
         transform = MultiplicativeNoise(always_apply=True, 
@@ -227,7 +239,7 @@ if __name__ == '__main__':
     elif augmentation == 'vertical_flip':
         transform = VerticalFlip(always_apply=True)
 
-    transformed_image = transform(image=image)['image']
+    #transformed_image = transform(image=image)['image']
 
     name, ext = image_name.split('.')
     new_path = name + '_' + augmentation + '.' + ext

@@ -85,7 +85,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
-        <button onclick="show('aug09')">GaussianBlue</button>
+        <button onclick="show('aug09')">Gaussian Blur</button>
         <div id="aug09" style="display: none;">
             Blur the input image using a Gaussian filter with a random kernel size.
             Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.GaussianBlur">Albumentations</a><br>
@@ -101,7 +101,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
-        <button onclick="show('aug10')">GlassBlur</button>
+        <button onclick="show('aug10')">Glass Blur</button>
         <div id="aug10" style="display: none;">
             Apply glass noise to the input image.
             Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.GlassBlur">Albumentations</a><br>
@@ -117,7 +117,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
-        <button onclick="show('aug19')">MedianBlur</button>
+        <button onclick="show('aug19')">Median Blur</button>
         <div id="aug19" style="display: none;">
             Invert the input image by subtracting pixel values from 255.
             Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.MedianBlur">Albumentations</a><br>
@@ -133,7 +133,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
-        <button onclick="show('aug20')">MotionBlur</button>
+        <button onclick="show('aug20')">Motion Blur</button>
         <div id="aug20" style="display: none;">
             Apply motion blur to the input image using a random-sized kernel.
             Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.MotionBlur">Albumentations</a><br>
@@ -143,6 +143,22 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure>
             <figure>
                 <img src="images/kitty_motion_blur.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug57')">Average Blur</button>
+        <div id="aug57" style="display: none;">
+            Blur an image by computing simple means over neighbourhoods.
+            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/blur.html#averageblur">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_average_blur.jpg">
                 <figcaption>Augmentation</figcaption>
             </figure>  
         </div>
