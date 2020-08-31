@@ -58,10 +58,20 @@ if __name__ == '__main__':
         transform = MedianBlur(always_apply=True, blur_limit=(18, 25))
 
     elif augmentation == 'motion_blur':
-        transform = MotionBlur(always_apply=True)
+        transform = iaa.MotionBlur(k=15)
+        transformed_image = transform(image=image)
 
     elif augmentation == 'average_blur':
         transform = iaa.AverageBlur(k=(2, 11))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'bilateral_blur':
+        transform = iaa.BilateralBlur(d=(3, 10), sigma_color=(250), 
+                                                 sigma_space=(250))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'mean_shift_blur':
+        transform = iaa.MeanShiftBlur()
         transformed_image = transform(image=image)
 
     ####

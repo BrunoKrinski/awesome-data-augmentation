@@ -119,7 +119,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
     <li class="item_list">
         <button onclick="show('aug19')">Median Blur</button>
         <div id="aug19" style="display: none;">
-            Invert the input image by subtracting pixel values from 255.
+            Blur the input image using a median filter with a random aperture linear size.
             Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.MedianBlur">Albumentations</a><br>
             <figure>
                 <img src="images/kitty.jpg"> 
@@ -135,8 +135,8 @@ A huge list of many types of data augmentations techniques used for deep learnin
     <li class="item_list">
         <button onclick="show('aug20')">Motion Blur</button>
         <div id="aug20" style="display: none;">
-            Apply motion blur to the input image using a random-sized kernel.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.MotionBlur">Albumentations</a><br>
+            Blur images in a way that fakes camera or object movements.
+            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/blur.html#motionblur">Imgaug</a><br>
             <figure>
                 <img src="images/kitty.jpg"> 
                 <figcaption>Original</figcaption>
@@ -159,6 +159,38 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure>
             <figure>
                 <img src="images/kitty_average_blur.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug58')">Bilateral Blur</button>
+        <div id="aug58" style="display: none;">
+            Bilateral filters blur homogenous and textured areas, while trying to preserve edges.
+            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/blur.html#bilateralblur">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_bilateral_blur.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug59')">Mean Shift Blur</button>
+        <div id="aug59" style="display: none;">
+            Apply a pyramidic mean shift filter to each image.
+            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/blur.html#meanshiftblur">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_mean_shift_blur.jpg">
                 <figcaption>Augmentation</figcaption>
             </figure>  
         </div>
