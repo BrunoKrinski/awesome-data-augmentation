@@ -86,6 +86,38 @@ A huge list of many types of data augmentations techniques used for deep learnin
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
+        <button onclick="show('aug74')">Add Elementwise</button>
+        <div id="aug74" style="display: none;">
+            Add values to the pixels of images with possibly different values for neighbouring pixels.
+            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/arithmetic.html#addelementwise">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_add_elementwise.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug75')">Additive Laplace Noise</button>
+        <div id="aug75" style="display: none;">
+            Add noise sampled from laplace distributions elementwise to images.
+            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/arithmetic.html#additivelaplacenoise">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_additive_laplace_noise.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
         <button onclick="show('aug67')">Additive Gaussian Noise</button>
         <div id="aug67" style="display: none;">
             Add noise sampled from gaussian distributions elementwise to images.
@@ -96,6 +128,22 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure>
             <figure>
                 <img src="images/kitty_additive_gaussian_noise.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug76')">Additive Poisson Noise</button>
+        <div id="aug76" style="display: none;">
+            Add noise sampled from poisson distributions elementwise to images.
+            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/arithmetic.html#additivepoissonnoise">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_additive_poisson_noise.jpg">
                 <figcaption>Augmentation</figcaption>
             </figure>  
         </div>
@@ -134,7 +182,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
-        <button onclick="show('aug18')">InvertImg</button>
+        <button onclick="show('aug18')">Invert Image</button>
         <div id="aug18" style="display: none;">
             Invert the input image by subtracting pixel values from 255.
             Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.InvertImg">Albumentations</a><br>
@@ -150,7 +198,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
-        <button onclick="show('aug17')">ImageCompression</button>
+        <button onclick="show('aug17')">Image Compression</button>
         <div id="aug17" style="display: none;">
             Decrease Jpeg, WebP compression of an image.
             Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ImageCompression">Albumentations</a><br>
@@ -176,6 +224,22 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure>
             <figure>
                 <img src="images/kitty_multiply.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug77')">Multiply Elementwise</button>
+        <div id="aug77" style="display: none;">
+            Multiply values of pixels with possibly different values for neighbouring pixels, making each pixel darker or brighter.
+            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/arithmetic.html#multiplyelementwise">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_multiply_elementwise.jpg">
                 <figcaption>Augmentation</figcaption>
             </figure>  
         </div>
@@ -229,8 +293,69 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug72')">Salt and Papper</button>
+        <div id="aug72" style="display: none;">
+            Replace pixels in images with salt/pepper noise (white/black-ish colors).
+            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/arithmetic.html#saltandpepper">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_salt_and_papper.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>
+        </div>
+    </li>
     <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug73')">Coarse Salt and Papper</button>
+        <div id="aug73" style="display: none;">
+            Replace rectangular areas in images with white/black-ish pixel noise.
+            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/arithmetic.html#coarsesaltandpepper">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_coarse_salt_and_papper.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>
+        </div>
+    </li>
     <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug78')">Replace Elementwise</button>
+        <div id="aug78" style="display: none;">
+            Replace pixels in an image with new values.
+            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/arithmetic.html#replaceelementwise">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_replace_elementwise.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug79')">Impulse Noise</button>
+        <div id="aug79" style="display: none;">
+            Add impulse noise to images.
+            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/arithmetic.html#impulsenoise">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_impulse_noise.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
     <!----------------------------------------------------------------------------------------------------------------->
 </ul>
 

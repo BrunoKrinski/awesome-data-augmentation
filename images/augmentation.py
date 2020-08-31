@@ -47,6 +47,18 @@ if __name__ == '__main__':
     if augmentation == 'add':
         transform = iaa.Add((-75, 75))
         transformed_image = transform(image=image)
+    
+    elif augmentation == 'additive_laplace_noise':
+        transform = iaa.AdditiveLaplaceNoise(scale=(0, 0.2*255))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'additive_poisson_noise':
+        transform = iaa.AdditivePoissonNoise(lam=(0, 40))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'add_elementwise':
+        transform = iaa.AddElementwise((-75, 75))
+        transformed_image = transform(image=image)
 
     elif augmentation == 'additive_gaussian_noise':
         transform = iaa.AdditiveGaussianNoise(scale=(0, 0.2*255))
@@ -54,6 +66,10 @@ if __name__ == '__main__':
 
     elif augmentation == 'multiply':
         transform = iaa.Multiply((0.1, 2.0))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'multiply_elementwise':
+        transform = iaa.MultiplyElementwise((0.1, 2.0))
         transformed_image = transform(image=image)
 
     elif augmentation == 'coarse_dropout':
@@ -80,9 +96,29 @@ if __name__ == '__main__':
         transform = iaa.Dropout(p=(0, 0.2))
         transformed_image = transform(image=image)
 
+    elif augmentation == 'total_dropout':
+        transform = iaa.TotalDropout(0.5)
+        transformed_image = transform(image=image)
+
     elif augmentation == 'channel_droput':
         transform = ChannelDropout(always_apply=True)
         transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'salt_and_papper':
+        transform = iaa.SaltAndPepper(0.1)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'coarse_salt_and_papper':
+        transform = iaa.CoarseSaltAndPepper(0.05, size_percent=(0.01, 0.1))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'replace_elementwise':
+        transform = iaa.ReplaceElementwise(0.1, [0, 255])
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'impulse_noise':
+        transform = iaa.ImpulseNoise(0.1)
+        transformed_image = transform(image=image)
 
     ## Blur
 
