@@ -120,6 +120,29 @@ if __name__ == '__main__':
         transform = iaa.ImpulseNoise(0.1)
         transformed_image = transform(image=image)
 
+    elif augmentation == 'salt':
+        transform = iaa.Salt(0.1)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'coarse_salt':
+        transform = iaa.CoarseSalt(0.05, size_percent=(0.01, 0.1))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'pepper':
+        transform = iaa.Pepper(0.1)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'coarse_pepper':
+        transform = iaa.CoarsePepper(0.05, size_percent=(0.01, 0.1))
+        transformed_image = transform(image=image)
+
+    ## Artistic
+
+    elif augmentation == 'cartoon':
+        transform = iaa.Cartoon(blur_ksize=3, segmentation_size=1.0,
+                                saturation=2.0, edge_prevalence=1.0)
+        transformed_image = transform(image=image)
+
     ## Blur
 
     elif augmentation == 'blur':

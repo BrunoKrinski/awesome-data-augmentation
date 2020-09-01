@@ -357,6 +357,91 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug80')">Salt</button>
+        <div id="aug80" style="display: none;">
+            Replace pixels in images with salt noise, i.e. white-ish pixels.
+            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/arithmetic.html#salt">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_salt.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug81')">Coarse Salt</button>
+        <div id="aug81" style="display: none;">
+            Replace rectangular areas in images with white-ish pixel noise.
+            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/arithmetic.html#coarsesalt">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_coarse_salt.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug82')">Pepper</button>
+        <div id="aug82" style="display: none;">
+            Replace pixels in images with pepper noise, i.e. black-ish pixels.
+            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/arithmetic.html#pepper">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_pepper.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug83')">Coarse Pepper</button>
+        <div id="aug83" style="display: none;">
+            Replace rectangular areas in images with black-ish pixel noise.
+            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/arithmetic.html#coarsepepper">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_coarse_pepper.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+</ul>
+
+<h3>Artistic</h3>
+<ul class="augmentations">
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug84')">Catoon</button>
+        <div id="aug84" style="display: none;">
+            Convert the style of images to a more cartoonish one.
+            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/artistic.html#cartoon">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_cartoon.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
 </ul>
 
 <h3>Blur</h3>
