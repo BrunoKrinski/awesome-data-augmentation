@@ -154,8 +154,16 @@ if __name__ == '__main__':
         transform = iaa.BlendAlphaSomeColors(iaa.Grayscale(1.0))
         transformed_image = transform(image=image)
 
+    elif augmentation == 'blend_alpha_regular_grid':
+        transform = iaa.BlendAlphaRegularGrid(nb_rows=(4, 6), nb_cols=(1, 4),
+                                              foreground=iaa.Multiply(0.0))
+        transformed_image = transform(image=image)
 
-
+    elif augmentation == 'blend_alpha_mask':
+        transform = iaa.BlendAlphaMask(iaa.InvertMaskGen(0.5, 
+                                      iaa.VerticalLinearGradientMaskGen()),
+                                      iaa.Clouds())
+        transformed_image = transform(image=image)
 
     ## Blur
 
