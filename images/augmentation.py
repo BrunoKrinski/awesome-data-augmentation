@@ -44,6 +44,7 @@ if __name__ == '__main__':
     # Pixel Level transforms:
 
     ## Arithmetic
+
     if augmentation == 'add':
         transform = iaa.Add((-75, 75))
         transformed_image = transform(image=image)
@@ -143,6 +144,19 @@ if __name__ == '__main__':
                                 saturation=2.0, edge_prevalence=1.0)
         transformed_image = transform(image=image)
 
+    ## Blend
+
+    elif augmentation == 'blend_alpha':
+        transform = iaa.BlendAlpha(0.5, iaa.Grayscale(1.0))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'blend_alpha_some_colors':
+        transform = iaa.BlendAlphaSomeColors(iaa.Grayscale(1.0))
+        transformed_image = transform(image=image)
+
+
+
+
     ## Blur
 
     elif augmentation == 'blur':
@@ -215,7 +229,7 @@ if __name__ == '__main__':
     elif augmentation == 'all_channels_clahe':
         transform = iaa.AllChannelsCLAHE()
         transformed_image = transform(image=image)
-    
+
     ####################
             
     elif augmentation == 'channel_shuffle':
