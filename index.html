@@ -444,6 +444,59 @@ A huge list of many types of data augmentations techniques used for deep learnin
     <!----------------------------------------------------------------------------------------------------------------->
 </ul>
 
+<h3>Blend</h3>
+<ul class="augmentations">
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug85')">Blend Alpha</button>
+        <div id="aug85" style="display: none;">
+            Alpha-blend two image sources using an alpha/opacity value.
+            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/blend.html#blendalpha">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_blend_alpha.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug86')">Blend Alpha Simplex Alpha</button>
+        <div id="aug86" style="display: none;">
+            Alpha-blend two image sources using simplex noise alpha masks.
+            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/blend.html#blendalphasimplexnoise">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_blend_alpha_simplex_noise.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug87')">Blend Alpha Some Colors</button>
+        <div id="aug87" style="display: none;">
+            Blend images from two branches using colorwise masks.
+            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/blend.html#blendalphasomecolors">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_blend_alpha_some_colors.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+</ul>
+
 <h3>Blur</h3>
 <ul class="augmentations">
     <!----------------------------------------------------------------------------------------------------------------->
