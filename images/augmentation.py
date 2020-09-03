@@ -194,10 +194,6 @@ if __name__ == '__main__':
         transform = GaussianBlur(always_apply=True)
         transformed_image = transform(image=image)['image']
 
-    elif augmentation == 'glass_blur':
-        transform = GlassBlur(always_apply=True)
-        transformed_image = transform(image=image)['image']
-
     elif augmentation == 'median_blur':
         transform = MedianBlur(always_apply=True, blur_limit=(18, 25))
         transformed_image = transform(image=image)['image']
@@ -358,6 +354,16 @@ if __name__ == '__main__':
         matrix = np.array([[0, -1, 0], [-1, 4, -1], [0, -1, 0]])
         transform = iaa.Convolve(matrix=matrix)
         transformed_image = transform(image=image)
+
+    ## Corruption
+
+    elif augmentation == 'glass_blur':
+        transform = GlassBlur(always_apply=True)
+        transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'gauss_noise':
+        transform = GaussNoise(always_apply=True, var_limit=(200.0, 250.0))
+        transformed_image = transform(image=image)['image']
     
     ## Edges
 
@@ -380,10 +386,6 @@ if __name__ == '__main__':
         transform = FromFloat(always_apply=True, max_value=127)
         transformed_image = transform(image=image)['image']
         
-    elif augmentation == 'gauss_noise':
-        transform = GaussNoise(always_apply=True, var_limit=(200.0, 250.0))
-        transformed_image = transform(image=image)['image']
-
     elif augmentation == 'super_pixels':
         transform = IAASuperpixels(always_apply=True)
         transformed_image = transform(image=image)['image']
