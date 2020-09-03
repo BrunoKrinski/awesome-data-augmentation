@@ -350,7 +350,7 @@ if __name__ == '__main__':
         transformed_image = transform(image=image)
 
     elif augmentation == 'directed_edge_detect':
-        transform = iaa.DirectedEdgeDetect(alpha=(0.0, 1.0), 
+        transform = iaa.DirectedEdgeDetect(alpha=(1.0), 
                                            direction=(0.0, 1.0))
         transformed_image = transform(image=image)
 
