@@ -1,6 +1,7 @@
 import cv2
 import imageio
 import argparse
+import numpy as np
 import imgaug as ia
 from imgaug import augmenters as iaa
 from albumentations import Blur, CLAHE, ChannelDropout, ChannelShuffle, \
@@ -335,6 +336,36 @@ if __name__ == '__main__':
         transform = iaa.AllChannelsCLAHE()
         transformed_image = transform(image=image)
 
+    ## Convolutional
+    elif augmentation == 'sharpen':
+        transform = iaa.Sharpen(alpha=(0.0, 1.0), lightness=(0.75, 2.0))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'emboss':
+        transform = iaa.Emboss(alpha=(0.0, 1.0), strength=(0.5, 1.5))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'edge_detect':
+        transform = iaa.EdgeDetect(alpha=(0.0, 1.0))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'directed_edge_detect':
+        transform = iaa.DirectedEdgeDetect(alpha=(0.0, 1.0), 
+                                           direction=(0.0, 1.0))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'convolve':
+        matrix = np.array([[0, -1, 0], [-1, 4, -1], [0, -1, 0]])
+        transform = iaa.Convolve(matrix=matrix)
+        transformed_image = transform(image=image)
+    
+    ## Edges
+
+    elif augmentation == 'canny':
+        transform = iaa.Canny(alpha=(0.0, 0.9))
+        transformed_image = transform(image=image)
+
+
     ####################
             
     elif augmentation == 'channel_shuffle':
@@ -352,15 +383,7 @@ if __name__ == '__main__':
     elif augmentation == 'gauss_noise':
         transform = GaussNoise(always_apply=True, var_limit=(200.0, 250.0))
         transformed_image = transform(image=image)['image']
-    
-    elif augmentation == 'emboss':
-        transform = IAAEmboss(always_apply=True, strength=(0.5, 0.8), alpha=1.0)
-        transformed_image = transform(image=image)['image']
-    
-    elif augmentation == 'sharpen':
-        transform = IAASharpen(always_apply=True, alpha=1.0)
-        transformed_image = transform(image=image)['image']
-    
+
     elif augmentation == 'super_pixels':
         transform = IAASuperpixels(always_apply=True)
         transformed_image = transform(image=image)['image']
