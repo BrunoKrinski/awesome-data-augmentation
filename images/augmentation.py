@@ -165,6 +165,24 @@ if __name__ == '__main__':
                                       iaa.Clouds())
         transformed_image = transform(image=image)
 
+    elif augmentation == 'blend_alpha_elementwise':
+        transform = iaa.BlendAlphaElementwise(0.5, iaa.Grayscale(1.0))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'blend_alpha_vlg':
+        transform = iaa.BlendAlphaVerticalLinearGradient(
+                                                    iaa.AddToHue((-100, 100)))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'blend_alpha_hlg':
+        transform = iaa.BlendAlphaHorizontalLinearGradient(
+                                                    iaa.AddToHue((-100, 100)))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'blend_alpha_simplex_noise':
+        transform = iaa.BlendAlphaSimplexNoise(iaa.EdgeDetect(1.0))
+        transformed_image = transform(image=image)
+
     ## Blur
 
     elif augmentation == 'blur':
