@@ -50,20 +50,20 @@ if __name__ == '__main__':
         transform = iaa.Add((-75, 75))
         transformed_image = transform(image=image)
     
-    elif augmentation == 'additive_laplace_noise':
-        transform = iaa.AdditiveLaplaceNoise(scale=(0, 0.2*255))
-        transformed_image = transform(image=image)
-
-    elif augmentation == 'additive_poisson_noise':
-        transform = iaa.AdditivePoissonNoise(lam=(0, 40))
-        transformed_image = transform(image=image)
-
     elif augmentation == 'add_elementwise':
         transform = iaa.AddElementwise((-75, 75))
         transformed_image = transform(image=image)
 
     elif augmentation == 'additive_gaussian_noise':
         transform = iaa.AdditiveGaussianNoise(scale=(0, 0.2*255))
+        transformed_image = transform(image=image)
+    
+    elif augmentation == 'additive_laplace_noise':
+        transform = iaa.AdditiveLaplaceNoise(scale=(0, 0.2*255))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'additive_poisson_noise':
+        transform = iaa.AdditivePoissonNoise(lam=(0, 40))
         transformed_image = transform(image=image)
 
     elif augmentation == 'multiply':
@@ -74,53 +74,17 @@ if __name__ == '__main__':
         transform = iaa.MultiplyElementwise((0.1, 2.0))
         transformed_image = transform(image=image)
 
-    elif augmentation == 'coarse_dropout':
-        transform = CoarseDropout(always_apply=True, max_holes=100)
-        transformed_image = transform(image=image)['image']
-
-    elif augmentation == 'solarize':
-        transform = Solarize(always_apply=True)
-        transformed_image = transform(image=image)['image']
-
-    elif augmentation == 'invert_img':
-        transform = InvertImg(always_apply=True)
-        transformed_image = transform(image=image)['image']
-
-    elif augmentation == 'image_compression':
-        transform = ImageCompression(always_apply=True, quality_lower=10)
-        transformed_image = transform(image=image)['image']
-
-    elif augmentation == 'cutout':
-        transform = iaa.Cutout(nb_iterations=5)
-        transformed_image = transform(image=image)
-
     elif augmentation == 'dropout':
         transform = iaa.Dropout(p=(0, 0.2))
         transformed_image = transform(image=image)
 
-    elif augmentation == 'total_dropout':
-        transform = iaa.TotalDropout(0.5)
-        transformed_image = transform(image=image)
+    elif augmentation == 'coarse_dropout':
+        transform = CoarseDropout(always_apply=True, max_holes=100)
+        transformed_image = transform(image=image)['image']
 
     elif augmentation == 'channel_droput':
         transform = ChannelDropout(always_apply=True)
         transformed_image = transform(image=image)['image']
-
-    elif augmentation == 'salt_and_papper':
-        transform = iaa.SaltAndPepper(0.1)
-        transformed_image = transform(image=image)
-
-    elif augmentation == 'coarse_salt_and_papper':
-        transform = iaa.CoarseSaltAndPepper(0.05, size_percent=(0.01, 0.1))
-        transformed_image = transform(image=image)
-
-    elif augmentation == 'replace_elementwise':
-        transform = iaa.ReplaceElementwise(0.1, [0, 255])
-        transformed_image = transform(image=image)
-
-    elif augmentation == 'impulse_noise':
-        transform = iaa.ImpulseNoise(0.1)
-        transformed_image = transform(image=image)
 
     elif augmentation == 'salt':
         transform = iaa.Salt(0.1)
@@ -138,6 +102,34 @@ if __name__ == '__main__':
         transform = iaa.CoarsePepper(0.05, size_percent=(0.01, 0.1))
         transformed_image = transform(image=image)
 
+    elif augmentation == 'salt_and_papper':
+        transform = iaa.SaltAndPepper(0.1)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'coarse_salt_and_papper':
+        transform = iaa.CoarseSaltAndPepper(0.05, size_percent=(0.01, 0.1))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'impulse_noise':
+        transform = iaa.ImpulseNoise(0.1)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'replace_elementwise':
+        transform = iaa.ReplaceElementwise(0.1, [0, 255])
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'cutout':
+        transform = iaa.Cutout(nb_iterations=5)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'solarize':
+        transform = Solarize(always_apply=True)
+        transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'invert_img':
+        transform = InvertImg(always_apply=True)
+        transformed_image = transform(image=image)['image']
+
     ## Artistic
 
     elif augmentation == 'cartoon':
@@ -149,6 +141,10 @@ if __name__ == '__main__':
 
     elif augmentation == 'blend_alpha':
         transform = iaa.BlendAlpha(0.5, iaa.Grayscale(1.0))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'blend_alpha_simplex_noise':
+        transform = iaa.BlendAlphaSimplexNoise(iaa.EdgeDetect(1.0))
         transformed_image = transform(image=image)
 
     elif augmentation == 'blend_alpha_some_colors':
@@ -178,10 +174,6 @@ if __name__ == '__main__':
     elif augmentation == 'blend_alpha_hlg':
         transform = iaa.BlendAlphaHorizontalLinearGradient(
                                                     iaa.AddToHue((-100, 100)))
-        transformed_image = transform(image=image)
-
-    elif augmentation == 'blend_alpha_simplex_noise':
-        transform = iaa.BlendAlphaSimplexNoise(iaa.EdgeDetect(1.0))
         transformed_image = transform(image=image)
 
     ## Blur
@@ -214,6 +206,10 @@ if __name__ == '__main__':
     elif augmentation == 'mean_shift_blur':
         transform = iaa.MeanShiftBlur()
         transformed_image = transform(image=image)
+
+    elif augmentation == 'glass_blur':
+        transform = GlassBlur(always_apply=True)
+        transformed_image = transform(image=image)['image']
 
     ## Color
 
@@ -332,6 +328,15 @@ if __name__ == '__main__':
         transform = iaa.AllChannelsCLAHE()
         transformed_image = transform(image=image)
 
+    ## Compression
+    elif augmentation == 'image_compression':
+        transform = ImageCompression(always_apply=True, quality_lower=10)
+        transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'downscale':
+        transform = Downscale(always_apply=True)
+        transformed_image = transform(image=image)['image']
+
     ## Convolutional
     elif augmentation == 'sharpen':
         transform = iaa.Sharpen(alpha=(0.0, 1.0), lightness=(0.75, 2.0))
@@ -357,10 +362,6 @@ if __name__ == '__main__':
 
     ## Corruption
 
-    elif augmentation == 'glass_blur':
-        transform = GlassBlur(always_apply=True)
-        transformed_image = transform(image=image)['image']
-
     elif augmentation == 'gauss_noise':
         transform = GaussNoise(always_apply=True, var_limit=(200.0, 250.0))
         transformed_image = transform(image=image)['image']
@@ -376,10 +377,6 @@ if __name__ == '__main__':
             
     elif augmentation == 'channel_shuffle':
         transform = ChannelShuffle(always_apply=True)
-        transformed_image = transform(image=image)['image']
-                
-    elif augmentation == 'downscale':
-        transform = Downscale(always_apply=True)
         transformed_image = transform(image=image)['image']
                         
     elif augmentation == 'from_float':
