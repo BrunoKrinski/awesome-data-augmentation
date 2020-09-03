@@ -212,26 +212,49 @@ if __name__ == '__main__':
         transformed_image = transform(image=image)['image']
 
     ## Color
-
-    elif augmentation == 'multiply_and_addtobrightness':
-        transform = iaa.MultiplyAndAddToBrightness(mul=(0.5, 1.5), 
-                                                   add=(-30, 30))
-        transformed_image = transform(image=image)
-
-    elif augmentation == 'multiply_hue_and_saturation':
-        transform = iaa.MultiplyHueAndSaturation((0.5, 1.5), per_channel=True)
-        transformed_image = transform(image=image)
-
     elif augmentation == 'multiply_hue':
         transform = iaa.MultiplyHue((0.5, 1.5))
         transformed_image = transform(image=image)
 
+    elif augmentation == 'addto_hue':
+        transform = iaa.AddToHue((-100, 100))
+        transformed_image = transform(image=image)
+    
     elif augmentation == 'multiply_saturation':
         transform = iaa.MultiplySaturation((0.5, 1.5))
+        transformed_image = transform(image=image)
+    
+    elif augmentation == 'addto_saturation':
+        transform = iaa.AddToSaturation((-100, 100))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'remove_saturation':
+        transform = iaa.RemoveSaturation()
+        transformed_image = transform(image=image)
+    
+    elif augmentation == 'multiply_hue_and_saturation':
+        transform = iaa.MultiplyHueAndSaturation((0.5, 1.5), per_channel=True)
         transformed_image = transform(image=image)
 
     elif augmentation == 'addto_hue_and_saturation':
         transform = iaa.AddToHueAndSaturation((-50, 50), per_channel=True)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'hue_saturation':
+        transform = HueSaturationValue(always_apply=True)
+        transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'multiply_brightness':
+        transform = iaa.MultiplyBrightness((0.1, 1.9))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'addto_brightness':
+        transform = iaa.AddToBrightness((-50, 50))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'multiply_and_addtobrightness':
+        transform = iaa.MultiplyAndAddToBrightness(mul=(0.5, 1.5), 
+                                                   add=(-30, 30))
         transformed_image = transform(image=image)
 
     elif augmentation == 'to_gray':
@@ -250,17 +273,9 @@ if __name__ == '__main__':
         transform = FancyPCA(always_apply=True, alpha=1.0)
         transformed_image = transform(image=image)['image']
 
-    elif augmentation == 'hue_saturation':
-        transform = HueSaturationValue(always_apply=True)
-        transformed_image = transform(image=image)['image']
-
     elif augmentation == 'rgb_shift':
         transform = RGBShift(always_apply=True)
         transformed_image = transform(image=image)['image']
-
-    elif augmentation == 'remove_saturation':
-        transform = iaa.RemoveSaturation()
-        transformed_image = transform(image=image)
 
     elif augmentation == 'change_color_temperature':
         transform = iaa.ChangeColorTemperature((1100, 10000))
@@ -272,22 +287,6 @@ if __name__ == '__main__':
 
     elif augmentation == 'uniform_color_quantization':
         transform = iaa.UniformColorQuantization()
-        transformed_image = transform(image=image)
-
-    elif augmentation == 'multiply_brightness':
-        transform = iaa.MultiplyBrightness((0.1, 1.9))
-        transformed_image = transform(image=image)
-
-    elif augmentation == 'addto_brightness':
-        transform = iaa.AddToBrightness((-50, 50))
-        transformed_image = transform(image=image)
-
-    elif augmentation == 'addto_hue':
-        transform = iaa.AddToHue((-100, 100))
-        transformed_image = transform(image=image)
-
-    elif augmentation == 'addto_saturation':
-        transform = iaa.AddToSaturation((-100, 100))
         transformed_image = transform(image=image)
 
     ## Contrast
