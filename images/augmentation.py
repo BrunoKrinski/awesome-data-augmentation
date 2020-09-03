@@ -273,6 +273,30 @@ if __name__ == '__main__':
         transform = iaa.ChangeColorTemperature((1100, 10000))
         transformed_image = transform(image=image)
 
+    elif augmentation == 'kmeans_color_quantization':
+        transform = iaa.KMeansColorQuantization()
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'uniform_color_quantization':
+        transform = iaa.UniformColorQuantization()
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'multiply_brightness':
+        transform = iaa.MultiplyBrightness((0.1, 1.9))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'addto_brightness':
+        transform = iaa.AddToBrightness((-50, 50))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'addto_hue':
+        transform = iaa.AddToHue((-100, 100))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'addto_saturation':
+        transform = iaa.AddToSaturation((-100, 100))
+        transformed_image = transform(image=image)
+
     ## Contrast
     
     elif augmentation == 'clahe':
