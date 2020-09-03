@@ -150,6 +150,22 @@ A huge list of many types of data augmentations techniques used for deep learnin
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
+        <button onclick="show('aug70')">Cutout</button>
+        <div id="aug70" style="display: none;">
+            Fill one or more rectangular areas in an image using a fill mode. See paper “Improved Regularization of Convolutional Neural Networks with Cutout” by DeVries and Taylor.
+            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/arithmetic.html#cutout">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_cutout.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
         <button onclick="show('aug76')">Additive Poisson Noise</button>
         <div id="aug76" style="display: none;">
             Add noise sampled from poisson distributions elementwise to images.
@@ -240,22 +256,6 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure>
             <figure>
                 <img src="images/kitty_multiply_elementwise.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>  
-        </div>
-    </li>
-    <!----------------------------------------------------------------------------------------------------------------->
-    <li class="item_list">
-        <button onclick="show('aug70')">Cutout</button>
-        <div id="aug70" style="display: none;">
-            Fill one or more rectangular areas in an image using a fill mode. See paper “Improved Regularization of Convolutional Neural Networks with Cutout” by DeVries and Taylor.
-            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/arithmetic.html#cutout">Imgaug</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_cutout.jpg">
                 <figcaption>Augmentation</figcaption>
             </figure>  
         </div>
@@ -480,6 +480,22 @@ A huge list of many types of data augmentations techniques used for deep learnin
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
+        <button onclick="show('aug93')">Blend Alpha Simplex Noise</button>
+        <div id="aug93" style="display: none;">
+            Alpha-blend two image sources using simplex noise alpha masks.
+            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/blend.html#blendalphasimplexnoise">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_blend_alpha_simplex_noise.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
         <button onclick="show('aug87')">Blend Alpha Some Colors</button>
         <div id="aug87" style="display: none;">
             Blend images from two branches using colorwise masks.
@@ -570,22 +586,6 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure>
             <figure>
                 <img src="images/kitty_blend_alpha_hlg.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>  
-        </div>
-    </li>
-    <!----------------------------------------------------------------------------------------------------------------->
-    <li class="item_list">
-        <button onclick="show('aug93')">Blend Alpha Simplex Noise</button>
-        <div id="aug93" style="display: none;">
-            Alpha-blend two image sources using simplex noise alpha masks.
-            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/blend.html#blendalphasimplexnoise">Imgaug</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_blend_alpha_simplex_noise.jpg">
                 <figcaption>Augmentation</figcaption>
             </figure>  
         </div>
