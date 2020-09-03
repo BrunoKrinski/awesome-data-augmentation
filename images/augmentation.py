@@ -218,6 +218,61 @@ if __name__ == '__main__':
         transform = iaa.MeanShiftBlur()
         transformed_image = transform(image=image)
 
+    ## Color
+
+    elif augmentation == 'multiply_and_addtobrightness':
+        transform = iaa.MultiplyAndAddToBrightness(mul=(0.5, 1.5), 
+                                                   add=(-30, 30))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'multiply_hue_and_saturation':
+        transform = iaa.MultiplyHueAndSaturation((0.5, 1.5), per_channel=True)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'multiply_hue':
+        transform = iaa.MultiplyHue((0.5, 1.5))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'multiply_saturation':
+        transform = iaa.MultiplySaturation((0.5, 1.5))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'addto_hue_and_saturation':
+        transform = iaa.AddToHueAndSaturation((-50, 50), per_channel=True)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'to_gray':
+        transform = ToGray(always_apply=True)
+        transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'posterize':
+        transform = Posterize(always_apply=True, num_bits=2)
+        transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'to_sepia':
+        transform = ToSepia(always_apply=True)
+        transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'fancy_pca':
+        transform = FancyPCA(always_apply=True, alpha=1.0)
+        transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'hue_saturation':
+        transform = HueSaturationValue(always_apply=True)
+        transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'rgb_shift':
+        transform = RGBShift(always_apply=True)
+        transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'remove_saturation':
+        transform = iaa.RemoveSaturation()
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'change_color_temperature':
+        transform = iaa.ChangeColorTemperature((1100, 10000))
+        transformed_image = transform(image=image)
+
     ## Contrast
     
     elif augmentation == 'clahe':
@@ -265,21 +320,13 @@ if __name__ == '__main__':
     elif augmentation == 'downscale':
         transform = Downscale(always_apply=True)
         transformed_image = transform(image=image)['image']
-                
-    elif augmentation == 'fancy_pca':
-        transform = FancyPCA(always_apply=True, alpha=1.0)
-        transformed_image = transform(image=image)['image']
-        
+                        
     elif augmentation == 'from_float':
         transform = FromFloat(always_apply=True, max_value=127)
         transformed_image = transform(image=image)['image']
         
     elif augmentation == 'gauss_noise':
         transform = GaussNoise(always_apply=True, var_limit=(200.0, 250.0))
-        transformed_image = transform(image=image)['image']
-    
-    elif augmentation == 'hue_saturation':
-        transform = HueSaturationValue(always_apply=True)
         transformed_image = transform(image=image)['image']
     
     elif augmentation == 'emboss':
@@ -306,14 +353,6 @@ if __name__ == '__main__':
 
     elif augmentation == 'normalize':
         transform = Normalize(always_apply=True)
-        transformed_image = transform(image=image)['image']
-    
-    elif augmentation == 'posterize':
-        transform = Posterize(always_apply=True, num_bits=2)
-        transformed_image = transform(image=image)['image']
-    
-    elif augmentation == 'rgb_shift':
-        transform = RGBShift(always_apply=True)
         transformed_image = transform(image=image)['image']
     
     elif augmentation == 'brightness_contrast':
@@ -347,14 +386,6 @@ if __name__ == '__main__':
 
     elif augmentation == 'to_float':
         transform = ToFloat(always_apply=True)
-        transformed_image = transform(image=image)['image']
-    
-    elif augmentation == 'to_gray':
-        transform = ToGray(always_apply=True)
-        transformed_image = transform(image=image)['image']
-    
-    elif augmentation == 'to_sepia':
-        transform = ToSepia(always_apply=True)
         transformed_image = transform(image=image)['image']
 
     elif augmentation == 'center_crop':

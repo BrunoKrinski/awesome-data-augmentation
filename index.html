@@ -709,6 +709,222 @@ A huge list of many types of data augmentations techniques used for deep learnin
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
 </ul>
+
+<h3>Color</h3>
+<ul class="augmentations">
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug86')">Multiply and Add to Brightness</button>
+        <div id="aug86" style="display: none;">
+            Multiply and add to the brightness channels of input images.
+            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/color.html#multiplyandaddtobrightness">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_multiply_and_addtobrightness.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug94')">Multiply Hue and Saturation</button>
+        <div id="aug94" style="display: none;">
+            Multipy hue and saturation by random values.
+            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/color.html#multiplyhueandsaturation">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_multiply_hue_and_saturation.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug95')">Multiply Hue</button>
+        <div id="aug95" style="display: none;">
+            Multiply the hue of images by random values.
+            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/color.html#multiplyhue">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_multiply_hue.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug96')">Multiply Saturation</button>
+        <div id="aug96" style="display: none;">
+            Multiply the saturation of images by random values.
+            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/color.html#multiplysaturation">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_multiply_saturation.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug97')">Add to Hue and Saturation</button>
+        <div id="aug97" style="display: none;">
+            Increases or decreases hue and saturation by random values.
+            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/color.html#addtohueandsaturation">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_addto_hue_and_saturation.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug32')">ToGray</button>
+        <div id="aug32" style="display: none;">
+            Convert the input RGB image to grayscale. If the mean pixel value for the resulting image is greater than 127, invert the resulting grayscale image.
+            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ToGray">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure> 
+            <figure>
+                <img src="images/kitty_to_gray.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure> 
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug22')">Posterize</button>
+        <div id="aug22" style="display: none;">
+            Reduce the number of bits for each color channel.
+            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Posterize">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_posterize.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure> 
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug33')">ToSepia</button>
+        <div id="aug33" style="display: none;">
+            Applies sepia filter to the input RGB image.
+            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ToSepia">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_to_sepia.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug07')">Fancy PCA</button>
+        <div id="aug07" style="display: none;">
+            Augment RGB image using FancyPCA from Krizhevsky's paper "ImageNet Classification with Deep Convolutional Neural Networks".
+            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.FancyPCA">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_fancy_pca.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug11')">HueSaturationValue</button>
+        <div id="aug11" style="display: none;">
+            Randomly change hue, saturation and value of the input image.
+            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.HueSaturationValue">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_hue_saturation.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug23')">RGBShift</button>
+        <div id="aug23" style="display: none;">
+            Randomly shift values for each channel of the input RGB image.
+            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RGBShift">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_rgb_shift.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug98')">Remove Saturation</button>
+        <div id="aug98" style="display: none;">
+            Decrease the saturation of images by varying degrees.
+            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/color.html#removesaturation">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_remove_saturation.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug99')">Change Color Temperature</button>
+        <div id="aug99" style="display: none;">
+            Change the temperature to a provided Kelvin value.
+            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/color.html#changecolortemperature">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_change_color_temperature.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------------------->
+</ul>
+
 <h3>Contrast</h3>
 <ul class="augmentations">
     <!----------------------------------------------------------------------------------------------------------------->
@@ -891,21 +1107,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure>
         </div>
     </li>
-    <li class="item_list">
-        <button onclick="show('aug07')">Fancy PCA</button>
-        <div id="aug07" style="display: none;">
-            Augment RGB image using FancyPCA from Krizhevsky's paper "ImageNet Classification with Deep Convolutional Neural Networks".
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.FancyPCA">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_fancy_pca.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>
-        </div>
-    </li>
+
     <li class="item_list">
         <button onclick="show('aug08')">GaussNoise</button>
         <div id="aug08" style="display: none;">
@@ -917,21 +1119,6 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure>
             <figure>
                 <img src="images/kitty_gauss_noise.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>
-        </div>
-    </li>
-    <li class="item_list">
-        <button onclick="show('aug11')">HueSaturationValue</button>
-        <div id="aug11" style="display: none;">
-            Randomly change hue, saturation and value of the input image.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.HueSaturationValue">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_hue_saturation.jpg">
                 <figcaption>Augmentation</figcaption>
             </figure>
         </div>
@@ -1007,36 +1194,6 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure>
             <figure>
                 <img src="images/kitty_multiplicative_noise.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>  
-        </div>
-    </li>
-    <li class="item_list">
-        <button onclick="show('aug22')">Posterize</button>
-        <div id="aug22" style="display: none;">
-            Reduce the number of bits for each color channel.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Posterize">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_posterize.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure> 
-        </div>
-    </li>
-    <li class="item_list">
-        <button onclick="show('aug23')">RGBShift</button>
-        <div id="aug23" style="display: none;">
-            Randomly shift values for each channel of the input RGB image.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RGBShift">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_rgb_shift.jpg">
                 <figcaption>Augmentation</figcaption>
             </figure>  
         </div>
@@ -1141,36 +1298,6 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure>
             <figure>
                 <img src="images/kitty_random_sun_flare.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>  
-        </div>
-    </li>
-    <li class="item_list">
-        <button onclick="show('aug32')">ToGray</button>
-        <div id="aug32" style="display: none;">
-            Convert the input RGB image to grayscale. If the mean pixel value for the resulting image is greater than 127, invert the resulting grayscale image.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ToGray">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure> 
-            <figure>
-                <img src="images/kitty_to_gray.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure> 
-        </div>
-    </li>
-    <li class="item_list">
-        <button onclick="show('aug33')">ToSepia</button>
-        <div id="aug33" style="display: none;">
-            Applies sepia filter to the input RGB image.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ToSepia">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_to_sepia.jpg">
                 <figcaption>Augmentation</figcaption>
             </figure>  
         </div>
