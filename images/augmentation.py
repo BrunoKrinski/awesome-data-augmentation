@@ -364,6 +364,45 @@ if __name__ == '__main__':
     elif augmentation == 'gauss_noise':
         transform = GaussNoise(always_apply=True, var_limit=(200.0, 250.0))
         transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'multiplicative_noise':
+        transform = MultiplicativeNoise(always_apply=True, 
+                                        multiplier=(0.5, 1.5))
+        transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'iso_noise':
+        transform = ISONoise(always_apply=True, color_shift=(0.08, 0.1), 
+                                                intensity=(0.5, 0.8))
+        transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'brightness_contrast':
+        transform = RandomBrightnessContrast(always_apply=True, 
+                                             brightness_limit=0.5)
+        transformed_image = transform(image=image)['image']
+
+     elif augmentation == 'random_fog':
+        transform = RandomFog(always_apply=True)
+        transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'random_gamma':
+        transform = RandomGamma(always_apply=True, gamma_limit=(120, 200))
+        transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'random_rain':
+        transform = RandomRain(always_apply=True)
+        transformed_image = transform(image=image)['image']
+    
+    elif augmentation == 'random_shadow':
+        transform = RandomShadow(always_apply=True)
+        transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'random_snow':
+        transform = RandomSnow(always_apply=True)
+        transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'random_sun_flare':
+        transform = RandomSunFlare(always_apply=True)
+        transformed_image = transform(image=image)['image']
     
     ## Edges
 
@@ -386,47 +425,8 @@ if __name__ == '__main__':
         transform = IAASuperpixels(always_apply=True)
         transformed_image = transform(image=image)['image']
 
-    elif augmentation == 'iso_noise':
-        transform = ISONoise(always_apply=True, color_shift=(0.08, 0.1), 
-                                                intensity=(0.5, 0.8))
-        transformed_image = transform(image=image)['image']
-
-    elif augmentation == 'multiplicative_noise':
-        transform = MultiplicativeNoise(always_apply=True, 
-                                        multiplier=(0.5, 1.5))
-        transformed_image = transform(image=image)['image']
-
     elif augmentation == 'normalize':
         transform = Normalize(always_apply=True)
-        transformed_image = transform(image=image)['image']
-    
-    elif augmentation == 'brightness_contrast':
-        transform = RandomBrightnessContrast(always_apply=True, 
-                                             brightness_limit=0.5)
-        transformed_image = transform(image=image)['image']
-
-    elif augmentation == 'random_fog':
-        transform = RandomFog(always_apply=True)
-        transformed_image = transform(image=image)['image']
-
-    elif augmentation == 'random_gamma':
-        transform = RandomGamma(always_apply=True, gamma_limit=(120, 200))
-        transformed_image = transform(image=image)['image']
-
-    elif augmentation == 'random_rain':
-        transform = RandomRain(always_apply=True)
-        transformed_image = transform(image=image)['image']
-    
-    elif augmentation == 'random_shadow':
-        transform = RandomShadow(always_apply=True)
-        transformed_image = transform(image=image)['image']
-
-    elif augmentation == 'random_snow':
-        transform = RandomSnow(always_apply=True)
-        transformed_image = transform(image=image)['image']
-
-    elif augmentation == 'random_sun_flare':
-        transform = RandomSunFlare(always_apply=True)
         transformed_image = transform(image=image)['image']
 
     elif augmentation == 'to_float':
