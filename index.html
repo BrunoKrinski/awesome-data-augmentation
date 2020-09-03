@@ -1300,12 +1300,14 @@ A huge list of many types of data augmentations techniques used for deep learnin
 
 <h3>Compression</h3>
 <ul class="augmentations">
+    <!-- Image Compression -- 1 -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
-        <button onclick="show('aug17')">Image Compression</button>
-        <div id="aug17" style="display: none;">
+        <button onclick="show('aug_image_compression')">Image Compression</button>
+        <div id="aug_image_compression" style="display: none;">
             Decrease Jpeg, WebP compression of an image.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ImageCompression">Albumentations</a><br>
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ImageCompression">Albumentations</a><br>
             <figure>
                 <img src="images/kitty.jpg"> 
                 <figcaption>Original</figcaption>
@@ -1316,12 +1318,14 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure> 
         </div>
     </li>
+    <!-- Downscale -- 2 -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
-        <button onclick="show('aug05')">Downscale</button>
-        <div id="aug05" style="display: none;">
+        <button onclick="show('aug_downscale')">Downscale</button>
+        <div id="aug_downscale" style="display: none;">
             Decreases image quality by downscaling and upscaling back.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Downscale">Albumentations</a><br>
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Downscale">Albumentations</a><br>
             <figure>
                 <img src="images/kitty.jpg"> 
                 <figcaption>Original</figcaption>
@@ -1335,14 +1339,18 @@ A huge list of many types of data augmentations techniques used for deep learnin
     <!----------------------------------------------------------------------------------------------------------------->
 </ul>
 
+<!--------------------------------------------------------------------------------------------------------------------->
+
 <h3>Convolutional</h3>
 <ul class="augmentations">
+    <!-- Sharpen -- 1 -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
-        <button onclick="show('aug14')">Sharpen</button>
-        <div id="aug14" style="display: none;">
+        <button onclick="show('aug_sharpen')">Sharpen</button>
+        <div id="aug_sharpen" style="display: none;">
             Augmenter that sharpens images and overlays the result with the original image.
-            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/convolutional.html#sharpen">Imgaug</a><br>
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/convolutional.html#sharpen">Imgaug</a><br>
             <figure>
                 <img src="images/kitty.jpg"> 
                 <figcaption>Original</figcaption>
@@ -1353,12 +1361,14 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure>
         </div>
     </li>
+    <!-- Emboss -- 2 -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
-        <button onclick="show('aug13')">Emboss</button>
-        <div id="aug13" style="display: none;">
+        <button onclick="show('aug_emboss')">Emboss</button>
+        <div id="aug_emboss" style="display: none;">
             Augmenter that embosses images and overlays the result with the original image.
-            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/convolutional.html#emboss">Albumentations</a><br>
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/convolutional.html#emboss">Albumentations</a><br>
             <figure>
                 <img src="images/kitty.jpg"> 
                 <figcaption>Original</figcaption>
@@ -1369,12 +1379,15 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure>
         </div>
     </li>
+    <!-- Edge Detect -- 3 -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
-        <button onclick="show('aug106')">Edge Detect</button>
-        <div id="aug106" style="display: none;">
-            Augmenter that detects all edges in images, marks them in a black and white image and then overlays the result with the original image.
-            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/convolutional.html#edgedetect">Imgaug</a><br>
+        <button onclick="show('aug_edge_detect')">Edge Detect</button>
+        <div id="aug_edge_detect" style="display: none;">
+            Augmenter that detects all edges in images, marks them in a black and white image and then overlays the 
+            result with the original image.
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/convolutional.html#edgedetect">Imgaug</a><br>
             <figure>
                 <img src="images/kitty.jpg"> 
                 <figcaption>Original</figcaption>
@@ -1385,12 +1398,15 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure>
         </div>
     </li>
+    <!-- Directed Edge Detect -- 4 -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
-        <button onclick="show('aug107')">Directed Edge Detect</button>
-        <div id="aug107" style="display: none;">
-            Augmenter that detects edges that have certain directions and marks them in a black and white image and then overlays the result with the original image.
-            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/convolutional.html#directededgedetect">Imgaug</a><br>
+        <button onclick="show('aug_directed_edge_detect')">Directed Edge Detect</button>
+        <div id="aug_directed_edge_detect" style="display: none;">
+            Augmenter that detects edges that have certain directions and marks them in a black and white image and then 
+            overlays the result with the original image.
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/convolutional.html#directededgedetect">Imgaug</a><br>
             <figure>
                 <img src="images/kitty.jpg"> 
                 <figcaption>Original</figcaption>
@@ -1401,12 +1417,14 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure>
         </div>
     </li>
+    <!-- Convolve -- 5 -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
-        <button onclick="show('aug108')">Convolve</button>
-        <div id="aug108" style="display: none;">
+        <button onclick="show('aug_convolve')">Convolve</button>
+        <div id="aug_convolve" style="display: none;">
             Apply a Convolution to input images.
-            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/convolutional.html#convolve">Imgaug</a><br>
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/convolutional.html#convolve">Imgaug</a><br>
             <figure>
                 <img src="images/kitty.jpg"> 
                 <figcaption>Original</figcaption>
@@ -1420,14 +1438,18 @@ A huge list of many types of data augmentations techniques used for deep learnin
     <!----------------------------------------------------------------------------------------------------------------->
 </ul>
 
+<!--------------------------------------------------------------------------------------------------------------------->
+
 <h3>Corruption</h3>
 <ul class="augmentations">
+    <!-- Gaussian Noise -- 1 -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
-        <button onclick="show('aug08')">Gaussian Noise</button>
-        <div id="aug08" style="display: none;">
+        <button onclick="show('aug_gaussian_noise')">Gaussian Noise</button>
+        <div id="aug_gaussian_noise" style="display: none;">
             Apply gaussian noise to the input image.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.GaussNoise">Albumentations</a><br>
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.GaussNoise">Albumentations</a><br>
             <figure>
                 <img src="images/kitty.jpg"> 
                 <figcaption>Original</figcaption>
@@ -1438,24 +1460,184 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure>
         </div>
     </li>
+    <!-- Multiplicative Noise -- 2 -->
     <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_multiplicative_noise')">Multiplicative Noise</button>
+        <div id="aug_multiplicative_noise" style="display: none;">
+            Multiply image to random number or array of numbers.
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.MultiplicativeNoise">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_multiplicative_noise.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!-- ISO Noise -- 3 -->
     <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_iso_noise')">ISO Noise</button>
+        <div id="aug_iso_noise" style="display: none;">
+            Apply camera sensor noise.
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ISONoise">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_iso_noise.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>
+        </div>
+    </li>
+    <!-- Random Brightness Contrast -- 4 -->
     <!----------------------------------------------------------------------------------------------------------------->
-    <!----------------------------------------------------------------------------------------------------------------->
-    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_random_brightness_contrast')">Random Brightness Contrast</button>
+        <div id="aug_random_brightness_contrast" style="display: none;">
+            Randomly change brightness and contrast of the input image.
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomBrightnessContrast">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_brightness_contrast.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!-- Random Fog -- 5 -->
+    <!----------------------------------------------------------------------------------------------------------------->  
+    <li class="item_list">
+        <button onclick="show('aug_random_fog')">RandomFog</button>
+        <div id="aug_random_fog" style="display: none;">
+            Simulates fog for the image.
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomFog">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_random_fog.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!-- Random Gamma -- 6 -->
+    <!----------------------------------------------------------------------------------------------------------------->  
+    <li class="item_list">
+        <button onclick="show('aug_random_gamma')">Random Gamma</button>
+        <div id="aug_random_gamma" style="display: none;">
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomGamma">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_random_gamma.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!-- Random Rain -- 7 -->
+    <!----------------------------------------------------------------------------------------------------------------->  
+    <li class="item_list">
+        <button onclick="show('aug_random_rain')">RandomRain</button>
+        <div id="aug_random_rain" style="display: none;">
+            Adds rain effects.
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomRain">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_random_rain.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!-- Random Shadow -- 8 -->
+    <!----------------------------------------------------------------------------------------------------------------->  
+    <li class="item_list">
+        <button onclick="show('aug_random_shadow')">Random Shadow</button>
+        <div id="aug_random_shadow" style="display: none;">
+            Simulates shadows for the image.
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomShadow">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_random_shadow.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!-- Random Snow -- 9 -->
+    <!----------------------------------------------------------------------------------------------------------------->  
+    <li class="item_list">
+        <button onclick="show('aug_random_snow')">Random Snow</button>
+        <div id="aug_random_snow" style="display: none;">
+            Bleach out some pixel values simulating snow.
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomSnow">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_random_snow.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!-- Random Sun Flare -- 10 -->
+    <!----------------------------------------------------------------------------------------------------------------->  
+    <li class="item_list">
+        <button onclick="show('aug_random_sun_flare')">RandomSunFlare</button>
+        <div id="aug_random_sun_flare" style="display: none;">
+            Simulates Sun Flare for the image.
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomSunFlare">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_random_sun_flare.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
     <!----------------------------------------------------------------------------------------------------------------->
     <!----------------------------------------------------------------------------------------------------------------->
     <!----------------------------------------------------------------------------------------------------------------->
 </ul>
 
+<!--------------------------------------------------------------------------------------------------------------------->
+
 <h3>Edges</h3>
 <ul class="augmentations">
+    <!-- Canny -- 1 -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
-        <button onclick="show('aug109')">Canny</button>
-        <div id="aug109" style="display: none;">
+        <button onclick="show('aug_canny')">Canny</button>
+        <div id="aug_canny" style="display: none;">
             Apply a canny edge detector to input images.
-            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/edges.html#canny">Imgaug</a><br>
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/edges.html#canny">Imgaug</a><br>
             <figure>
                 <img src="images/kitty.jpg"> 
                 <figcaption>Original</figcaption>
@@ -1504,141 +1686,8 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure>
         </div>
     </li>
-    <li class="item_list">
-        <button onclick="show('aug16')">ISONoise</button>
-        <div id="aug16" style="display: none;">
-            Apply camera sensor noise.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ISONoise">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_iso_noise.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>
-        </div>
-    </li>
-    <li class="item_list">
-        <button onclick="show('aug21')">MultiplicativeNoise</button>
-        <div id="aug21" style="display: none;">
-            Multiply image to random number or array of numbers.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.MultiplicativeNoise">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_multiplicative_noise.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>  
-        </div>
-    </li>
-    <li class="item_list">
-        <button onclick="show('aug25')">RandomFog</button>
-        <div id="aug25" style="display: none;">
-            Simulates fog for the image.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomFog">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_random_fog.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>  
-        </div>
-    </li>
-    <li class="item_list">
-        <button onclick="show('aug24')">RandomBrightnessContrast</button>
-        <div id="aug24" style="display: none;">
-            Randomly change brightness and contrast of the input image.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomBrightnessContrast">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_brightness_contrast.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>  
-        </div>
-    </li>
-    <li class="item_list">
-        <button onclick="show('aug26')">RandomGamma</button>
-        <div id="aug26" style="display: none;">
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomGamma">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_random_gamma.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>  
-        </div>
-    </li>
-    <li class="item_list">
-        <button onclick="show('aug27')">RandomRain</button>
-        <div id="aug27" style="display: none;">
-            Adds rain effects.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomRain">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_random_rain.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>  
-        </div>
-    </li>
-    <li class="item_list">
-        <button onclick="show('aug28')">RandomShadow</button>
-        <div id="aug28" style="display: none;">
-            Simulates shadows for the image.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomShadow">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_random_shadow.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>  
-        </div>
-    </li>
-    <li class="item_list">
-        <button onclick="show('aug29')">RandomSnow</button>
-        <div id="aug29" style="display: none;">
-            Bleach out some pixel values simulating snow.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomSnow">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_random_snow.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>  
-        </div>
-    </li>
-    <li class="item_list">
-        <button onclick="show('aug30')">RandomSunFlare</button>
-        <div id="aug30" style="display: none;">
-            Simulates Sun Flare for the image.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomSunFlare">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_random_sun_flare.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>  
-        </div>
-    </li>
 </ul>
+
 <h2>Spatial-level transforms</h2>
 <ul class="augmentations">
     <li class="item_list">
