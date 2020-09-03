@@ -1131,12 +1131,14 @@ A huge list of many types of data augmentations techniques used for deep learnin
 
 <h3>Contrast</h3>
 <ul class="augmentations">
+    <!-- CLAHE -- 1 -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
-        <button onclick="show('aug01')">CLAHE</button>
-        <div id="aug01" style="display: none;">
+        <button onclick="show('aug_clahe')">CLAHE</button>
+        <div id="aug_clahe" style="display: none;">
             Apply Contrast Limited Adaptive Histogram Equalization to the input image.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.CLAHE">Albumentations</a><br>
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.CLAHE">Albumentations</a><br>
             <figure>
                 <img src="images/kitty.jpg"> 
                 <figcaption>Original</figcaption>
@@ -1147,12 +1149,14 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure>
         </div>
     </li>
+    <!-- All Channels CLAHE -- 2 -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
-        <button onclick="show('aug66')">All Channels CLAHE</button>
-        <div id="aug66" style="display: none;">
+        <button onclick="show('aug_all_channels_clahe')">All Channels CLAHE</button>
+        <div id="aug_all_channels_clahe" style="display: none;">
             Apply CLAHE to all channels of images in their original colorspaces.
-            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/contrast.html#allchannelsclahe">Imgaug</a><br>
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/contrast.html#allchannelsclahe">Imgaug</a><br>
             <figure>
                 <img src="images/kitty.jpg"> 
                 <figcaption>Original</figcaption>
@@ -1163,28 +1167,14 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure>
         </div>
     </li>
+    <!-- Gamma Contrast -- 3 -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
-        <button onclick="show('aug06')">Equalize</button>
-        <div id="aug06" style="display: none;">
-            Equalize the image histogram.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Equalize">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_equalize.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>
-        </div>
-    </li>
-    <!----------------------------------------------------------------------------------------------------------------->
-    <li class="item_list">
-        <button onclick="show('aug60')">Gamma Contrast</button>
-        <div id="aug60" style="display: none;">
+        <button onclick="show('aug_gamma_contrast')">Gamma Contrast</button>
+        <div id="aug_gamma_contrast" style="display: none;">
             Adjust image contrast by scaling pixel values to 255*((v/255)**gamma).
-            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/contrast.html#gammacontrast">Imgaug</a><br>
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/contrast.html#gammacontrast">Imgaug</a><br>
             <figure>
                 <img src="images/kitty.jpg"> 
                 <figcaption>Original</figcaption>
@@ -1195,12 +1185,14 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure>
         </div>
     </li>
+    <!-- Sigmoid Contrast -- 4 -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
-        <button onclick="show('aug61')">Sigmoid Contrast</button>
-        <div id="aug61" style="display: none;">
+        <button onclick="show('aug_sigmoid_contrast')">Sigmoid Contrast</button>
+        <div id="aug_sigmoid_contrast" style="display: none;">
             Adjust image contrast to 255*1/(1+exp(gain*(cutoff-I_ij/255))).
-            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/contrast.html#sigmoidcontrast">Imgaug</a><br>
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/contrast.html#sigmoidcontrast">Imgaug</a><br>
             <figure>
                 <img src="images/kitty.jpg"> 
                 <figcaption>Original</figcaption>
@@ -1211,12 +1203,14 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure>
         </div>
     </li>
+    <!-- Log Contrast -- 5 -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
-        <button onclick="show('aug62')">Log Contrast</button>
-        <div id="aug62" style="display: none;">
+        <button onclick="show('aug_log_contrast')">Log Contrast</button>
+        <div id="aug_log_contrast" style="display: none;">
             Adjust image contrast by scaling pixels to 255*gain*log_2(1+v/255).
-            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/contrast.html#logcontrast">Imgaug</a><br>
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/contrast.html#logcontrast">Imgaug</a><br>
             <figure>
                 <img src="images/kitty.jpg"> 
                 <figcaption>Original</figcaption>
@@ -1227,12 +1221,14 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure>
         </div>
     </li>
+    <!-- Linear Contrast -- 6 -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
-        <button onclick="show('aug63')">Linear Contrast</button>
-        <div id="aug63" style="display: none;">
+        <button onclick="show('aug_linear_contrast')">Linear Contrast</button>
+        <div id="aug_linear_contrast" style="display: none;">
             Adjust contrast by scaling each pixel to 127 + alpha*(v-127).
-            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/contrast.html#linearcontrast">Imgaug</a><br>
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/contrast.html#linearcontrast">Imgaug</a><br>
             <figure>
                 <img src="images/kitty.jpg"> 
                 <figcaption>Original</figcaption>
@@ -1243,12 +1239,32 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure>
         </div>
     </li>
+    <!-- Equalize -- 7 -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
-        <button onclick="show('aug64')">Histogram Equalization</button>
-        <div id="aug64" style="display: none;">
+        <button onclick="show('aug_equalize')">Equalize</button>
+        <div id="aug_equalize" style="display: none;">
+            Equalize the image histogram.
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Equalize">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_equalize.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>
+        </div>
+    </li>
+    <!-- Histogram Equalization -- 8 -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_histogram_equalization')">Histogram Equalization</button>
+        <div id="aug_histogram_equalization" style="display: none;">
             Apply Histogram Eq. to L/V/L channels of images in HLS/HSV/Lab colorspaces.
-            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/contrast.html#histogramequalization">Imgaug</a><br>
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/contrast.html#histogramequalization">Imgaug</a><br>
             <figure>
                 <img src="images/kitty.jpg"> 
                 <figcaption>Original</figcaption>
@@ -1259,12 +1275,14 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure>
         </div>
     </li>
+    <!-- All Channels Histogram Equalization -- 9 -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
-        <button onclick="show('aug65')">All Channels Histogram Equalization</button>
-        <div id="aug65" style="display: none;">
+        <button onclick="show('aug_all_channels_he')">All Channels Histogram Equalization</button>
+        <div id="aug_all_channels_he" style="display: none;">
             Apply Histogram Eq. to all channels of images in their original colorspaces.
-            Source: <a target="_blank" href="https://imgaug.readthedocs.io/en/latest/source/overview/contrast.html#allchannelshistogramequalization">Imgaug</a><br>
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/contrast.html#allchannelshistogramequalization">Imgaug</a><br>
             <figure>
                 <img src="images/kitty.jpg"> 
                 <figcaption>Original</figcaption>
@@ -1277,6 +1295,8 @@ A huge list of many types of data augmentations techniques used for deep learnin
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
 </ul>
+
+<!--------------------------------------------------------------------------------------------------------------------->
 
 <h3>Compression</h3>
 <ul class="augmentations">
