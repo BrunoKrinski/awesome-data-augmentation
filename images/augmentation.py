@@ -443,15 +443,15 @@ if __name__ == '__main__':
         transformed_image = transform(image=image)
 
     elif augmentation == 'max_pooling':
-        transform = iaa.AveragePooling(5)
+        transform = iaa.MaxPooling(5)
         transformed_image = transform(image=image)
 
     elif augmentation == 'min_pooling':
-        transform = iaa.AveragePooling(5)
+        transform = iaa.MinPooling(5)
         transformed_image = transform(image=image)
 
     elif augmentation == 'median_pooling':
-        transform = iaa.AveragePooling(5)
+        transform = iaa.MedianPooling(5)
         transformed_image = transform(image=image)
 
 
