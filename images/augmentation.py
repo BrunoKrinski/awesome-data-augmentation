@@ -454,7 +454,27 @@ if __name__ == '__main__':
         transform = iaa.MedianPooling(5)
         transformed_image = transform(image=image)
 
+    ## Segmentation
+    elif augmentation == 'superpixels':
+        transform = iaa.Superpixels(p_replace=0.5, n_segments=512)
+        transformed_image = transform(image=image)
 
+    elif augmentation == 'voronoi':
+        points_sampler = iaa.RegularGridPointsSampler(n_cols=20, n_rows=40)
+        transform = iaa.Voronoi(points_sampler)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'uniform_voronoi':
+        transform = iaa.UniformVoronoi((100, 500))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'regular_grid_voronoi':
+        transform = iaa.RegularGridVoronoi(10, 20)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'relative_regular_grid_voronoi':
+        transform = iaa.RelativeRegularGridVoronoi(0.1, 0.25)
+        transformed_image = transform(image=image)
     ## Weather
     elif augmentation == 'fog':
         transform = iaa.imgcorruptlike.Fog(severity=2)
@@ -480,10 +500,6 @@ if __name__ == '__main__':
                         
     elif augmentation == 'from_float':
         transform = FromFloat(always_apply=True, max_value=127)
-        transformed_image = transform(image=image)['image']
-        
-    elif augmentation == 'super_pixels':
-        transform = IAASuperpixels(always_apply=True)
         transformed_image = transform(image=image)['image']
 
     elif augmentation == 'normalize':

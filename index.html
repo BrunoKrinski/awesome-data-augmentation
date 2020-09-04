@@ -1279,7 +1279,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
 <h3>Contrast</h3>
 <ul class="augmentations">
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Contrast -- 1 -->
+    <!-- Contrast -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
         <button onclick="show('aug_contrast')">Contrast</button>
@@ -1297,7 +1297,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- CLAHE -- 2 -->
+    <!-- CLAHE -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
         <button onclick="show('aug_clahe')">CLAHE</button>
@@ -1316,7 +1316,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- All Channels CLAHE -- 3 -->
+    <!-- All Channels CLAHE -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
         <button onclick="show('aug_all_channels_clahe')">All Channels CLAHE</button>
@@ -1335,7 +1335,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Random Gamma -- 4 -->
+    <!-- Random Gamma -->
     <!----------------------------------------------------------------------------------------------------------------->  
     <li class="item_list">
         <button onclick="show('aug_random_gamma')">Random Gamma</button>
@@ -1353,7 +1353,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Gamma Contrast -- 5 -->
+    <!-- Gamma Contrast -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
         <button onclick="show('aug_gamma_contrast')">Gamma Contrast</button>
@@ -1372,7 +1372,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Sigmoid Contrast -- 6 -->
+    <!-- Sigmoid Contrast -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
         <button onclick="show('aug_sigmoid_contrast')">Sigmoid Contrast</button>
@@ -1391,7 +1391,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Log Contrast -- 7 -->
+    <!-- Log Contrast -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
         <button onclick="show('aug_log_contrast')">Log Contrast</button>
@@ -1410,7 +1410,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Linear Contrast -- 8 -->
+    <!-- Linear Contrast -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
         <button onclick="show('aug_linear_contrast')">Linear Contrast</button>
@@ -1429,7 +1429,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Equalize -- 9 -->
+    <!-- Equalize -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
         <button onclick="show('aug_equalize')">Equalize</button>
@@ -1448,7 +1448,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Histogram Equalization -- 10 -->
+    <!-- Histogram Equalization -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
         <button onclick="show('aug_histogram_equalization')">Histogram Equalization</button>
@@ -1467,7 +1467,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- All Channels Histogram Equalization -- 11 -->
+    <!-- All Channels Histogram Equalization -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
         <button onclick="show('aug_all_channels_he')">All Channels Histogram Equalization</button>
@@ -1493,7 +1493,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
 <h3>Compression</h3>
 <ul class="augmentations">
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Image Compression -- 1 -->
+    <!-- Image Compression -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
         <button onclick="show('aug_image_compression')">Image Compression</button>
@@ -1512,7 +1512,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Downscale -- 2 -->
+    <!-- Downscale -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
         <button onclick="show('aug_downscale')">Downscale</button>
@@ -1531,7 +1531,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Pixelate -- 3 -->
+    <!-- Pixelate -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
         <button onclick="show('aug_pixelate')">Pixelate</button>
@@ -1556,7 +1556,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
 <h3>Convolutional</h3>
 <ul class="augmentations">
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Sharpen -- 1 -->
+    <!-- Sharpen -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
         <button onclick="show('aug_sharpen')">Sharpen</button>
@@ -1575,7 +1575,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Emboss -- 2 -->
+    <!-- Emboss -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
         <button onclick="show('aug_emboss')">Emboss</button>
@@ -1594,47 +1594,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Edge Detect -- 3 -->
-    <!----------------------------------------------------------------------------------------------------------------->
-    <li class="item_list">
-        <button onclick="show('aug_edge_detect')">Edge Detect</button>
-        <div id="aug_edge_detect" style="display: none;">
-            Augmenter that detects all edges in images, marks them in a black and white image and then overlays the 
-            result with the original image.
-            Source: <a target="_blank" 
-                       href="https://imgaug.readthedocs.io/en/latest/source/overview/convolutional.html#edgedetect">Imgaug</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_edge_detect.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>
-        </div>
-    </li>
-    <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Directed Edge Detect -- 4 -->
-    <!----------------------------------------------------------------------------------------------------------------->
-    <li class="item_list">
-        <button onclick="show('aug_directed_edge_detect')">Directed Edge Detect</button>
-        <div id="aug_directed_edge_detect" style="display: none;">
-            Augmenter that detects edges that have certain directions and marks them in a black and white image and then 
-            overlays the result with the original image.
-            Source: <a target="_blank" 
-                       href="https://imgaug.readthedocs.io/en/latest/source/overview/convolutional.html#directededgedetect">Imgaug</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_directed_edge_detect.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>
-        </div>
-    </li>
-    <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Convolve -- 5 -->
+    <!-- Convolve -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
         <button onclick="show('aug_convolve')">Convolve</button>
@@ -1660,7 +1620,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
 <h3>Corruption</h3>
 <ul class="augmentations">
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Gaussian Noise -- 1 -->
+    <!-- Gaussian Noise -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
         <button onclick="show('aug_gaussian_noise')">Gaussian Noise</button>
@@ -1679,7 +1639,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Multiplicative Noise -- 2 -->
+    <!-- Multiplicative Noise -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
         <button onclick="show('aug_multiplicative_noise')">Multiplicative Noise</button>
@@ -1698,7 +1658,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- ISO Noise -- 3 -->
+    <!-- ISO Noise -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
         <button onclick="show('aug_iso_noise')">ISO Noise</button>
@@ -1717,7 +1677,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Shot Noise -- 4 -->
+    <!-- Shot Noise -->
     <!----------------------------------------------------------------------------------------------------------------->  
     <li class="item_list">
         <button onclick="show('aug_shot_noise')">Shot Noise</button>
@@ -1735,7 +1695,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Speckle Noise -- 5 -->
+    <!-- Speckle Noise -->
     <!----------------------------------------------------------------------------------------------------------------->  
     <li class="item_list">
         <button onclick="show('aug_speckle_noise')">Speckle Noise</button>
@@ -1753,7 +1713,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Random Shadow -- 6 -->
+    <!-- Random Shadow -->
     <!----------------------------------------------------------------------------------------------------------------->  
     <li class="item_list">
         <button onclick="show('aug_random_shadow')">Random Shadow</button>
@@ -1772,7 +1732,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Random Sun Flare -- 7 -->
+    <!-- Random Sun Flare -->
     <!----------------------------------------------------------------------------------------------------------------->  
     <li class="item_list">
         <button onclick="show('aug_random_sun_flare')">Random Sun Flare</button>
@@ -1791,7 +1751,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Spatter -- 8 -->
+    <!-- Spatter -->
     <!----------------------------------------------------------------------------------------------------------------->  
     <li class="item_list">
         <button onclick="show('aug_spatter')">Spatter</button>
@@ -1809,7 +1769,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Elastic Transform -- 9 -->
+    <!-- Elastic Transform -->
     <!----------------------------------------------------------------------------------------------------------------->  
     <li class="item_list">
         <button onclick="show('aug_elastic_transform')">Elastic Transform</button>
@@ -1834,7 +1794,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
 <h3>Edges</h3>
 <ul class="augmentations">
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Canny -- 1 -->
+    <!-- Canny -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
         <button onclick="show('aug_canny')">Canny</button>
@@ -1853,6 +1813,46 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Edge Detect -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_edge_detect')">Edge Detect</button>
+        <div id="aug_edge_detect" style="display: none;">
+            Augmenter that detects all edges in images, marks them in a black and white image and then overlays the 
+            result with the original image.
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/convolutional.html#edgedetect">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_edge_detect.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Directed Edge Detect -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_directed_edge_detect')">Directed Edge Detect</button>
+        <div id="aug_directed_edge_detect" style="display: none;">
+            Augmenter that detects edges that have certain directions and marks them in a black and white image and then 
+            overlays the result with the original image.
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/convolutional.html#directededgedetect">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_directed_edge_detect.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
 </ul>
 
 <!--------------------------------------------------------------------------------------------------------------------->
@@ -1860,7 +1860,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
 <h3>Pooling</h3>
 <ul class="augmentations">
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Average Pooling -- 1 -->
+    <!-- Average Pooling -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
         <button onclick="show('aug_average_pooling')">Average Pooling</button>
@@ -1879,7 +1879,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Max Pooling -- 2 -->
+    <!-- Max Pooling -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
         <button onclick="show('aug_max_pooling')">Max Pooling</button>
@@ -1898,7 +1898,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Min Pooling -- 3 -->
+    <!-- Min Pooling -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
         <button onclick="show('aug_min_pooling')">Min Pooling</button>
@@ -1917,7 +1917,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Median Pooling -- 4 -->
+    <!-- Median Pooling -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
         <button onclick="show('aug_median_pooling')">Median Pooling</button>
@@ -1939,10 +1939,113 @@ A huge list of many types of data augmentations techniques used for deep learnin
 </ul>
 
 <!--------------------------------------------------------------------------------------------------------------------->
+
+<h3>Segmentation</h3>
+<ul class="augmentations">
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Superpixels -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_superpixels')">Superpixels</button>
+        <div id="aug_superpixels" style="display: none;">
+            Completely or partially transform images to their superpixel representation.
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/segmentation.html#superpixels">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_superpixels.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Voronoi -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_voronoi')">Voronoi</button>
+        <div id="aug_voronoi" style="display: none;">
+            Average colors of an image within Voronoi cells.
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/segmentation.html#voronoi">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_voronoi.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Uniform Voronoi -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_uniform_voronoi')">Unfirom Voronoi</button>
+        <div id="aug_uniform_voronoi" style="display: none;">
+            Uniformly sample Voronoi cells on images and average colors within them.
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/segmentation.html#uniformvoronoi">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_uniform_voronoi.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Regular Grid Voronoi -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_regular_grid_voronoi')">Regular Grid Voronoi</button>
+        <div id="aug_regular_grid_voronoi" style="display: none;">
+            Sample Voronoi cells from regular grids and color-average them.
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/segmentation.html#regulargridvoronoi">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_regular_grid_voronoi.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Relative Regular Grid Voronoi -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_relative_regular_grid_voronoi')">Relative Regular Grid Voronoi</button>
+        <div id="aug_relative_regular_grid_voronoi" style="display: none;">
+            Sample Voronoi cells from image-dependent grids and color-average them.
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/segmentation.html#relativeregulargridvoronoi">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_relative_regular_grid_voronoi.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+</ul>
+
+<!--------------------------------------------------------------------------------------------------------------------->
+
 <h3>Weather</h3>
 <ul class="augmentations">
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Fog -- 1 -->
+    <!-- Fog -->
     <!----------------------------------------------------------------------------------------------------------------->  
     <li class="item_list">
         <button onclick="show('aug_fog')">Fog</button>
@@ -1961,7 +2064,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Random Rain -- 2 -->
+    <!-- Random Rain -->
     <!----------------------------------------------------------------------------------------------------------------->  
     <li class="item_list">
         <button onclick="show('aug_random_rain')">Random Rain</button>
@@ -1980,7 +2083,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Snow -- 3 -->
+    <!-- Snow -->
     <!----------------------------------------------------------------------------------------------------------------->  
     <li class="item_list">
         <button onclick="show('aug_snow')">Snow</button>
@@ -1998,7 +2101,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Frost -- 4 -->
+    <!-- Frost -->
     <!----------------------------------------------------------------------------------------------------------------->  
     <li class="item_list">
         <button onclick="show('aug_frost')">Frost</button>
@@ -2032,23 +2135,6 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure>
             <figure>
                 <img src="images/kitty_channel_shuffle.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>
-        </div>
-    </li>
-
-
-    <li class="item_list">
-        <button onclick="show('aug15')">IAASuperpixels</button>
-        <div id="aug15" style="display: none;">
-            Completely or partially transform the input image to its superpixel representation. Uses skimage's version of the SLIC algorithm.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/imgaug/transforms/#albumentations.imgaug.transforms.IAASuperpixels">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_super_pixels.jpg">
                 <figcaption>Augmentation</figcaption>
             </figure>
         </div>
