@@ -560,44 +560,6 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Blend Alpha Regular Grid -->
-    <!----------------------------------------------------------------------------------------------------------------->
-    <li class="item_list">
-        <button onclick="show('aug_blend_alpha_regular_grid')">Blend Alpha Regular Grid</button>
-        <div id="aug_blend_alpha_regular_grid" style="display: none;">
-            Blend images from two branches according to a regular grid.
-            Source: <a target="_blank" 
-                       href="https://imgaug.readthedocs.io/en/latest/source/overview/blend.html#blendalpharegulargrid">Imgaug</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_blend_alpha_regular_grid.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>  
-        </div>
-    </li>
-    <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Blend Alpha Elementwise -->
-    <!----------------------------------------------------------------------------------------------------------------->
-    <li class="item_list">
-        <button onclick="show('aug_blend_alpha_elementwise')">Blend Alpha Elementwise</button>
-        <div id="aug_blend_alpha_elementwise" style="display: none;">
-            Alpha-blend two image sources using alpha/opacity values sampled per pixel.
-            Source: <a target="_blank" 
-                       href="https://imgaug.readthedocs.io/en/latest/source/overview/blend.html#blendalphaelementwise">Imgaug</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_blend_alpha_elementwise.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>  
-        </div>
-    </li>
-    <!----------------------------------------------------------------------------------------------------------------->
     <!-- Blend Alpha Vertical Linear Gradient -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
@@ -631,6 +593,44 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure>
             <figure>
                 <img src="images/kitty_blend_alpha_hlg.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Blend Alpha Regular Grid -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_blend_alpha_regular_grid')">Blend Alpha Regular Grid</button>
+        <div id="aug_blend_alpha_regular_grid" style="display: none;">
+            Blend images from two branches according to a regular grid.
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/blend.html#blendalpharegulargrid">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_blend_alpha_regular_grid.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Blend Alpha Elementwise -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_blend_alpha_elementwise')">Blend Alpha Elementwise</button>
+        <div id="aug_blend_alpha_elementwise" style="display: none;">
+            Alpha-blend two image sources using alpha/opacity values sampled per pixel.
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/blend.html#blendalphaelementwise">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_blend_alpha_elementwise.jpg">
                 <figcaption>Augmentation</figcaption>
             </figure>  
         </div>
@@ -990,6 +990,25 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Multiply Hue and Saturation -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_multiply_hue_and_saturation')">Multiply Hue and Saturation</button>
+        <div id="aug_multiply_hue_and_saturation" style="display: none;">
+            Multipy hue and saturation by random values.
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/color.html#multiplyhueandsaturation">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_multiply_hue_and_saturation.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
     <!-- Multiply Saturation -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
@@ -1059,25 +1078,6 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure>
             <figure>
                 <img src="images/kitty_remove_saturation.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>  
-        </div>
-    </li>
-    <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Multiply Hue and Saturation -->
-    <!----------------------------------------------------------------------------------------------------------------->
-    <li class="item_list">
-        <button onclick="show('aug_multiply_hue_and_saturation')">Multiply Hue and Saturation</button>
-        <div id="aug_multiply_hue_and_saturation" style="display: none;">
-            Multipy hue and saturation by random values.
-            Source: <a target="_blank" 
-                       href="https://imgaug.readthedocs.io/en/latest/source/overview/color.html#multiplyhueandsaturation">Imgaug</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_multiply_hue_and_saturation.jpg">
                 <figcaption>Augmentation</figcaption>
             </figure>  
         </div>
