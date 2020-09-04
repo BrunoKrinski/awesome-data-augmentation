@@ -1224,7 +1224,25 @@ A huge list of many types of data augmentations techniques used for deep learnin
 <h3>Contrast</h3>
 <ul class="augmentations">
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- CLAHE -- 1 -->
+    <!-- Contrast -- 1 -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_contrast')">Contrast</button>
+        <div id="aug_contrast" style="display: none;">
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/imgcorruptlike.html#contrast">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_contrast.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- CLAHE -- 2 -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
         <button onclick="show('aug_clahe')">CLAHE</button>
@@ -1243,7 +1261,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- All Channels CLAHE -- 2 -->
+    <!-- All Channels CLAHE -- 3 -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
         <button onclick="show('aug_all_channels_clahe')">All Channels CLAHE</button>
@@ -1262,7 +1280,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Gamma Contrast -- 3 -->
+    <!-- Gamma Contrast -- 4 -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
         <button onclick="show('aug_gamma_contrast')">Gamma Contrast</button>
@@ -1281,7 +1299,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Sigmoid Contrast -- 4 -->
+    <!-- Sigmoid Contrast -- 5 -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
         <button onclick="show('aug_sigmoid_contrast')">Sigmoid Contrast</button>
@@ -1300,7 +1318,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Log Contrast -- 5 -->
+    <!-- Log Contrast -- 6 -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
         <button onclick="show('aug_log_contrast')">Log Contrast</button>
@@ -1319,7 +1337,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Linear Contrast -- 6 -->
+    <!-- Linear Contrast -- 7 -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
         <button onclick="show('aug_linear_contrast')">Linear Contrast</button>
@@ -1338,7 +1356,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Equalize -- 7 -->
+    <!-- Equalize -- 8 -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
         <button onclick="show('aug_equalize')">Equalize</button>
@@ -1357,7 +1375,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Histogram Equalization -- 8 -->
+    <!-- Histogram Equalization -- 9 -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
         <button onclick="show('aug_histogram_equalization')">Histogram Equalization</button>
@@ -1376,7 +1394,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- All Channels Histogram Equalization -- 9 -->
+    <!-- All Channels Histogram Equalization -- 10 -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
         <button onclick="show('aug_all_channels_he')">All Channels Histogram Equalization</button>
@@ -1608,7 +1626,43 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Random Brightness Contrast -- 4 -->
+    <!-- Shot Noise -- 4 -->
+    <!----------------------------------------------------------------------------------------------------------------->  
+    <li class="item_list">
+        <button onclick="show('aug_shot_noise')">Shot Noise</button>
+        <div id="aug_shot_noise" style="display: none;">
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/imgcorruptlike.html#shotnoise">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_shot_noise.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Speckle Noise -- 5 -->
+    <!----------------------------------------------------------------------------------------------------------------->  
+    <li class="item_list">
+        <button onclick="show('aug_speckle_noise')">Speckle Noise</button>
+        <div id="aug_speckle_noise" style="display: none;">
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/imgcorruptlike.html#specklenoise">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_speckle_noise.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Random Brightness Contrast -- 6 -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
         <button onclick="show('aug_random_brightness_contrast')">Random Brightness Contrast</button>
@@ -1627,26 +1681,25 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Random Fog -- 5 -->
-    <!----------------------------------------------------------------------------------------------------------------->  
+    <!-- Brightness -- 7 -->
+    <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
-        <button onclick="show('aug_random_fog')">Random Fog</button>
-        <div id="aug_random_fog" style="display: none;">
-            Simulates fog for the image.
+        <button onclick="show('aug_brightness')">Brightness</button>
+        <div id="aug_brightness" style="display: none;">
             Source: <a target="_blank" 
-                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomFog">Albumentations</a><br>
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/imgcorruptlike.html#brightness">Imgaug</a><br>
             <figure>
                 <img src="images/kitty.jpg"> 
                 <figcaption>Original</figcaption>
             </figure>
             <figure>
-                <img src="images/kitty_random_fog.jpg">
+                <img src="images/kitty_brightness.jpg">
                 <figcaption>Augmentation</figcaption>
             </figure>  
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Random Gamma -- 6 -->
+    <!-- Random Gamma -- 8 -->
     <!----------------------------------------------------------------------------------------------------------------->  
     <li class="item_list">
         <button onclick="show('aug_random_gamma')">Random Gamma</button>
@@ -1664,26 +1717,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Random Rain -- 7 -->
-    <!----------------------------------------------------------------------------------------------------------------->  
-    <li class="item_list">
-        <button onclick="show('aug_random_rain')">Random Rain</button>
-        <div id="aug_random_rain" style="display: none;">
-            Adds rain effects.
-            Source: <a target="_blank" 
-                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomRain">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_random_rain.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>  
-        </div>
-    </li>
-    <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Random Shadow -- 8 -->
+    <!-- Random Shadow -- 9 -->
     <!----------------------------------------------------------------------------------------------------------------->  
     <li class="item_list">
         <button onclick="show('aug_random_shadow')">Random Shadow</button>
@@ -1697,24 +1731,6 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure>
             <figure>
                 <img src="images/kitty_random_shadow.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>  
-        </div>
-    </li>
-    <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Snow -- 9 -->
-    <!----------------------------------------------------------------------------------------------------------------->  
-    <li class="item_list">
-        <button onclick="show('aug_snow')">Snow</button>
-        <div id="aug_snow" style="display: none;">
-            Source: <a target="_blank" 
-                       href="https://imgaug.readthedocs.io/en/latest/source/overview/imgcorruptlike.html#snow">Imgaug</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_snow.jpg">
                 <figcaption>Augmentation</figcaption>
             </figure>  
         </div>
@@ -1757,23 +1773,6 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Shot Noise -- 12 -->
-    <!----------------------------------------------------------------------------------------------------------------->  
-    <li class="item_list">
-        <button onclick="show('aug_shot_noise')">Shot Noise</button>
-        <div id="aug_shot_noise" style="display: none;">
-            Source: <a target="_blank" 
-                       href="https://imgaug.readthedocs.io/en/latest/source/overview/imgcorruptlike.html#shotnoise">Imgaug</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_shot_noise.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>  
-        </div>
-    </li>
 </ul>
 
 <!--------------------------------------------------------------------------------------------------------------------->
@@ -1801,6 +1800,86 @@ A huge list of many types of data augmentations techniques used for deep learnin
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
 </ul>
+
+<!--------------------------------------------------------------------------------------------------------------------->
+<h3>Weather</h3>
+<ul class="augmentations">
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Fog -- 1 -->
+    <!----------------------------------------------------------------------------------------------------------------->  
+    <li class="item_list">
+        <button onclick="show('aug_fog')">Fog</button>
+        <div id="aug_fog" style="display: none;">
+            Simulates fog for the image.
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/imgcorruptlike.html#fog">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_fog.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Random Rain -- 2 -->
+    <!----------------------------------------------------------------------------------------------------------------->  
+    <li class="item_list">
+        <button onclick="show('aug_random_rain')">Random Rain</button>
+        <div id="aug_random_rain" style="display: none;">
+            Adds rain effects.
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomRain">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_random_rain.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Snow -- 3 -->
+    <!----------------------------------------------------------------------------------------------------------------->  
+    <li class="item_list">
+        <button onclick="show('aug_snow')">Snow</button>
+        <div id="aug_snow" style="display: none;">
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/imgcorruptlike.html#snow">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_snow.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Frost -- 4 -->
+    <!----------------------------------------------------------------------------------------------------------------->  
+    <li class="item_list">
+        <button onclick="show('aug_frost')">Frost</button>
+        <div id="aug_frost" style="display: none;">
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/imgcorruptlike.html#frost">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_frost.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+</ul>
+<!--------------------------------------------------------------------------------------------------------------------->
 
 <p>On building...</p>
 

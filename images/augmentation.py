@@ -298,7 +298,10 @@ if __name__ == '__main__':
         transformed_image = transform(image=image)
 
     ## Contrast
-    
+    elif augmentation == 'contrast':
+        transform = iaa.imgcorruptlike.Contrast(severity=2)
+        transformed_image = transform(image=image)
+
     elif augmentation == 'clahe':
         transform = CLAHE(always_apply=True, tile_grid_size=(64, 64))
         transformed_image = transform(image=image)['image']
@@ -383,41 +386,41 @@ if __name__ == '__main__':
                                                 intensity=(0.5, 0.8))
         transformed_image = transform(image=image)['image']
 
+    elif augmentation == 'shot_noise':
+        transform = iaa.imgcorruptlike.ShotNoise(severity=2)
+        transformed_image = transform(image=image)
+    
+    elif augmentation == 'speckle_noise':
+        transform = iaa.imgcorruptlike.SpeckleNoise(severity=2)
+        transformed_image = transform(image=image)
+
     elif augmentation == 'brightness_contrast':
         transform = RandomBrightnessContrast(always_apply=True, 
                                              brightness_limit=0.5)
         transformed_image = transform(image=image)['image']
 
-    elif augmentation == 'random_fog':
-        transform = RandomFog(always_apply=True)
-        transformed_image = transform(image=image)['image']
+    elif augmentation == 'brightness':
+        transform = iaa.imgcorruptlike.Brightness(severity=2)
+        transformed_image = transform(image=image)
 
     elif augmentation == 'random_gamma':
         transform = RandomGamma(always_apply=True, gamma_limit=(120, 200))
-        transformed_image = transform(image=image)['image']
-
-    elif augmentation == 'random_rain':
-        transform = RandomRain(always_apply=True)
         transformed_image = transform(image=image)['image']
     
     elif augmentation == 'random_shadow':
         transform = RandomShadow(always_apply=True)
         transformed_image = transform(image=image)['image']
 
-    elif augmentation == 'snow':
-        transform = iaa.imgcorruptlike.Snow(severity=2)
-        transformed_image = transform(image=image)
-
     elif augmentation == 'random_sun_flare':
         transform = RandomSunFlare(always_apply=True)
         transformed_image = transform(image=image)['image']
-    
+        
     elif augmentation == 'spatter':
         transform = iaa.imgcorruptlike.Spatter(severity=2)
         transformed_image = transform(image=image)
 
-    elif augmentation == 'shot_noise':
-        transform = iaa.imgcorruptlike.ShotNoise(severity=2)
+    elif augmentation == 'spatter':
+        transform = iaa.imgcorruptlike.Spatter(severity=2)
         transformed_image = transform(image=image)
     
     ## Edges
@@ -426,6 +429,22 @@ if __name__ == '__main__':
         transform = iaa.Canny(alpha=(0.0, 0.9))
         transformed_image = transform(image=image)
 
+    ## Weather
+    elif augmentation == 'fog':
+        transform = iaa.imgcorruptlike.Fog(severity=2)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'random_rain':
+        transform = RandomRain(always_apply=True)
+        transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'snow':
+        transform = iaa.imgcorruptlike.Snow(severity=2)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'frost':
+        transform = iaa.imgcorruptlike.Frost(severity=2)
+        transformed_image = transform(image=image)
 
     ####################
             
