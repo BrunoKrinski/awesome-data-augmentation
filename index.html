@@ -106,6 +106,102 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure>  
         </div>
     </li>
+     <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Impulse Noise -- 17 -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_impulse_noise')">Impulse Noise</button>
+        <div id="aug_impulse_noise" style="display: none;">
+            Add impulse noise to images.
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/arithmetic.html#impulsenoise">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_impulse_noise.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Replace Elementwise -- 18 -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_replace_elementwise')">Replace Elementwise</button>
+        <div id="aug_replace_elementwise" style="display: none;">
+            Replace pixels in an image with new values.
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/arithmetic.html#replaceelementwise">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_replace_elementwise.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Cutout -- 19 -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_cutout')">Cutout</button>
+        <div id="aug_cutout" style="display: none;">
+            Fill one or more rectangular areas in an image using a fill mode. See paper “Improved Regularization of 
+            Convolutional Neural Networks with Cutout” by DeVries and Taylor.
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/arithmetic.html#cutout">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_cutout.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Solarize -- 20 -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_solarize')">Solarize</button>
+        <div id="aug_solarize" style="display: none;">
+            Invert all pixel values above a threshold.
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Solarize">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_solarize.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Invert Image -- 21 -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_invert_image')">Invert Image</button>
+        <div id="aug_invert_image" style="display: none;">
+            Invert the input image by subtracting pixel values from 255.
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.InvertImg">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_invert_img.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
     <!----------------------------------------------------------------------------------------------------------------->
     <!-- Additive Gaussian Noise -- 3 -->
     <!----------------------------------------------------------------------------------------------------------------->
@@ -371,102 +467,6 @@ A huge list of many types of data augmentations techniques used for deep learnin
                 <img src="images/kitty_coarse_salt_and_papper.jpg">
                 <figcaption>Augmentation</figcaption>
             </figure>
-        </div>
-    </li>
-    <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Impulse Noise -- 17 -->
-    <!----------------------------------------------------------------------------------------------------------------->
-    <li class="item_list">
-        <button onclick="show('aug_impulse_noise')">Impulse Noise</button>
-        <div id="aug_impulse_noise" style="display: none;">
-            Add impulse noise to images.
-            Source: <a target="_blank" 
-                       href="https://imgaug.readthedocs.io/en/latest/source/overview/arithmetic.html#impulsenoise">Imgaug</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_impulse_noise.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>  
-        </div>
-    </li>
-    <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Replace Elementwise -- 18 -->
-    <!----------------------------------------------------------------------------------------------------------------->
-    <li class="item_list">
-        <button onclick="show('aug_replace_elementwise')">Replace Elementwise</button>
-        <div id="aug_replace_elementwise" style="display: none;">
-            Replace pixels in an image with new values.
-            Source: <a target="_blank" 
-                       href="https://imgaug.readthedocs.io/en/latest/source/overview/arithmetic.html#replaceelementwise">Imgaug</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_replace_elementwise.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>  
-        </div>
-    </li>
-    <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Cutout -- 19 -->
-    <!----------------------------------------------------------------------------------------------------------------->
-    <li class="item_list">
-        <button onclick="show('aug_cutout')">Cutout</button>
-        <div id="aug_cutout" style="display: none;">
-            Fill one or more rectangular areas in an image using a fill mode. See paper “Improved Regularization of 
-            Convolutional Neural Networks with Cutout” by DeVries and Taylor.
-            Source: <a target="_blank" 
-                       href="https://imgaug.readthedocs.io/en/latest/source/overview/arithmetic.html#cutout">Imgaug</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_cutout.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>  
-        </div>
-    </li>
-    <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Solarize -- 20 -->
-    <!----------------------------------------------------------------------------------------------------------------->
-    <li class="item_list">
-        <button onclick="show('aug_solarize')">Solarize</button>
-        <div id="aug_solarize" style="display: none;">
-            Invert all pixel values above a threshold.
-            Source: <a target="_blank" 
-                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Solarize">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_solarize.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>  
-        </div>
-    </li>
-    <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Invert Image -- 21 -->
-    <!----------------------------------------------------------------------------------------------------------------->
-    <li class="item_list">
-        <button onclick="show('aug_invert_image')">Invert Image</button>
-        <div id="aug_invert_image" style="display: none;">
-            Invert the input image by subtracting pixel values from 255.
-            Source: <a target="_blank" 
-                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.InvertImg">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_invert_img.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>  
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
