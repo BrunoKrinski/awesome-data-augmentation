@@ -426,6 +426,10 @@ if __name__ == '__main__':
     elif augmentation == 'spatter':
         transform = iaa.imgcorruptlike.Spatter(severity=2)
         transformed_image = transform(image=image)
+
+    elif augmentation == 'elastic_transform':
+        transform = iaa.imgcorruptlike.ElasticTransform(severity=5)
+        transformed_image = transform(image=image)
     
     ## Edges
 
