@@ -235,6 +235,10 @@ if __name__ == '__main__':
     elif augmentation == 'addto_saturation':
         transform = iaa.AddToSaturation((-100, 100))
         transformed_image = transform(image=image)
+    
+    elif augmentation == 'saturate':
+        transform = iaa.imgcorruptlike.Saturate(severity=5)
+        transformed_image = transform(image=image)
 
     elif augmentation == 'remove_saturation':
         transform = iaa.RemoveSaturation()
@@ -306,10 +310,6 @@ if __name__ == '__main__':
         transform = iaa.UniformColorQuantization()
         transformed_image = transform(image=image)
 
-    elif augmentation == 'saturate':
-        transform = iaa.imgcorruptlike.Saturate(severity=5)
-        transformed_image = transform(image=image)
-
     ## Contrast
     elif augmentation == 'contrast':
         transform = iaa.imgcorruptlike.Contrast(severity=2)
@@ -363,6 +363,10 @@ if __name__ == '__main__':
     elif augmentation == 'downscale':
         transform = Downscale(always_apply=True)
         transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'pixelate':
+        transform = iaa.imgcorruptlike.Pixelate(severity=4)
+        transformed_image = transform(image=image)
 
     ## Convolutional
     elif augmentation == 'sharpen':
