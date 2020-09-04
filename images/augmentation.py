@@ -244,6 +244,15 @@ if __name__ == '__main__':
         transform = iaa.MultiplyHueAndSaturation((0.5, 1.5), per_channel=True)
         transformed_image = transform(image=image)
 
+    elif augmentation == 'brightness_contrast':
+        transform = RandomBrightnessContrast(always_apply=True, 
+                                             brightness_limit=0.5)
+        transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'brightness':
+        transform = iaa.imgcorruptlike.Brightness(severity=2)
+        transformed_image = transform(image=image)
+
     elif augmentation == 'addto_hue_and_saturation':
         transform = iaa.AddToHueAndSaturation((-50, 50), per_channel=True)
         transformed_image = transform(image=image)
@@ -297,6 +306,10 @@ if __name__ == '__main__':
         transform = iaa.UniformColorQuantization()
         transformed_image = transform(image=image)
 
+    elif augmentation == 'saturate':
+        transform = iaa.imgcorruptlike.Saturate(severity=5)
+        transformed_image = transform(image=image)
+
     ## Contrast
     elif augmentation == 'contrast':
         transform = iaa.imgcorruptlike.Contrast(severity=2)
@@ -308,6 +321,10 @@ if __name__ == '__main__':
 
     elif augmentation == 'equalize':
         transform = Equalize(always_apply=True)
+        transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'random_gamma':
+        transform = RandomGamma(always_apply=True, gamma_limit=(120, 200))
         transformed_image = transform(image=image)['image']
     
     elif augmentation == 'gamma_contrast':
@@ -393,19 +410,6 @@ if __name__ == '__main__':
     elif augmentation == 'speckle_noise':
         transform = iaa.imgcorruptlike.SpeckleNoise(severity=2)
         transformed_image = transform(image=image)
-
-    elif augmentation == 'brightness_contrast':
-        transform = RandomBrightnessContrast(always_apply=True, 
-                                             brightness_limit=0.5)
-        transformed_image = transform(image=image)['image']
-
-    elif augmentation == 'brightness':
-        transform = iaa.imgcorruptlike.Brightness(severity=2)
-        transformed_image = transform(image=image)
-
-    elif augmentation == 'random_gamma':
-        transform = RandomGamma(always_apply=True, gamma_limit=(120, 200))
-        transformed_image = transform(image=image)['image']
     
     elif augmentation == 'random_shadow':
         transform = RandomShadow(always_apply=True)
@@ -415,10 +419,6 @@ if __name__ == '__main__':
         transform = RandomSunFlare(always_apply=True)
         transformed_image = transform(image=image)['image']
         
-    elif augmentation == 'spatter':
-        transform = iaa.imgcorruptlike.Spatter(severity=2)
-        transformed_image = transform(image=image)
-
     elif augmentation == 'spatter':
         transform = iaa.imgcorruptlike.Spatter(severity=2)
         transformed_image = transform(image=image)
