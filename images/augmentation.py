@@ -211,6 +211,14 @@ if __name__ == '__main__':
         transform = GlassBlur(always_apply=True)
         transformed_image = transform(image=image)['image']
 
+    elif augmentation == 'defocus_blur':
+        transform = iaa.imgcorruptlike.DefocusBlur(severity=2)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'zoom_blur':
+        transform = iaa.imgcorruptlike.ZoomBlur(severity=2)
+        transformed_image = transform(image=image)
+
     ## Color
     elif augmentation == 'multiply_hue':
         transform = iaa.MultiplyHue((0.5, 1.5))
@@ -380,7 +388,7 @@ if __name__ == '__main__':
                                              brightness_limit=0.5)
         transformed_image = transform(image=image)['image']
 
-     elif augmentation == 'random_fog':
+    elif augmentation == 'random_fog':
         transform = RandomFog(always_apply=True)
         transformed_image = transform(image=image)['image']
 
@@ -396,13 +404,21 @@ if __name__ == '__main__':
         transform = RandomShadow(always_apply=True)
         transformed_image = transform(image=image)['image']
 
-    elif augmentation == 'random_snow':
-        transform = RandomSnow(always_apply=True)
-        transformed_image = transform(image=image)['image']
+    elif augmentation == 'snow':
+        transform = iaa.imgcorruptlike.Snow(severity=2)
+        transformed_image = transform(image=image)
 
     elif augmentation == 'random_sun_flare':
         transform = RandomSunFlare(always_apply=True)
         transformed_image = transform(image=image)['image']
+    
+    elif augmentation == 'spatter':
+        transform = iaa.imgcorruptlike.Spatter(severity=2)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'shot_noise':
+        transform = iaa.imgcorruptlike.ShotNoise(severity=2)
+        transformed_image = transform(image=image)
     
     ## Edges
 
