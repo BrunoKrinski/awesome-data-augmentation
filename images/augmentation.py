@@ -437,6 +437,24 @@ if __name__ == '__main__':
         transform = iaa.Canny(alpha=(0.0, 0.9))
         transformed_image = transform(image=image)
 
+    ## Pooling
+    elif augmentation == 'average_pooling':
+        transform = iaa.AveragePooling(5)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'max_pooling':
+        transform = iaa.AveragePooling(5)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'min_pooling':
+        transform = iaa.AveragePooling(5)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'median_pooling':
+        transform = iaa.AveragePooling(5)
+        transformed_image = transform(image=image)
+
+
     ## Weather
     elif augmentation == 'fog':
         transform = iaa.imgcorruptlike.Fog(severity=2)
