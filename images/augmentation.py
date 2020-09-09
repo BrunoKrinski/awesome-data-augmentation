@@ -438,6 +438,7 @@ if __name__ == '__main__':
         transformed_image = transform(image=image)
 
     ## Pooling
+    
     elif augmentation == 'average_pooling':
         transform = iaa.AveragePooling(5)
         transformed_image = transform(image=image)
@@ -455,6 +456,7 @@ if __name__ == '__main__':
         transformed_image = transform(image=image)
 
     ## Segmentation
+   
     elif augmentation == 'superpixels':
         transform = iaa.Superpixels(p_replace=0.5, n_segments=512)
         transformed_image = transform(image=image)
@@ -475,7 +477,9 @@ if __name__ == '__main__':
     elif augmentation == 'relative_regular_grid_voronoi':
         transform = iaa.RelativeRegularGridVoronoi(0.1, 0.25)
         transformed_image = transform(image=image)
+    
     ## Weather
+    
     elif augmentation == 'fog':
         transform = iaa.imgcorruptlike.Fog(severity=2)
         transformed_image = transform(image=image)
@@ -484,17 +488,29 @@ if __name__ == '__main__':
         transform = RandomRain(always_apply=True)
         transformed_image = transform(image=image)['image']
 
+    elif augmentation == 'rain':
+        transform = iaa.Rain(speed=(0.1, 0.3))
+        transformed_image = transform(image=image)
+
     elif augmentation == 'snow':
         transform = iaa.imgcorruptlike.Snow(severity=2)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'snow_flakes':
+        transform = iaa.Snowflakes(flake_size=(0.1, 0.4), speed=(0.01, 0.05))
         transformed_image = transform(image=image)
 
     elif augmentation == 'frost':
         transform = iaa.imgcorruptlike.Frost(severity=2)
         transformed_image = transform(image=image)
 
+    elif augmentation == 'clouds':
+        transform = iaa.Clouds()
+        transformed_image = transform(image=image)
+
     # Spatial Level Transforms
 
-    # Crop
+    ## Crop
 
     elif augmentation == 'crop':
         transform = Crop(always_apply=True, x_max=400, y_max=400)
@@ -562,7 +578,7 @@ if __name__ == '__main__':
         transformed_image = transform(image=image)['image']
 
     
-    # Flip
+    ## Flip
 
     elif augmentation == 'flip':
         transform = Flip(always_apply=True)
