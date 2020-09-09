@@ -542,11 +542,11 @@ if __name__ == '__main__':
         transformed_image = transform(image=image)
 
     elif augmentation == 'translatex':
-        transform = iaa.TranslateX(px=(-100, 100))
+        transform = iaa.TranslateX(px=(0, 100))
         transformed_image = transform(image=image)
 
     elif augmentation == 'translatey':
-        transform = iaa.TranslateY(px=(-100, 100))
+        transform = iaa.TranslateY(px=(0, 100))
         transformed_image = transform(image=image)
 
     ## Crop
