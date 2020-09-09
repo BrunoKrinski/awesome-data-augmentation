@@ -64,7 +64,8 @@ layout: default
 
 <h1>Awesome Augmentations:</h1>
 A huge list of many types of data augmentations techniques used for deep learning!
-<h2>Pixel-level transforms</h2>
+
+<h2>Pixel-level Transforms</h2>
 
 <h3>Arithmetic</h3>
 <ul class="augmentations">
@@ -2128,7 +2129,8 @@ A huge list of many types of data augmentations techniques used for deep learnin
         <button onclick="show('aug03')">Channel Shuffle</button>
         <div id="aug03" style="display: none;">
             Randomly rearrange channels of the input RGB image.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ChannelShuffle">Albumentations</a><br>
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ChannelShuffle">Albumentations</a><br>
             <figure>
                 <img src="images/kitty.jpg"> 
                 <figcaption>Original</figcaption>
@@ -2142,6 +2144,71 @@ A huge list of many types of data augmentations techniques used for deep learnin
 </ul>
 
 <h2>Spatial-level transforms</h2>
+
+<h3>Arithmetic</h3>
+<ul class="augmentations">
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Flip -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_flip')">Flip</button>
+        <div id="aug_flip" style="display: none;">
+            Flip the input either horizontally, vertically or both horizontally and vertically.
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Flip">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure> 
+            <figure>
+                <img src="images/kitty_flip.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure> 
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Horizontal Flip -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_horizontal_flip')">Horizontal Flip</button>
+        <div id="aug_horizontal_flip" style="display: none;">
+            Flip the input horizontally around the y-axis.
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.HorizontalFlip">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure> 
+            <figure>
+                <img src="images/kitty_horizontal_flip.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure> 
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Vertical Flip -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_vertical_flip')">Vertical Flip</button>
+        <div id="aug_vertical_flip" style="display: none;">
+            Flip the input vertically around the x-axis.
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.VerticalFlip">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure> 
+            <figure>
+                <img src="images/kitty_vertical_flip.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure> 
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+</ul>
+
+<!--------------------------------------------------------------------------------------------------------------------->
+
 <ul class="augmentations">
     <li class="item_list">
         <button onclick="show('aug34')">CenterCrop</button>
@@ -2188,21 +2255,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure> 
         </div>
     </li>
-    <li class="item_list">
-        <button onclick="show('aug37')">Flip</button>
-        <div id="aug37" style="display: none;">
-            Flip the input either horizontally, vertically or both horizontally and vertically.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Flip">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure> 
-            <figure>
-                <img src="images/kitty_flip.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure> 
-        </div>
-    </li>
+    
     <li class="item_list">
         <button onclick="show('aug38')">GridDistortion</button>
         <div id="aug38" style="display: none;">
@@ -2231,21 +2284,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure> 
         </div>
     </li>
-    <li class="item_list">
-        <button onclick="show('aug40')">HorizontalFlip</button>
-        <div id="aug40" style="display: none;">
-            Flip the input horizontally around the y-axis.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.HorizontalFlip">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure> 
-            <figure>
-                <img src="images/kitty_horizontal_flip.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure> 
-        </div>
-    </li>
+
     <li class="item_list">
         <button onclick="show('aug41')">IAAAffine</button>
         <div id="aug41" style="display: none;">
@@ -2465,21 +2504,6 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure> 
             <figure>
                 <img src="images/kitty_transpose.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure> 
-        </div>
-    </li>
-    <li class="item_list">
-        <button onclick="show('aug56')">VerticalFlip</button>
-        <div id="aug56" style="display: none;">
-            Flip the input vertically around the x-axis.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.VerticalFlip">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure> 
-            <figure>
-                <img src="images/kitty_vertical_flip.jpg">
                 <figcaption>Augmentation</figcaption>
             </figure> 
         </div>

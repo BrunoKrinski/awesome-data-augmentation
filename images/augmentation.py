@@ -42,7 +42,7 @@ if __name__ == '__main__':
     height, width, channels = image.shape 
     image_name = image_path.split('/')[-1]
 
-    # Pixel Level transforms:
+    # Pixel Level Transforms:
 
     ## Arithmetic
 
@@ -492,7 +492,21 @@ if __name__ == '__main__':
         transform = iaa.imgcorruptlike.Frost(severity=2)
         transformed_image = transform(image=image)
 
-    ####################
+    # Spatial Level Transforms
+
+    # Flip
+    elif augmentation == 'flip':
+        transform = Flip(always_apply=True)
+        transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'horizontal_flip':
+        transform = HorizontalFlip(always_apply=True)
+        transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'vertical_flip':
+        transform = VerticalFlip(always_apply=True)
+        transformed_image = transform(image=image)['image']
+
             
     elif augmentation == 'channel_shuffle':
         transform = ChannelShuffle(always_apply=True)
@@ -527,9 +541,7 @@ if __name__ == '__main__':
         transform = ElasticTransform(always_apply=True, alpha=10)
         transformed_image = transform(image=image)['image']
 
-    elif augmentation == 'flip':
-        transform = Flip(always_apply=True)
-        transformed_image = transform(image=image)['image']
+    
 
     elif augmentation == 'grid_distortion':
         transform = GridDistortion(always_apply=True, distort_limit=0.5)
@@ -539,9 +551,7 @@ if __name__ == '__main__':
         transform = GridDropout(always_apply=True)
         transformed_image = transform(image=image)['image']
 
-    elif augmentation == 'horizontal_flip':
-        transform = HorizontalFlip(always_apply=True)
-        transformed_image = transform(image=image)['image']
+    
 
     elif augmentation == 'iaaaffine':
         transform = IAAAffine(always_apply=True, p=1.0, rotate=180, shear=50)
@@ -603,10 +613,6 @@ if __name__ == '__main__':
 
     elif augmentation == 'transpose':
         transform = Transpose(always_apply=True)
-        transformed_image = transform(image=image)['image']
-
-    elif augmentation == 'vertical_flip':
-        transform = VerticalFlip(always_apply=True)
         transformed_image = transform(image=image)['image']
 
     name, ext = image_name.split('.')
