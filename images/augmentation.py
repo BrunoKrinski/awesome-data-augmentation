@@ -86,6 +86,10 @@ if __name__ == '__main__':
         transform = ChannelDropout(always_apply=True)
         transformed_image = transform(image=image)['image']
 
+    elif augmentation == 'grid_dropout':
+        transform = GridDropout(always_apply=True)
+        transformed_image = transform(image=image)['image']
+
     elif augmentation == 'salt':
         transform = iaa.Salt(0.1)
         transformed_image = transform(image=image)
@@ -592,7 +596,6 @@ if __name__ == '__main__':
                                                       min_max_height=[200, 200])
         transformed_image = transform(image=image)['image']
 
-    
     ## Flip
 
     elif augmentation == 'flip':
@@ -688,6 +691,10 @@ if __name__ == '__main__':
         transform = SmallestMaxSize(always_apply=True)
         transformed_image = transform(image=image)['image']
 
+    elif augmentation == 'elastic_transformation':
+        transform = iaa.ElasticTransformation(alpha=(0, 10.0), sigma=0.25)
+        transformed_image = transform(image=image)
+
     ##############
 
             
@@ -709,10 +716,6 @@ if __name__ == '__main__':
 
     elif augmentation == 'grid_distortion':
         transform = GridDistortion(always_apply=True, distort_limit=0.5)
-        transformed_image = transform(image=image)['image']
-
-    elif augmentation == 'grid_dropout':
-        transform = GridDropout(always_apply=True)
         transformed_image = transform(image=image)['image']
 
     elif augmentation == 'optical_distortion':
