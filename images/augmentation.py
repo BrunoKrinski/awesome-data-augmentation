@@ -494,7 +494,36 @@ if __name__ == '__main__':
 
     # Spatial Level Transforms
 
+    # Crop
+
+    elif augmentation == 'crop':
+        transform = Crop(always_apply=True, x_max=400, y_max=400)
+        transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'center_crop':
+        transform = CenterCrop(always_apply=True, width=400, height=400)
+        transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'random_crop':
+        transform = RandomCrop(always_apply=True, width=200, height=200)
+        transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'crop_and_pad':
+        transform = iaa.CropAndPad(percent=(-0.25, 0.25))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'random_resized_crop':
+        transform = RandomResizedCrop(always_apply=True, width=100, height=100)
+        transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'random_sized_crop':
+        transform = RandomSizedCrop(always_apply=True, height=500, width=500, 
+                                                      min_max_height=[200, 200])
+        transformed_image = transform(image=image)['image']
+
+    
     # Flip
+
     elif augmentation == 'flip':
         transform = Flip(always_apply=True)
         transformed_image = transform(image=image)['image']
@@ -534,18 +563,8 @@ if __name__ == '__main__':
         transform = ToFloat(always_apply=True)
         transformed_image = transform(image=image)['image']
 
-    elif augmentation == 'center_crop':
-        transform = CenterCrop(always_apply=True, width=400, height=400)
-        transformed_image = transform(image=image)['image']
+   
     
-    elif augmentation == 'crop':
-        transform = Crop(always_apply=True, x_max=400, y_max=400)
-        transformed_image = transform(image=image)['image']
-
-    elif augmentation == 'crop_non_empty_mask':
-        transform = CropNonEmptyMaskIfExists(always_apply=True, width=400, 
-                                                                height=400)
-        transformed_image = transform(image=image)['image']
 
     elif augmentation == 'elastic_transform':
         transform = ElasticTransform(always_apply=True, alpha=10)
@@ -567,9 +586,7 @@ if __name__ == '__main__':
         transform = IAAAffine(always_apply=True, p=1.0, rotate=180, shear=50)
         transformed_image = transform(image=image)['image']
 
-    elif augmentation == 'crop_and_pad':
-        transform = IAACropAndPad(always_apply=True, percent=0.5)
-        transformed_image = transform(image=image)['image']
+   
     
     elif augmentation == 'longest_max_size':
         transform = LongestMaxSize(always_apply=True)
@@ -579,17 +596,12 @@ if __name__ == '__main__':
         transform = OpticalDistortion(always_apply=True, distort_limit=0.5)
         transformed_image = transform(image=image)['image']
     
-    elif augmentation == 'random_crop':
-        transform = RandomCrop(always_apply=True, width=200, height=200)
-        transformed_image = transform(image=image)['image']
+    
 
     elif augmentation == 'random_grid_shuffle':
         transform = RandomGridShuffle(always_apply=True, grid=(5, 5))
         transformed_image = transform(image=image)['image']
 
-    elif augmentation == 'random_resized_crop':
-        transform = RandomResizedCrop(always_apply=True, width=100, height=100)
-        transformed_image = transform(image=image)['image']
 
     elif augmentation == 'random_rotate90':
         transform = RandomRotate90(always_apply=True)
@@ -597,11 +609,6 @@ if __name__ == '__main__':
 
     elif augmentation == 'random_scale':
         transform = RandomScale(always_apply=True)
-        transformed_image = transform(image=image)['image']
-
-    elif augmentation == 'random_sized_crop':
-        transform = RandomSizedCrop(always_apply=True, height=500, width=500, 
-                                                      min_max_height=[200, 200])
         transformed_image = transform(image=image)['image']
 
     elif augmentation == 'resize':

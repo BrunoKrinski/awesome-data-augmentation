@@ -2145,7 +2145,128 @@ A huge list of many types of data augmentations techniques used for deep learnin
 
 <h2>Spatial-level transforms</h2>
 
-<h3>Arithmetic</h3>
+<h3>Crop</h3>
+<ul class="augmentations">
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Crop -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_crop')">Crop</button>
+        <div id="aug_crop" style="display: none;">
+            Crop region from image.
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Crop">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_crop.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Center Crop -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_center_crop')">Center Crop</button>
+        <div id="aug_center_crop" style="display: none;">
+            Crop the central part of the input.
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.CenterCrop">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_center_crop.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Random Crop -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_random_crop')">Random Crop</button>
+        <div id="aug_random_crop" style="display: none;">
+            Crop a random part of the input.
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomCrop">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure> 
+            <figure>
+                <img src="images/kitty_random_crop.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure> 
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Crop and Pad -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_crop_and_pad')">Crop And Pad</button>
+        <div id="aug_crop_and_pad" style="display: none;">
+            Crop/pad images by pixel amounts or fractions of image sizes.
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/size.html#cropandpad">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure> 
+            <figure>
+                <img src="images/kitty_crop_and_pad.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure> 
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Random Resized Crop -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_random_resized_crop')">Random Resized Crop</button>
+        <div id="aug_random_resized_crop" style="display: none;">
+            Torchvision's variant of crop a random part of the input and rescale it to some size.
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomResizedCrop">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure> 
+            <figure>
+                <img src="images/kitty_random_resized_crop.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure> 
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Random Sized Crop -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_random_sized_crop')">Random Sized Crop</button>
+        <div id="aug_random_sized_crop" style="display: none;">
+            Crop a random part of the input and rescale it to some size.
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomSizedCrop">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure> 
+            <figure>
+                <img src="images/kitty_random_sized_crop.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure> 
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+</ul>
+
+<!----------------------------------------------------------------------------------------------------------------->
+
+<h3>Flip</h3>
 <ul class="augmentations">
     <!----------------------------------------------------------------------------------------------------------------->
     <!-- Flip -->
@@ -2248,36 +2369,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
 <!--------------------------------------------------------------------------------------------------------------------->
 
 <ul class="augmentations">
-    <li class="item_list">
-        <button onclick="show('aug34')">CenterCrop</button>
-        <div id="aug34" style="display: none;">
-            Crop the central part of the input.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.CenterCrop">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_center_crop.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>  
-        </div>
-    </li>
-    <li class="item_list">
-        <button onclick="show('aug35')">Crop</button>
-        <div id="aug35" style="display: none;">
-            Crop region from image.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Crop">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_crop.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>  
-        </div>
-    </li>
+ 
     <li class="item_list">
         <button onclick="show('aug36')">ElasticTransform</button>
         <div id="aug36" style="display: none;">
@@ -2338,20 +2430,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure> 
         </div>
     </li>
-    <li class="item_list">
-        <button onclick="show('aug42')">IAACropAndPad</button>
-        <div id="aug42" style="display: none;">
-            Source: <a target="_blank" href="https://github.com/albumentations-team/albumentations">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure> 
-            <figure>
-                <img src="images/kitty_crop_and_pad.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure> 
-        </div>
-    </li>
+
     <li class="item_list">
         <button onclick="show('aug43')">IAAPiecewiseAffine</button>
         <div id="aug43" style="display: none;">
@@ -2396,21 +2475,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure> 
         </div>
     </li>
-    <li class="item_list">
-        <button onclick="show('aug46')">RandomCrop</button>
-        <div id="aug46" style="display: none;">
-            Crop a random part of the input.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomCrop">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure> 
-            <figure>
-                <img src="images/kitty_random_crop.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure> 
-        </div>
-    </li>
+
     <li class="item_list">
         <button onclick="show('aug47')">RandomGridShuffle</button>
         <div id="aug47" style="display: none;">
@@ -2426,21 +2491,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure> 
         </div>
     </li>
-    <li class="item_list">
-        <button onclick="show('aug48')">RandomResizedCrop</button>
-        <div id="aug48" style="display: none;">
-            Torchvision's variant of crop a random part of the input and rescale it to some size.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomResizedCrop">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure> 
-            <figure>
-                <img src="images/kitty_random_resized_crop.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure> 
-        </div>
-    </li>
+
     <li class="item_list">
         <button onclick="show('aug49')">RandomRotate90</button>
         <div id="aug49" style="display: none;">
@@ -2471,21 +2522,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure> 
         </div>
     </li>
-    <li class="item_list">
-        <button onclick="show('aug50')">RandomSizedCrop</button>
-        <div id="aug50" style="display: none;">
-            Crop a random part of the input and rescale it to some size.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomSizedCrop">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure> 
-            <figure>
-                <img src="images/kitty_random_sized_crop.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure> 
-        </div>
-    </li>
+
     <li class="item_list">
         <button onclick="show('aug52')">Rotate</button>
         <div id="aug52" style="display: none;">
