@@ -507,6 +507,16 @@ if __name__ == '__main__':
         transform = VerticalFlip(always_apply=True)
         transformed_image = transform(image=image)['image']
 
+    elif augmentation == 'fliplr':
+        transform = iaa.Fliplr(0.5)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'flipud':
+        transform = iaa.Flipud(0.5)
+        transformed_image = transform(image=image)
+
+    ##############
+
             
     elif augmentation == 'channel_shuffle':
         transform = ChannelShuffle(always_apply=True)
