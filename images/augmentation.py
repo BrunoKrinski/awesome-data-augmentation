@@ -510,6 +510,21 @@ if __name__ == '__main__':
 
     # Spatial Level Transforms
 
+    ## Affine
+
+    elif augmentation == 'affine':
+        transform = iaa.Affine(scale={"x": (0.5, 1.5), "y": (0.5, 1.5)})
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'piecewise_affine':
+        transform = iaa.PiecewiseAffine(scale=(0.05, 0.09))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'shift_scale_rotate':
+        transform = ShiftScaleRotate(always_apply=True, shift_limit=0.1, 
+                                                        scale_limit=0.5)
+        transformed_image = transform(image=image)['image']
+
     ## Crop
 
     elif augmentation == 'crop':
@@ -656,11 +671,6 @@ if __name__ == '__main__':
         transform = RandomRotate90(always_apply=True)
         transformed_image = transform(image=image)['image']
    
-    elif augmentation == 'shift_scale_rotate':
-        transform = ShiftScaleRotate(always_apply=True, shift_limit=0.1, 
-                                                        scale_limit=0.5)
-        transformed_image = transform(image=image)['image']
-  
     elif augmentation == 'transpose':
         transform = Transpose(always_apply=True)
         transformed_image = transform(image=image)['image']
@@ -703,10 +713,6 @@ if __name__ == '__main__':
 
     elif augmentation == 'grid_dropout':
         transform = GridDropout(always_apply=True)
-        transformed_image = transform(image=image)['image']
-
-    elif augmentation == 'iaaaffine':
-        transform = IAAAffine(always_apply=True, p=1.0, rotate=180, shear=50)
         transformed_image = transform(image=image)['image']
 
     elif augmentation == 'optical_distortion':

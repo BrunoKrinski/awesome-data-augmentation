@@ -2202,6 +2202,70 @@ A huge list of many types of data augmentations techniques used for deep learnin
 
 <h2>Spatial-level transforms</h2>
 
+<h3>Affine</h3>
+<ul class="augmentations">
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Affine -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_affine')">Affine</button>
+        <div id="aug_affine" style="display: none;">
+            Augmenter to apply affine transformations to images.
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/geometric.html#affine">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure> 
+            <figure>
+                <img src="images/kitty_affine.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure> 
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Piecewise Affine -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_piecewise_affine')">Piecewise Affine</button>
+        <div id="aug_piecewise_affine" style="display: none;">
+            Apply affine transformations that differ between local neighbourhoods.
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/geometric.html#piecewiseaffine">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure> 
+            <figure>
+                <img src="images/kitty_piecewise_affine.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure> 
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Shift Scale Rotate -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_shift_scale_rotate')">Shift Scale Rotate</button>
+        <div id="aug_shift_scale_rotate" style="display: none;">
+            Randomly apply affine transforms: translate, scale and rotate the input.
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ShiftScaleRotate">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure> 
+            <figure>
+                <img src="images/kitty_shift_scale_rotate.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure> 
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+</ul>
+
+<!--------------------------------------------------------------------------------------------------------------------->
+
 <h3>Crop</h3>
 <ul class="augmentations">
     <!----------------------------------------------------------------------------------------------------------------->
@@ -2853,26 +2917,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Shift Scale Rotate -->
-    <!----------------------------------------------------------------------------------------------------------------->
-    <li class="item_list">
-        <button onclick="show('aug_shift_scale_rotate')">Shift Scale Rotate</button>
-        <div id="aug_shift_scale_rotate" style="display: none;">
-            Randomly apply affine transforms: translate, scale and rotate the input.
-            Source: <a target="_blank" 
-                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ShiftScaleRotate">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure> 
-            <figure>
-                <img src="images/kitty_shift_scale_rotate.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure> 
-        </div>
-    </li>
-    <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Shift Scale Rotate -->
+    <!-- Transpose -->
     <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
         <button onclick="show('aug_transpose')">Transpose</button>
@@ -2992,37 +3037,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
 
-    <li class="item_list">
-        <button onclick="show('aug41')">IAAAffine</button>
-        <div id="aug41" style="display: none;">
-            Place a regular grid of points on the input and randomly move the neighbourhood of these point around via affine transformations.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/imgaug/transforms/#albumentations.imgaug.transforms.IAAAffine">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure> 
-            <figure>
-                <img src="images/kitty_iaaaffine.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure> 
-        </div>
-    </li>
 
-    <li class="item_list">
-        <button onclick="show('aug43')">IAAPiecewiseAffine</button>
-        <div id="aug43" style="display: none;">
-            Place a regular grid of points on the input and randomly move the neighbourhood of these point around via affine transformations.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/imgaug/transforms/#albumentations.imgaug.transforms.IAAPiecewiseAffine">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure> 
-            <figure>
-                <img src="images/kitty_piecewise_affine.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure> 
-        </div>
-    </li>
     
     <li class="item_list">
         <button onclick="show('aug45')">OpticalDistortion</button>
