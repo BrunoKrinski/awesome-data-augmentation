@@ -2615,6 +2615,204 @@ A huge list of many types of data augmentations techniques used for deep learnin
 
 <!--------------------------------------------------------------------------------------------------------------------->
 
+<h3>Pad</h3>
+<ul class="augmentations">
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Pad to Fixed Size -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_pad_to_fixed_size')">Pad to Fixed Size</button>
+        <div id="aug_pad_to_fixed_size" style="display: none;">
+            Pad images to minimum width/height.
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/size.html#padtofixedsize">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_pad_to_fixed_size.jpg" style="width: 605px;">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Pad to Multiples of -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_pad_to_multiples_of')">Pad to Multiples of</button>
+        <div id="aug_pad_to_multiples_of" style="display: none;">
+            Pad images until their height/width is a multiple of a value.
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/size.html#padtomultiplesof">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_pad_to_multiples_of.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Pad to Powers of -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_pad_to_powers_of')">Pad to Powers of</button>
+        <div id="aug_pad_to_powers_of" style="display: none;">
+            Pad images until their height/width is a power of a base.
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/size.html#padtopowersof">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_pad_to_powers_of.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Pad to Aspect Ratio -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_pad_to_aspect_ratio')">Pad to Aspect Ratio</button>
+        <div id="aug_pad_to_aspect_ratio" style="display: none;">
+            Pad images until their width/height matches an aspect ratio.
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/size.html#padtoaspectratio">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_pad_to_aspect_ratio.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Pad to Square -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_pad_to_square')">Pad to Square</button>
+        <div id="aug_pad_to_square" style="display: none;">
+            Pad images until their height and width are identical.
+            Source: <a target="_blank" 
+                       href=https://imgaug.readthedocs.io/en/latest/source/overview/size.html#padtosquare">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_pad_to_square.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Center Pad to Fixed Size -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_cpad_to_fixed_size')">Center Pad to Fixed Size</button>
+        <div id="aug_cpad_to_fixed_size" style="display: none;">
+            Pad images equally on all sides up to given minimum heights/widths.
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/size.html#centerpadtofixedsize">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_center_pad_to_fixed_size.jpg" style="width:605px">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Center Pad to Multiples of -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_cpad_to_multiples_of')">Center Pad to Multiples of</button>
+        <div id="aug_cpad_to_multiples_of" style="display: none;">
+            Pad images equally on all sides until H/W are multiples of given values.
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/size.html#centerpadtomultiplesof">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_center_pad_to_multiples_of.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Center Pad to Powers of -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_cpad_to_powers_of')">Center Pad to Powers of</button>
+        <div id="aug_cpad_to_powers_of" style="display: none;">
+            Pad images equally on all sides until H/W is a power of a base.
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/size.html#centerpadtopowersof">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_center_pad_to_powers_of.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Center Pad to Aspect Ratio -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_cpad_to_aspect_ratio')">Center Pad to Aspect Ratio</button>
+        <div id="aug_cpad_to_aspect_ratio" style="display: none;">
+            Pad images equally on all sides until H/W matches an aspect ratio.
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/size.html#centerpadtoaspectratio">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_center_pad_to_aspect_ratio.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Center Pad to Square -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_center_pad_to_square')">Center Crop to Square</button>
+        <div id="aug_center_pad_to_square" style="display: none;">
+            Pad images equally on all sides until their height & width are identical.
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/size.html#centerpadtosquare">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_center_pad_to_square.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+</ul>
+
+<!--------------------------------------------------------------------------------------------------------------------->
+
+
 <p>On building...</p>
 
 <ul class="augmentations">

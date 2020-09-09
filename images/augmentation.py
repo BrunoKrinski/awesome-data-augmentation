@@ -501,7 +501,7 @@ if __name__ == '__main__':
         transformed_image = transform(image=image)
 
     elif augmentation == 'frost':
-        transform = iaa.imgcorruptlike.Frost(severity=2)
+        transform = iaa.imgcorruptlike.Frost(severity=1)
         transformed_image = transform(image=image)
 
     elif augmentation == 'clouds':
@@ -598,6 +598,48 @@ if __name__ == '__main__':
 
     elif augmentation == 'flipud':
         transform = iaa.Flipud(0.5)
+        transformed_image = transform(image=image)
+
+    ## Pad
+
+    elif augmentation == 'pad_to_fixed_size':
+        transform = iaa.PadToFixedSize(width=1000, height=1000)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'pad_to_multiples_of':
+        transform = iaa.PadToPowersOf(height_base=3, width_base=2)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'pad_to_powers_of':
+        transform = iaa.CropToMultiplesOf(height_multiple=32, width_multiple=32)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'pad_to_aspect_ratio':
+        transform = iaa.PadToAspectRatio(2.0)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'pad_to_square':
+        transform = iaa.PadToSquare()
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'center_pad_to_fixed_size':
+        transform = iaa.CenterPadToFixedSize(width=300, height=300)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'center_pad_to_multiples_of':
+        transform = iaa.CenterPadToPowersOf(height_base=3, width_base=2)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'center_pad_to_powers_of':
+        transform = iaa.CenterPadToMultiplesOf(height_multiple=32, width_multiple=32)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'center_pad_to_aspect_ratio':
+        transform = iaa.CenterPadToAspectRatio(2.0)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'center_pad_to_square':
+        transform = iaa.CenterPadToSquare()
         transformed_image = transform(image=image)
 
     ##############
