@@ -623,7 +623,7 @@ if __name__ == '__main__':
         transformed_image = transform(image=image)
 
     elif augmentation == 'center_pad_to_fixed_size':
-        transform = iaa.CenterPadToFixedSize(width=300, height=300)
+        transform = iaa.CenterPadToFixedSize(width=1000, height=1000)
         transformed_image = transform(image=image)
 
     elif augmentation == 'center_pad_to_multiples_of':
