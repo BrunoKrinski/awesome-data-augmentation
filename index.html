@@ -1291,6 +1291,27 @@ A huge list of many types of data augmentations techniques used for deep learnin
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Channel Shuffle -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <ul class="augmentations">    
+        <li class="item_list">
+            <button onclick="show('aug_shannel_shuffle')">Channel Shuffle</button>
+            <div id="aug_shannel_shuffle" style="display: none;">
+                Randomly rearrange channels of the input RGB image.
+                Source: <a target="_blank" 
+                           href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ChannelShuffle">Albumentations</a><br>
+                <figure>
+                    <img src="images/kitty.jpg"> 
+                    <figcaption>Original</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/kitty_channel_shuffle.jpg">
+                    <figcaption>Augmentation</figcaption>
+                </figure>
+            </div>
+        </li>
+        <!----------------------------------------------------------------------------------------------------------------->
+    </ul>
 </ul>
 
 <!--------------------------------------------------------------------------------------------------------------------->
@@ -1787,25 +1808,6 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure>  
         </div>
     </li>
-    <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Elastic Transform -->
-    <!----------------------------------------------------------------------------------------------------------------->  
-    <li class="item_list">
-        <button onclick="show('aug_elastic_transform')">Elastic Transform</button>
-        <div id="aug_elastic_transform" style="display: none;">
-            Source: <a target="_blank" 
-                       href="https://imgaug.readthedocs.io/en/latest/source/overview/imgcorruptlike.html#elastictransform">Imgaug</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_elastic_transform.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>  
-        </div>
-    </li>
-    <!----------------------------------------------------------------------------------------------------------------->
 </ul>
 
 <!--------------------------------------------------------------------------------------------------------------------->
@@ -2195,28 +2197,8 @@ A huge list of many types of data augmentations techniques used for deep learnin
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
 </ul>
+
 <!--------------------------------------------------------------------------------------------------------------------->
-
-<p>On building...</p>
-
-<ul class="augmentations">    
-    <li class="item_list">
-        <button onclick="show('aug03')">Channel Shuffle</button>
-        <div id="aug03" style="display: none;">
-            Randomly rearrange channels of the input RGB image.
-            Source: <a target="_blank" 
-                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ChannelShuffle">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure>
-            <figure>
-                <img src="images/kitty_channel_shuffle.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure>
-        </div>
-    </li>
-</ul>
 
 <h2>Spatial-level transforms</h2>
 
@@ -2588,6 +2570,142 @@ A huge list of many types of data augmentations techniques used for deep learnin
                 <img src="images/kitty_random_sized_crop.jpg">
                 <figcaption>Augmentation</figcaption>
             </figure> 
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+</ul>
+
+<!----------------------------------------------------------------------------------------------------------------->
+
+<h3>Distortion</h3>
+<ul class="augmentations">
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Grid Distortion -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_grid_distortion')">Grid Distortion</button>
+        <div id="aug_grid_distortion" style="display: none;">
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.GridDistortion">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure> 
+            <figure>
+                <img src="images/kitty_grid_distortion.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure> 
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Optical Distortion -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_optical_distortion')">Optical Distortion</button>
+        <div id="aug_optical_distortion" style="display: none;">
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.OpticalDistortion">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure> 
+            <figure>
+                <img src="images/kitty_optical_distortion.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure> 
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Random Grid Shuffle -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_random_grid_shuffle')">Random Grid Shuffle</button>
+        <div id="aug_random_grid_shuffle" style="display: none;">
+            Random shuffle grid's cells on image.
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomGridShuffle">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure> 
+            <figure>
+                <img src="images/kitty_random_grid_shuffle.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure> 
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Elastic Transformation -->
+    <!----------------------------------------------------------------------------------------------------------------->  
+    <li class="item_list">
+        <button onclick="show('aug_elastic_transformation')">Elastic Transformation</button>
+        <div id="aug_elastic_transformation" style="display: none;">
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/geometric.html#elastictransformation">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_elastic_transformation.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Elastic Transform -->
+    <!----------------------------------------------------------------------------------------------------------------->  
+    <li class="item_list">
+        <button onclick="show('aug_elastic_transform')">Elastic Transform</button>
+        <div id="aug_elastic_transform" style="display: none;">
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/imgcorruptlike.html#elastictransform">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_elastic_transform.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- With Polar Warping -->
+    <!----------------------------------------------------------------------------------------------------------------->  
+    <li class="item_list">
+        <button onclick="show('aug_with_polar_warping')">With Polar Warping</button>
+        <div id="aug_with_polar_warping" style="display: none;">
+            Augmenter that applies other augmenters in a polar-transformed space.
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/geometric.html#withpolarwarping">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_with_polar_warping.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Jigsaw -->
+    <!----------------------------------------------------------------------------------------------------------------->  
+    <li class="item_list">
+        <button onclick="show('aug_jigsaw')">Jigsaw</button>
+        <div id="aug_jigsaw" style="display: none;">
+            Move cells within images similar to jigsaw patterns.
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/geometric.html#jigsaw">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_jigsaw.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
@@ -3022,57 +3140,6 @@ A huge list of many types of data augmentations techniques used for deep learnin
 
 <!--------------------------------------------------------------------------------------------------------------------->
 
-<p>On building...</p>
-
-<ul class="augmentations">
-    
-    <li class="item_list">
-        <button onclick="show('aug38')">GridDistortion</button>
-        <div id="aug38" style="display: none;">
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.GridDistortion">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure> 
-            <figure>
-                <img src="images/kitty_grid_distortion.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure> 
-        </div>
-    </li>
-    
-    <li class="item_list">
-        <button onclick="show('aug45')">OpticalDistortion</button>
-        <div id="aug45" style="display: none;">
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.OpticalDistortion">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure> 
-            <figure>
-                <img src="images/kitty_optical_distortion.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure> 
-        </div>
-    </li>
-
-    <li class="item_list">
-        <button onclick="show('aug47')">RandomGridShuffle</button>
-        <div id="aug47" style="display: none;">
-            Random shuffle grid's cells on image.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomCrop">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure> 
-            <figure>
-                <img src="images/kitty_random_grid_shuffle.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure> 
-        </div>
-    </li>
-</ul>
-
 <h1>Awesome Articles:</h1>
 A list of awesome articles and tutorials for easy understanding of deep learning and data augmentation!
 <ul>
@@ -3090,6 +3157,9 @@ A list of awesome articles and tutorials for easy understanding of deep learning
     </li>
     <li>
         <a target="_blanck" href="https://towardsdatascience.com/generative-adversarial-network-gan-for-dummies-a-step-by-step-tutorial-fdefff170391">Generative Adversarial Network (GAN) for Dummies — A Step By Step Tutorial</a>
+    </li>
+    <li>
+        <a target="_blanck" href="https://www.affineanalytics.com/data-augmentation-for-deep-learning-algorithms/">Data Augmentation For Deep Learning Algorithms</a>
     </li>
 </ul>
 
@@ -3179,6 +3249,20 @@ A list of awesome surveys in many different subjects of deep learning!
                 </li>
             </ul>
             <img class="center" src="papers/img0.png">
+        </div>
+    </li>
+    <!----------------------------------------------------------------------2016--------------------------------------->
+    <li>
+        <button onclick="show('div24')">Adaptive data augmentation for image classification</button>
+        <div id="div24" class="paper" style="display: none;">
+            <ul class="item_list">
+                <li>
+                    Link: <a target="_blank" href="https://ieeexplore.ieee.org/document/7533048">IEEE Xplore</a>
+                </li>
+                <li>
+                    Authors: Alhussein Fawzi ; Horst Samulowitz ; Deepak Turaga ; Pascal Frossard
+                </li>
+            </ul>
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->

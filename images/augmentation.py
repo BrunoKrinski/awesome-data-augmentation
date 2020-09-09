@@ -224,6 +224,7 @@ if __name__ == '__main__':
         transformed_image = transform(image=image)
 
     ## Color
+
     elif augmentation == 'multiply_hue':
         transform = iaa.MultiplyHue((0.5, 1.5))
         transformed_image = transform(image=image)
@@ -314,7 +315,12 @@ if __name__ == '__main__':
         transform = iaa.UniformColorQuantization()
         transformed_image = transform(image=image)
 
+    elif augmentation == 'channel_shuffle':
+        transform = ChannelShuffle(always_apply=True)
+        transformed_image = transform(image=image)['image'] 
+
     ## Contrast
+
     elif augmentation == 'contrast':
         transform = iaa.imgcorruptlike.Contrast(severity=2)
         transformed_image = transform(image=image)
@@ -360,6 +366,7 @@ if __name__ == '__main__':
         transformed_image = transform(image=image)
 
     ## Compression
+
     elif augmentation == 'image_compression':
         transform = ImageCompression(always_apply=True, quality_lower=10)
         transformed_image = transform(image=image)['image']
@@ -373,6 +380,7 @@ if __name__ == '__main__':
         transformed_image = transform(image=image)
 
     ## Convolutional
+
     elif augmentation == 'sharpen':
         transform = iaa.Sharpen(alpha=(0.0, 1.0), lightness=(0.75, 2.0))
         transformed_image = transform(image=image)
@@ -429,10 +437,6 @@ if __name__ == '__main__':
         
     elif augmentation == 'spatter':
         transform = iaa.imgcorruptlike.Spatter(severity=2)
-        transformed_image = transform(image=image)
-
-    elif augmentation == 'elastic_transform':
-        transform = iaa.imgcorruptlike.ElasticTransform(severity=5)
         transformed_image = transform(image=image)
     
     ## Edges
@@ -596,6 +600,36 @@ if __name__ == '__main__':
                                                       min_max_height=[200, 200])
         transformed_image = transform(image=image)['image']
 
+    ## Distortion
+
+    elif augmentation == 'grid_distortion':
+        transform = GridDistortion(always_apply=True, distort_limit=0.5)
+        transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'optical_distortion':
+        transform = OpticalDistortion(always_apply=True, distort_limit=0.5)
+        transformed_image = transform(image=image)['image']
+    
+    elif augmentation == 'random_grid_shuffle':
+        transform = RandomGridShuffle(always_apply=True, grid=(5, 5))
+        transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'elastic_transformation':
+        transform = iaa.ElasticTransformation(alpha=(0, 10.0), sigma=0.25)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'elastic_transform':
+        transform = iaa.imgcorruptlike.ElasticTransform(severity=5)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'with_polar_warping':
+        transform = iaa.WithPolarWarping(iaa.CropAndPad(percent=(-0.1, 0.1)))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'jigsaw':
+        transform = iaa.Jigsaw(nb_rows=10, nb_cols=10)
+        transformed_image = transform(image=image)
+
     ## Flip
 
     elif augmentation == 'flip':
@@ -679,6 +713,7 @@ if __name__ == '__main__':
         transformed_image = transform(image=image)['image']
 
     ## Size
+
     elif augmentation == 'resize':
         transform = Resize(always_apply=True, height=100, width=100)
         transformed_image = transform(image=image)['image']
@@ -690,42 +725,7 @@ if __name__ == '__main__':
     elif augmentation == 'smallest_max_size':
         transform = SmallestMaxSize(always_apply=True)
         transformed_image = transform(image=image)['image']
-
-    elif augmentation == 'elastic_transformation':
-        transform = iaa.ElasticTransformation(alpha=(0, 10.0), sigma=0.25)
-        transformed_image = transform(image=image)
-
-    ##############
-
-            
-    elif augmentation == 'channel_shuffle':
-        transform = ChannelShuffle(always_apply=True)
-        transformed_image = transform(image=image)['image']
-                        
-    elif augmentation == 'from_float':
-        transform = FromFloat(always_apply=True, max_value=127)
-        transformed_image = transform(image=image)['image']
-
-    elif augmentation == 'normalize':
-        transform = Normalize(always_apply=True)
-        transformed_image = transform(image=image)['image']
-
-    elif augmentation == 'to_float':
-        transform = ToFloat(always_apply=True)
-        transformed_image = transform(image=image)['image']
-
-    elif augmentation == 'grid_distortion':
-        transform = GridDistortion(always_apply=True, distort_limit=0.5)
-        transformed_image = transform(image=image)['image']
-
-    elif augmentation == 'optical_distortion':
-        transform = OpticalDistortion(always_apply=True, distort_limit=0.5)
-        transformed_image = transform(image=image)['image']
-    
-    elif augmentation == 'random_grid_shuffle':
-        transform = RandomGridShuffle(always_apply=True, grid=(5, 5))
-        transformed_image = transform(image=image)['image']
-
+   
     name, ext = image_name.split('.')
     new_path = name + '_' + augmentation + '.' + ext
     cv2.imwrite(new_path, transformed_image)
