@@ -646,6 +646,19 @@ if __name__ == '__main__':
         transform = iaa.CenterPadToSquare()
         transformed_image = transform(image=transformed_image)
 
+    ## Size
+    elif augmentation == 'resize':
+        transform = Resize(always_apply=True, height=100, width=100)
+        transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'longest_max_size':
+        transform = LongestMaxSize(always_apply=True)
+        transformed_image = transform(image=image)['image']
+          
+    elif augmentation == 'smallest_max_size':
+        transform = SmallestMaxSize(always_apply=True)
+        transformed_image = transform(image=image)['image']
+
     ##############
 
             
@@ -668,9 +681,7 @@ if __name__ == '__main__':
    
     
 
-    elif augmentation == 'elastic_transform':
-        transform = ElasticTransform(always_apply=True, alpha=10)
-        transformed_image = transform(image=image)['image']
+
 
     
 
@@ -690,10 +701,7 @@ if __name__ == '__main__':
 
    
     
-    elif augmentation == 'longest_max_size':
-        transform = LongestMaxSize(always_apply=True)
-        transformed_image = transform(image=image)['image']
-
+   
     elif augmentation == 'optical_distortion':
         transform = OpticalDistortion(always_apply=True, distort_limit=0.5)
         transformed_image = transform(image=image)['image']
@@ -708,15 +716,7 @@ if __name__ == '__main__':
     elif augmentation == 'random_rotate90':
         transform = RandomRotate90(always_apply=True)
         transformed_image = transform(image=image)['image']
-
-    elif augmentation == 'random_scale':
-        transform = RandomScale(always_apply=True)
-        transformed_image = transform(image=image)['image']
-
-    elif augmentation == 'resize':
-        transform = Resize(always_apply=True, height=500, width=500)
-        transformed_image = transform(image=image)['image']
-
+   
     elif augmentation == 'rotate':
         transform = Rotate(always_apply=True)
         transformed_image = transform(image=image)['image']
@@ -725,10 +725,7 @@ if __name__ == '__main__':
         transform = ShiftScaleRotate(always_apply=True, shift_limit=0.1, 
                                                         scale_limit=0.5)
         transformed_image = transform(image=image)['image']
-    
-    elif augmentation == 'smallest_max_size':
-        transform = SmallestMaxSize(always_apply=True)
-        transformed_image = transform(image=image)['image']
+  
 
     elif augmentation == 'transpose':
         transform = Transpose(always_apply=True)

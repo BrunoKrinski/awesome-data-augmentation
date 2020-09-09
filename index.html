@@ -2812,26 +2812,73 @@ A huge list of many types of data augmentations techniques used for deep learnin
 
 <!--------------------------------------------------------------------------------------------------------------------->
 
-
-<p>On building...</p>
-
+<h3>Size</h3>
 <ul class="augmentations">
- 
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Resize -->
+    <!----------------------------------------------------------------------------------------------------------------->
     <li class="item_list">
-        <button onclick="show('aug36')">ElasticTransform</button>
-        <div id="aug36" style="display: none;">
-            Elastic deformation of images as described in Simard, Steinkraus and Platt, "Best Practices for Convolutional Neural Networks applied to Visual Document Analysis" (with modifications). Based on <a target="_blanck" href="https://gist.github.com/erniejunior/601cdf56d2b424757de5">https://gist.github.com/erniejunior/601cdf56d2b424757de5.</a>
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ElasticTransform">Albumentations</a><br>
+        <button onclick="show('aug_resize')">Resize</button>
+        <div id="aug_resize" style="display: none;">
+            Resize the input to the given height and width.
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Resize">Albumentations</a><br>
             <figure>
                 <img src="images/kitty.jpg"> 
                 <figcaption>Original</figcaption>
             </figure> 
             <figure>
-                <img src="images/kitty_elastic_transform.jpg">
+                <img src="images/kitty_resize.jpg">
                 <figcaption>Augmentation</figcaption>
             </figure> 
         </div>
     </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Longest Max Size -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_longes_max_size')">Longest Max Size</button>
+        <div id="aug_longes_max_size" style="display: none;">
+            Rescale an image so that maximum side is equal to max_size, keeping the aspect ratio of the initial image.
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.LongestMaxSize">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure> 
+            <figure>
+                <img src="images/kitty_longest_max_size.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure> 
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Smallest Max Size -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_smallest_max_size')">Smallest Max Size</button>
+        <div id="aug_smallest_max_size" style="display: none;">
+            Rescale an image so that minimum side is equal to max_size, keeping the aspect ratio of the initial image.
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.SmallestMaxSize">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure> 
+            <figure>
+                <img src="images/kitty_smallest_max_size.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure> 
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+</ul>
+
+<!--------------------------------------------------------------------------------------------------------------------->
+
+<p>On building...</p>
+
+<ul class="augmentations">
     
     <li class="item_list">
         <button onclick="show('aug38')">GridDistortion</button>
@@ -2893,21 +2940,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure> 
         </div>
     </li>
-    <li class="item_list">
-        <button onclick="show('aug44')">LongestMaxSize</button>
-        <div id="aug44" style="display: none;">
-            Rescale an image so that maximum side is equal to max_size, keeping the aspect ratio of the initial image.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.LongestMaxSize">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure> 
-            <figure>
-                <img src="images/kitty_longest_max_size.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure> 
-        </div>
-    </li>
+    
     <li class="item_list">
         <button onclick="show('aug45')">OpticalDistortion</button>
         <div id="aug45" style="display: none;">
@@ -2954,21 +2987,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure> 
         </div>
     </li>
-    <li class="item_list">
-        <button onclick="show('aug51')">Resize</button>
-        <div id="aug51" style="display: none;">
-            Resize the input to the given height and width.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Resize">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure> 
-            <figure>
-                <img src="images/kitty_resize.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure> 
-        </div>
-    </li>
+   
 
     <li class="item_list">
         <button onclick="show('aug52')">Rotate</button>
@@ -3000,21 +3019,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure> 
         </div>
     </li>
-    <li class="item_list">
-        <button onclick="show('aug54')">SmallestMaxSize</button>
-        <div id="aug54" style="display: none;">
-            Rescale an image so that minimum side is equal to max_size, keeping the aspect ratio of the initial image.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.SmallestMaxSize">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure> 
-            <figure>
-                <img src="images/kitty_smallest_max_size.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure> 
-        </div>
-    </li>
+   
     <li class="item_list">
         <button onclick="show('aug55')">Transpose</button>
         <div id="aug55" style="display: none;">
