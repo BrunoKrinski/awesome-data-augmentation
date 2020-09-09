@@ -500,6 +500,26 @@ if __name__ == '__main__':
         transform = Crop(always_apply=True, x_max=400, y_max=400)
         transformed_image = transform(image=image)['image']
 
+    elif augmentation == 'crop_to_fixed_size':
+        transform = iaa.CropToFixedSize(width=100, height=100)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'crop_to_multiples_of':
+        transform = iaa.CropToPowersOf(height_base=3, width_base=2)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'crop_to_powers_of':
+        transform = iaa.CropToMultiplesOf(height_multiple=32, width_multiple=32)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'crop_to_aspect_ratio':
+        transform = iaa.CropToAspectRatio(2.0)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'crop_to_square':
+        transform = iaa.CropToSquare()
+        transformed_image = transform(image=image)
+
     elif augmentation == 'center_crop':
         transform = CenterCrop(always_apply=True, width=400, height=400)
         transformed_image = transform(image=image)['image']
