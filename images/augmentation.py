@@ -546,7 +546,7 @@ if __name__ == '__main__':
         transformed_image = transform(image=image)
 
     elif augmentation == 'translatey':
-        transform = iaa.TranslateY(px=(200))
+        transform = iaa.TranslateY(px=(-200))
         transformed_image = transform(image=image)
 
     ## Crop
