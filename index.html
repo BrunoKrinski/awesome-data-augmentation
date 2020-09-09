@@ -2180,7 +2180,7 @@ A huge list of many types of data augmentations techniques used for deep learnin
                 <figcaption>Original</figcaption>
             </figure>
             <figure>
-                <img src="images/kitty_crop_to_fixed_size.jpg">
+                <img src="images/kitty_crop_to_fixed_size.jpg" style="width:605px">
                 <figcaption>Augmentation</figcaption>
             </figure>  
         </div>
@@ -2276,6 +2276,101 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure>
             <figure>
                 <img src="images/kitty_center_crop.jpg" style="width: 605">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Center Crop to Fixed Size -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_ccrop_to_fixed_size')">Center Crop to Fixed Size</button>
+        <div id="aug_ccrop_to_fixed_size" style="display: none;">
+            Take a crop from the center of each image.
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/size.html#centercroptofixedsize">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_center_crop_to_fixed_size.jpg" style="width:605px">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Center Crop to Multiples of -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_ccrop_to_multiples_of')">Center Crop to Multiples of</button>
+        <div id="aug_ccrop_to_multiples_of" style="display: none;">
+            Crop images equally on all sides until H/W are multiples of given values.
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/size.html#centercroptomultiplesof">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_center_crop_to_multiples_of.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Center Crop to Powers of -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_ccrop_to_powers_of')">Center Crop to Powers of</button>
+        <div id="aug_ccrop_to_powers_of" style="display: none;">
+            Crop images until their height/width is a power of a base.
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/size.html#centercroptopowersof">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_center_crop_to_powers_of.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Center Crop to Aspect Ratio -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_ccrop_to_aspect_ratio')">Center Crop to Aspect Ratio</button>
+        <div id="aug_ccrop_to_aspect_ratio" style="display: none;">
+            Crop images until their width/height matches an aspect ratio.
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/size.html#centercroptoaspectratio">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_center_crop_to_aspect_ratio.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure>  
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Center Crop to Square -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_center_crop_to_square')">Center Crop to Square</button>
+        <div id="aug_center_crop_to_square" style="display: none;">
+            Crop images until their width and height are identical.
+            Source: <a target="_blank" 
+                       href="https://imgaug.readthedocs.io/en/latest/source/overview/size.html#centercroptosquare">Imgaug</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure>
+            <figure>
+                <img src="images/kitty_center_crop_to_square.jpg">
                 <figcaption>Augmentation</figcaption>
             </figure>  
         </div>

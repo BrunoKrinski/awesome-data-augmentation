@@ -501,7 +501,7 @@ if __name__ == '__main__':
         transformed_image = transform(image=image)['image']
 
     elif augmentation == 'crop_to_fixed_size':
-        transform = iaa.CropToFixedSize(width=100, height=100)
+        transform = iaa.CropToFixedSize(width=300, height=300)
         transformed_image = transform(image=image)
 
     elif augmentation == 'crop_to_multiples_of':
@@ -523,6 +523,26 @@ if __name__ == '__main__':
     elif augmentation == 'center_crop':
         transform = CenterCrop(always_apply=True, width=400, height=400)
         transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'center_crop_to_fixed_size':
+        transform = iaa.CenterCropToFixedSize(width=300, height=300)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'center_crop_to_multiples_of':
+        transform = iaa.CenterCropToPowersOf(height_base=3, width_base=2)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'center_crop_to_powers_of':
+        transform = iaa.CenterCropToMultiplesOf(height_multiple=32, width_multiple=32)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'center_crop_to_aspect_ratio':
+        transform = iaa.CenterCropToAspectRatio(2.0)
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'center_crop_to_square':
+        transform = iaa.CenterCropToSquare()
+        transformed_image = transform(image=image)
 
     elif augmentation == 'random_crop':
         transform = RandomCrop(always_apply=True, width=200, height=200)
