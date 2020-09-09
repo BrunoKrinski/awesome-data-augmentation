@@ -2812,6 +2812,89 @@ A huge list of many types of data augmentations techniques used for deep learnin
 
 <!--------------------------------------------------------------------------------------------------------------------->
 
+<h3>Rotate</h3>
+<ul class="augmentations">
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Rotate -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_rotate')">Rotate</button>
+        <div id="aug_rotate" style="display: none;">
+            Rotate the input by an angle selected randomly from the uniform distribution.
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Rotate">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure> 
+            <figure>
+                <img src="images/kitty_rotate.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure> 
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Rotate -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_random_rotate_90')">Random Rotate 90</button>
+        <div id="aug_random_rotate_90" style="display: none;">
+            Randomly rotate the input by 90 degrees zero or more times.
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomRotate90">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure> 
+            <figure>
+                <img src="images/kitty_random_rotate90.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure> 
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Shift Scale Rotate -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_shift_scale_rotate')">Shift Scale Rotate</button>
+        <div id="aug_shift_scale_rotate" style="display: none;">
+            Randomly apply affine transforms: translate, scale and rotate the input.
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ShiftScaleRotate">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure> 
+            <figure>
+                <img src="images/kitty_shift_scale_rotate.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure> 
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Shift Scale Rotate -->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li class="item_list">
+        <button onclick="show('aug_transpose')">Transpose</button>
+        <div id="aug_transpose" style="display: none;">
+            Transpose the input by swapping rows and columns.
+            Source: <a target="_blank" 
+                       href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Transpose">Albumentations</a><br>
+            <figure>
+                <img src="images/kitty.jpg"> 
+                <figcaption>Original</figcaption>
+            </figure> 
+            <figure>
+                <img src="images/kitty_transpose.jpg">
+                <figcaption>Augmentation</figcaption>
+            </figure> 
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+</ul>
+
+<!--------------------------------------------------------------------------------------------------------------------->
+
 <h3>Size</h3>
 <ul class="augmentations">
     <!----------------------------------------------------------------------------------------------------------------->
@@ -2967,70 +3050,6 @@ A huge list of many types of data augmentations techniques used for deep learnin
             </figure> 
             <figure>
                 <img src="images/kitty_random_grid_shuffle.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure> 
-        </div>
-    </li>
-
-    <li class="item_list">
-        <button onclick="show('aug49')">RandomRotate90</button>
-        <div id="aug49" style="display: none;">
-            Randomly rotate the input by 90 degrees zero or more times.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.RandomRotate90">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure> 
-            <figure>
-                <img src="images/kitty_random_rotate90.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure> 
-        </div>
-    </li>
-   
-
-    <li class="item_list">
-        <button onclick="show('aug52')">Rotate</button>
-        <div id="aug52" style="display: none;">
-            Rotate the input by an angle selected randomly from the uniform distribution.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Rotate">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure> 
-            <figure>
-                <img src="images/kitty_rotate.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure> 
-        </div>
-    </li>
-    <li class="item_list">
-        <button onclick="show('aug53')">ShiftScaleRotate</button>
-        <div id="aug53" style="display: none;">
-            Randomly apply affine transforms: translate, scale and rotate the input.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.ShiftScaleRotate">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure> 
-            <figure>
-                <img src="images/kitty_shift_scale_rotate.jpg">
-                <figcaption>Augmentation</figcaption>
-            </figure> 
-        </div>
-    </li>
-   
-    <li class="item_list">
-        <button onclick="show('aug55')">Transpose</button>
-        <div id="aug55" style="display: none;">
-            Transpose the input by swapping rows and columns.
-            Source: <a target="_blank" href="https://albumentations.ai/docs/api_reference/augmentations/transforms/#albumentations.augmentations.transforms.Transpose">Albumentations</a><br>
-            <figure>
-                <img src="images/kitty.jpg"> 
-                <figcaption>Original</figcaption>
-            </figure> 
-            <figure>
-                <img src="images/kitty_transpose.jpg">
                 <figcaption>Augmentation</figcaption>
             </figure> 
         </div>

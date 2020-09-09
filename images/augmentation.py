@@ -646,6 +646,25 @@ if __name__ == '__main__':
         transform = iaa.CenterPadToSquare()
         transformed_image = transform(image=transformed_image)
 
+    ## Rotate
+
+    elif augmentation == 'rotate':
+        transform = Rotate(always_apply=True)
+        transformed_image = transform(image=image)['image']
+
+    elif augmentation == 'random_rotate90':
+        transform = RandomRotate90(always_apply=True)
+        transformed_image = transform(image=image)['image']
+   
+    elif augmentation == 'shift_scale_rotate':
+        transform = ShiftScaleRotate(always_apply=True, shift_limit=0.1, 
+                                                        scale_limit=0.5)
+        transformed_image = transform(image=image)['image']
+  
+    elif augmentation == 'transpose':
+        transform = Transpose(always_apply=True)
+        transformed_image = transform(image=image)['image']
+
     ## Size
     elif augmentation == 'resize':
         transform = Resize(always_apply=True, height=100, width=100)
@@ -678,13 +697,6 @@ if __name__ == '__main__':
         transform = ToFloat(always_apply=True)
         transformed_image = transform(image=image)['image']
 
-   
-    
-
-
-
-    
-
     elif augmentation == 'grid_distortion':
         transform = GridDistortion(always_apply=True, distort_limit=0.5)
         transformed_image = transform(image=image)['image']
@@ -693,42 +705,16 @@ if __name__ == '__main__':
         transform = GridDropout(always_apply=True)
         transformed_image = transform(image=image)['image']
 
-    
-
     elif augmentation == 'iaaaffine':
         transform = IAAAffine(always_apply=True, p=1.0, rotate=180, shear=50)
         transformed_image = transform(image=image)['image']
 
-   
-    
-   
     elif augmentation == 'optical_distortion':
         transform = OpticalDistortion(always_apply=True, distort_limit=0.5)
         transformed_image = transform(image=image)['image']
     
-    
-
     elif augmentation == 'random_grid_shuffle':
         transform = RandomGridShuffle(always_apply=True, grid=(5, 5))
-        transformed_image = transform(image=image)['image']
-
-
-    elif augmentation == 'random_rotate90':
-        transform = RandomRotate90(always_apply=True)
-        transformed_image = transform(image=image)['image']
-   
-    elif augmentation == 'rotate':
-        transform = Rotate(always_apply=True)
-        transformed_image = transform(image=image)['image']
-
-    elif augmentation == 'shift_scale_rotate':
-        transform = ShiftScaleRotate(always_apply=True, shift_limit=0.1, 
-                                                        scale_limit=0.5)
-        transformed_image = transform(image=image)['image']
-  
-
-    elif augmentation == 'transpose':
-        transform = Transpose(always_apply=True)
         transformed_image = transform(image=image)['image']
 
     name, ext = image_name.split('.')
