@@ -619,8 +619,10 @@ if __name__ == '__main__':
         transformed_image = transform(image=image)
 
     elif augmentation == 'pad_to_square':
+        transform = Resize(always_apply=True, height=200, width=400)
+        transformed_image = transform(image=image)['image']
         transform = iaa.PadToSquare()
-        transformed_image = transform(image=image)
+        transformed_image = transform(image=transformed_image)
 
     elif augmentation == 'center_pad_to_fixed_size':
         transform = iaa.CenterPadToFixedSize(width=1000, height=1000)
@@ -639,8 +641,10 @@ if __name__ == '__main__':
         transformed_image = transform(image=image)
 
     elif augmentation == 'center_pad_to_square':
+        transform = Resize(always_apply=True, height=200, width=400)
+        transformed_image = transform(image=image)['image']
         transform = iaa.CenterPadToSquare()
-        transformed_image = transform(image=image)
+        transformed_image = transform(image=transformed_image)
 
     ##############
 
