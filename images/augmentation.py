@@ -533,6 +533,22 @@ if __name__ == '__main__':
                                                         scale_limit=0.5)
         transformed_image = transform(image=image)['image']
 
+    elif augmentation == 'scalex':
+        transform = iaa.ScaleX((0.5, 1.5))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'scaley':
+        transform = iaa.ScaleY((0.5, 1.5))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'translatex':
+        transform = iaa.TranslateX(px=(-100, 100))
+        transformed_image = transform(image=image)
+
+    elif augmentation == 'translatey':
+        transform = iaa.TranslateY(px=(-100, 100))
+        transformed_image = transform(image=image)
+
     ## Crop
 
     elif augmentation == 'crop':
