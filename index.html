@@ -3416,6 +3416,15 @@ A list of awesome surveys in many different subjects of deep learning!
                           <a target="_blank" href="https://github.com/bethgelab/stylize-datasets">Github</a>
                 </li>
             </ul>
+            <p>
+                The authors proposed a neural network to perform style transfer between images. That is, the proposed 
+                method takes an image with a real scenario and outputs the same image as it was painting. The proposed 
+                network uses a VGG-19 as an encoder, to extract features from both, real image A and a painting example 
+                B. Then, the features enter in the Adaptive Instance Normalization (AdaIn), proposed by the authors, to 
+                perform style transfer between the images. The output of the AdaIn enters the decoder to generate the 
+                image with the new painting style. This decoder uses another encoder, that also uses a VGG-net, to learn
+                 how to perform such conversion. 
+            </p>
             <img class="center" src="papers/img18.jpg">
             <img class="center" src="papers/img19.png">
         </div>
