@@ -3619,6 +3619,18 @@ A list of awesome surveys in many different subjects of deep learning!
                     Code: <a target="_blank" href="https://github.com/kakaobrain/fast-autoaugment">Github</a>
                 </li>
             </ul>
+            <p>
+                The authors proposed an algorithm to automatically find the best augmentation policies to train a 
+                classification network. The proposed framework is similar to its predecessor, AutoAugment, but focused 
+                on reducing the time to find the best augmentations to the problem. In the proposed algorithm, the 
+                training dataset is split in K-folds, with each fold split into two sets, called Dm and Da. The k sets 
+                of Dm are used to train neural networks and the k sets of Da are used to find the best augmentation 
+                policies. In each Da, they applied a Bayes Optimization algorithm to select B augmentation policies, 
+                which are validated in the neural networks trained in with the Dm sets. For each fold, the top-N 
+                policies are selected and concatenated, generating a unique set of augmentation policies. In the end, 
+                the network is trained with the entire training dataset plus the best augmentations and validated in the
+                 validation dataset.
+            </p>
             <img class="center" src="papers/img15.jpg">
         </div>
     </li>
