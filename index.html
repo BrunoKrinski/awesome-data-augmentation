@@ -3677,29 +3677,11 @@ A list of awesome surveys in many different subjects of deep learning!
                 are still an open problem. In state-of-art networks based on anchor boxes, small objects have a limited 
                 number of anchors, which harms the detection process. To improve the ability of the network to find 
                 small objects, a data augmentation is proposed. In images with the occurrence of small objects, the 
-                authors basically made a copy of the object and pasted many copies over the image. This augmentation 
+                authors made a copy of the object and pasted many copies over the image. This augmentation 
                 helped the network to generate more anchor boxes for the objects, which helped the network to detect 
                 such objects.
             </p>
             <img class="center" src="papers/img20.png">
-        </div>
-    </li>
-    <!----------------------------------------------------------------------------------------------------------------->
-    <li>
-        <button onclick="show('div21')">DoveNet: Deep Image Harmonization via Domain Verification</button>
-        <div id="div21" class="paper" style="display: none;">
-            <ul class="item_list">
-                <li>
-                    Link: <a target="_blank" href="https://arxiv.org/abs/1911.13239">Arxiv</a>
-                </li>
-                <li>
-                    Authors: Wenyan Cong, Jianfu Zhang, Li Niu, Liu Liu, Zhixin Ling, Weiyuan Li, Liqing Zhang
-                </li>
-                <li>
-                    Code: <a target="_blank" href="https://github.com/bcmi/Image_Harmonization_Datasets">Github</a>
-                </li>
-            </ul>
-            <img class="center" src="papers/img22.png">
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
@@ -3717,6 +3699,11 @@ A list of awesome surveys in many different subjects of deep learning!
                     Code: <a target="_blank" href="https://github.com/GothicAi/Instaboost">Github</a>
                 </li>
             </ul>
+            <p>
+                The authors proposed an augmentation technique called Random InstaBoost. In this approach, given an 
+                image and its respective segmentation mask, they cut the object from the scene and place it elsewhere on
+                 the image. The hole left by the object in its original location is closed by an inpainting technique. 
+            </p>
             <img class="center" src="papers/img23.png">
         </div>
     </li>
@@ -3759,6 +3746,13 @@ A list of awesome surveys in many different subjects of deep learning!
                     Code: <a target="_blank" href="https://github.com/google-research/augmix">Github</a>
                 </li>
             </ul>
+            <p>
+                The authors proposed a mixing of different augmentation techniques. Instead of performing a series of 
+                augmentations in sequence, they use different augmentations chains in parallel, where each chain is a 
+                sequence of augmentation techniques. Each sequence of augmentations generates a different augmented 
+                image, that is mixed through elementwise convex combinations, with all augmented images receiving a 
+                different weight. In the end, the resulting augmented image is mixed with the original image. 
+            </p>
             <img class="center" src="papers/img14.png">
         </div>
     </li>
@@ -3777,6 +3771,16 @@ A list of awesome surveys in many different subjects of deep learning!
                     Code: <a target="_blank" href="https://github.com/Jia-Research-Lab/GridMask">Github</a>
                 </li>
             </ul>
+            <p>
+                The proposed augmentation generates a mask with a sequence of black squares uniformly distributed 
+                forming a grid on top of the image. The regions of the image corresponding to the black squares in the 
+                mask are removed by setting the pixels to zero. This method is similar to others that remove regions 
+                from the image, forcing the network to learn the same concepts with different regions of the image and 
+                improve the ability to learn objects with occlusion. It also helps to reduce overfitting. The advantage 
+                of this method over others similar is that this other method uses random positions and size of the image 
+                to be removed, which can generate examples that remove the entire object in the image or do not remove 
+                any relevant information on it.
+            </p>
             <img class="center" src="papers/img16.png">
         </div>
     </li>
