@@ -3829,6 +3829,15 @@ A list of awesome surveys in many different subjects of deep learning!
                     Project: <a target="_blank" href="https://nvlabs.github.io/COCO-FUNIT/">https://nvlabs.github.io/COCO-FUNIT/</a>
                 </li>
             </ul>
+            <p>
+                Motivated by some content losses when translating more complex images using the FUNIT network, the 
+                authors proposed some improvements to the original work. The idea is the same as the original FUNIT, 
+                learn to translate images from a source class to a target class with a few examples from the target 
+                class. Aiming to mitigate the content loss in the FUNIT image-to-image translation results, the authors 
+                of COCO-FUNIT proposed an adaptation to the FUNIT called e COntent-COnditioned style encoder (COCO), to 
+                replace the original style encoder from FUNIT. In the COCO encoder, both style and content from the 
+                images are used to encoder the target class, which reduced the content loss problem.
+            </p>
             <img class="center" src="papers/img24.jpg">
             <img class="center" src="papers/img25.png">
         </div>
@@ -3850,6 +3859,31 @@ A list of awesome surveys in many different subjects of deep learning!
             </ul>
             <img class="center" src="papers/img26.png">
             <img class="center" src="papers/img27.png">
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li>
+        <button onclick="show('div21')">Learning Data Augmentation Strategies for Object Detection</button>
+        <div id="div21" class="paper" style="display: none;">
+            <ul class="item_list">
+                <li>
+                    Link: <a target="_blank" href="https://arxiv.org/abs/1906.11172">Arxiv</a>
+                </li>
+                <li>
+                    Authors: Barret Zoph, Ekin D. Cubuk, Golnaz Ghiasi, Tsung-Yi Lin, Jonathon Shlens, Quoc V. Le
+                </li>
+                <li>
+                    Code: <a target="_blank" href="github.com/tensorflow/tpu/tree/master/models/official/detection">Github</a>
+                </li>
+            </ul>
+            <p>
+                The authors proposed a study about the behavior of several augmentations techniques, usually applied to 
+                classification problems, on object detection problems. The authors also proposed a search method to find 
+                the best augmentation policies to be applied in an object detection problem. To achieve this goal, they 
+                defined an augmentation policy as a set of K sub-policies, with each sub-policy being a set of N image 
+                transformations. They trained a Recurrent Neural Network (RNN) to find the K sub-policies that better 
+                that composes an augmentation policy.
+            </p>
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
