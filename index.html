@@ -3479,6 +3479,25 @@ A list of awesome surveys in many different subjects of deep learning!
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
+    <li>
+        <button onclick="show('div24')">Improving Deep Learning using Generic Data Augmentation</button>
+        <div id="div24" class="paper" style="display: none;">
+            <ul class="item_list">
+                <li>
+                    Link: <a target="_blank" href="https://arxiv.org/abs/1708.06020">Arxiv</a>
+                </li>
+                <li>
+                    Authors: Luke Taylor, Geoff Nitschke
+                </li>
+            </ul>
+            <p>
+                The authors performed a series of experiments and comparisons of different data augmentation techniques 
+                in the classification problem. They focused on geometric methods (flipping, rotation, and cropping), and
+                 photometric methods (color jittering,  edge enhancement, and fancy PCA).
+            </p>
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
     <h3>2018</h3>
     <!----------------------------------------------------------------------2018--------------------------------------->
     <li>
@@ -3507,7 +3526,7 @@ A list of awesome surveys in many different subjects of deep learning!
             <img class="center" src="papers/img4.png">
             <img class="center" src="papers/img5.png">
         </div>
-    </li>''
+    </li>
     <!----------------------------------------------------------------------------------------------------------------->
     <li>
         <button onclick="show('div08')">AutoAugment: Learning Augmentation Policies from Data</button>
@@ -3534,6 +3553,28 @@ A list of awesome surveys in many different subjects of deep learning!
                 learns the best augmentation strategy for the problem approached. 
             </p>
             <img class="center" src="papers/img28.png">
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li>
+        <button onclick="show('div25')">Data Augmentation by Pairing Samples for Images Classification</button>
+        <div id="div25" class="paper" style="display: none;">
+            <ul class="item_list">
+                <li>
+                    Link: <a target="_blank" href="https://arxiv.org/abs/1801.02929">Arxiv</a>
+                </li>
+                <li>
+                    Authors: Hiroshi Inoue
+                </li>
+            </ul>
+            <p>
+                The author proposed a data augmentation called SamplePairing. In this technique, he takes two random 
+                images from the training dataset and mixup them by making a per-pixel average of both images. The label 
+                of the first image is used as the label of the mixed image. With this augmentation, the training step 
+                does not achieve good results. However, a network trained with this augmentation, and then fine-tuned 
+                without the augmentation, showed improvements on the classification problem.
+            </p>
+            <img class="center" src="papers/img33.png">
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
