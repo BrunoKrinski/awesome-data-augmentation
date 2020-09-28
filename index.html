@@ -3715,6 +3715,27 @@ A list of awesome surveys in many different subjects of deep learning!
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
+    <li>
+        <button onclick="show('div34')">On the Importance of Visual Context for Data Augmentation in Scene Understanding</button>
+        <div id="div34" class="paper" style="display: none;">
+            <ul class="item_list">
+                <li>
+                    Link: <a target="_blank" href="https://arxiv.org/abs/1809.02492">Arxiv</a>
+                </li>
+                <li>
+                    Authors: Nikita Dvornik, Julien Mairal, Cordelia Schmid
+                </li>
+            </ul>
+            <p>
+                The authors trained a Convolution Neural Network to learn the context of the object in the dataset. They 
+                cropped the object from the image and created a context image. Then, the network is trained to learn the 
+                probability of different objects being in that background. They used this network to guide the proposed 
+                data augmentation, where objects are placed on new background images.
+            </p>
+            <img class="center" src="papers/img42.png">
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
     <h3>2019</h3>
     <!----------------------------------------------------------------------2019--------------------------------------->
     <li>
@@ -3890,6 +3911,45 @@ A list of awesome surveys in many different subjects of deep learning!
             </p>
             <img class="center" src="papers/img30.png">
             <img class="center" src="papers/img31.png">
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li>
+        <button onclick="show('div32')">Optimizing Data Augmentation for Semantic Segmentation on Small-Scale Dataset</button>
+        <div id="div32" class="paper" style="display: none;">
+            <ul class="item_list">
+                <li>
+                    Link: <a target="_blank" href="https://dl.acm.org/doi/abs/10.1145/3341016.3341020">ACM Digital Library</a>
+                </li>
+                <li>
+                    Authors: Rui Ma, Pin Tao, Huiyun Tang
+                </li>
+            </ul>
+            <p>
+                The authors evaluated seven popular data augmentations in a semantic segmentation problem. They 
+                evaluated color transform, flipping, projection transform, jpeg compression, cropping, local shift, and 
+                local copy. 
+            </p>
+        </div>
+    </li>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <li>
+        <button onclick="show('div33')">Pixel Level Data Augmentation for Semantic Image Segmentation Using Generative Adversarial Networks</button>
+        <div id="div33" class="paper" style="display: none;">
+            <ul class="item_list">
+                <li>
+                    Link: <a target="_blank" href="https://ieeexplore.ieee.org/document/8683590">IEEE Xplore</a>
+                </li>
+                <li>
+                    Authors: Shuangting Liu, Jiaqi Zhang, Yuxin Chen, Yifan Liu, Zengchang Qin, Tao Wan
+                </li>
+            </ul>
+            <p>
+                The authors proposed a data augmentation technique based on Generative Adversarial Networks (GANs). They
+                 trained a GAN to generate realistic images from segmentation masks. Then, they manually created 
+                 segmentation masks with the classes which they wanted to augment and used the GAN to generate a 
+                 corresponding image. 
+            </p>
         </div>
     </li>
     <!----------------------------------------------------------------------------------------------------------------->
